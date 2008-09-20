@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>elliottcable</title>
+  <link href="http://feeds.elliottcable.name/elliottcable" rel="self"/>
+  <link href="http://elliottcable.name/"/>
+  <updated>2008-06-15T07:05:17Z</updated>
+  <author>
+    <name>elliottcable</name>
+    <email>me@elliottcable.name</email>
+  </author>
+  <id>urn:uuid:A6664182-0348-4142-B077-C563A07DA23A</id>
+
+  <entry>
+    <title>Nothing here</title>
+    <link href="http://elliottcable.name"/>
+    <id>urn:uuid:F22EFFFE-A506-48A9-B889-318FCFA4A86B</id>
+    <updated>2008-06-15T07:05:17Z</updated>
+    <summary>Unsurprisingly, elliottcable hasn't gotten around to doing something sensible, such as writing a self-aggregator for all the shit he does on the internet. Someday, this feed will point to that. Until then... Uh... I dunno, eat lots of lieful cake?</summary>
+  </entry>
+
+</feed>
