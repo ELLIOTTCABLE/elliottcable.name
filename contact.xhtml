@@ -28,13 +28,12 @@
         
         a { color: #0000FF; text-decoration: none; }
         a:hover {
-          color: #0000FF !important;
+          color: black;
           text-decoration: none;
         }
         
         a:visited { color: black; }
         a:visited:hover {
-          color: white;
           text-decoration: none;
         }
         
@@ -75,15 +74,11 @@
         }
         address.vcard a { color: #CCCCFF; }
         address.vcard a.preferred, address.vcard .preferred a { color: #0000FF; }
-        address.vcard a:hover { text-shadow: #9999FF 0px 0px 3px; }
+        address.vcard a:hover { color: #0000FF; text-shadow: #9999FF 0px 0px 3px; }
         
-        address.vcard a:visited { color: black; }
-        address.vcard a:visited:hover {
-          color: white;
-          text-decoration: none;
-          
-          text-shadow: #9999FF 0px 0px 3px;
-        }
+        address.vcard a:visited { color: #CCCCCC; }
+        address.vcard a:visited.preferred, address.vcard .preferred a:visited { color: black; }
+        address.vcard a:visited:hover { color: black; text-shadow: #999999 0px 0px 3px; }
         
         h1.title {
           text-transform: uppercase;
@@ -96,7 +91,7 @@
         }
         h1.title a {
           padding: 0px; margin: 0px;
-          color: #0000FF;
+          color: #0000FF !important;
           
           display: block;
           text-align: center;
@@ -112,7 +107,7 @@
           
           padding-bottom: 1em;
         }
-        h2.subtitle a { color: #0000FF; }
+        h2.subtitle a { color: #0000FF !important; }
         
         .email {
           font: 125%/1.6 "Anivers";
