@@ -76,15 +76,20 @@
         }
         #header a#download > * { display: none; }
         
-        #navigation { margin: 0px; }
+        #navigation {
+          margin: 0px;
+          
+          font: 100 125%/1.6 "Diavlo Light", "Diavlo";
+          text-align: center;
+        }
+        #navigation:before { content: "my:"; }
         #navigation li { display: inline; margin: 0px; list-style: none; }
         #navigation li a {
           display: inline-block;
           margin-left: 0.25em;
-          padding-left: 0.5em;
-          padding-right: 0.5em;
+          padding-left: 0.25em;
+          padding-right: 0.25em;
           
-          font: 500 100%/1.6 "Diavlo Bold", "Diavlo";
           color: black;
           text-shadow: none;
         }
