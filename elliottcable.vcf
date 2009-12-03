@@ -12,10 +12,6 @@ URL;type=HOME;type=pref:http\://ell.io/
 BDAY;value=date:1989-08-10
 X-JABBER;type=HOME;type=pref:me@ell.io
 X-AIM;type=HOME:me@ell.io
-X-MSN;type=HOME:me@ell.io
-X-YAHOO;type=HOME:elliottcable
-X-YAHOO-ID;type=HOME:elliottcable
-X-SKYPE-USERNAME;type=HOME;type=pref:elliottcable
 TZ;VALUE=text:-09:00;AKST;America/Anchorage
 GEO:61.117314;-149.798997
 PHOTO;BASE64:
