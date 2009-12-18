@@ -30,12 +30,13 @@
         _gaq.push(['_trackPageview']);
         
         (function() {
-          var ga = document.createElementNS(document.namespaceURI, 'script');
+          var ga = document.createElementNS(document.lastChild.namespaceURI,
+            'script');
           ga.type = "text/javascript"; ga.async = true;
           ga.src = "http://www.google-analytics.com/ga.js";
           
-          document.getElementsByTagNameNS(document.namespaceURI, 'head')[0]
-            .appendChild(ga);
+          document.getElementsByTagNameNS(document.lastChild.namespaceURI,
+            'head')[0].appendChild(ga);
         })();
       ]]>
     </script>
