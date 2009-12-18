@@ -115,16 +115,16 @@
         #navigation li a, #navigation li a:visited { text-shadow: none; }
         #navigation li a:hover { background: black; color: white; }
         
-        address.vcard {
+        .vcard {
           font-style: normal;
         }
-        address.vcard a { color: #CCCCFF; }
-        address.vcard a.preferred, address.vcard .preferred a { color: blue; }
-        address.vcard a:hover { color: blue; text-shadow: #9999FF 0px 0px 3px; }
+        .vcard a { color: #CCCCFF; }
+        .vcard a.preferred, .vcard .preferred a { color: blue; }
+        .vcard a:hover { color: blue; text-shadow: #9999FF 0px 0px 3px; }
         
-        address.vcard a:visited { color: #CCCCCC; }
-        address.vcard a:visited.preferred, address.vcard .preferred a:visited { color: black; }
-        address.vcard a:visited:hover { color: black; text-shadow: #999999 0px 0px 3px; }
+        .vcard a:visited { color: #CCCCCC; }
+        .vcard a:visited.preferred, .vcard .preferred a:visited { color: black; }
+        .vcard a:visited:hover { color: black; text-shadow: #999999 0px 0px 3px; }
         
         h1.title {
           padding: 0px; margin: 0px;
@@ -192,7 +192,7 @@
       <a id="download" href="http://elliottcable.name/elliottcable.vcf" rel="me"><span>download my vCard</span></a>
     </div>
     <div id="acontlol">
-      <address id="hcard-elliott-cable" class="vcard">
+      <div id="hcard-elliott-cable" class="vcard">
         <ul id="navigation">
           <li><a href="http://blog.elliottcable.name/">blog</a></li>
           <li><a href="http://by.elliottcable.name/">projects</a></li>
@@ -221,10 +221,10 @@
           <a class="url" rel="me" href="http://www.facebook.com/people/Elliott-Cable/501987318">Facebook</a>
           <a class="url" rel="me" href="http://www.last.fm/user/elliottcable">last.fm</a>
         </div>
-        <div class="email">
+        <address class="email">
           <a class="email preferred" rel="me" href="mailto:me@ell.io">me@elliottcable.name</a>
-        </div>
-      </address>
+        </address>
+      </div>
     </div>
     <div id="footer">
       <a href="http://www.josbuivenga.demon.nl/index.html" rel="acquaintance colleague">typophility</a>
