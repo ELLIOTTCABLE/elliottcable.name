@@ -13,12 +13,11 @@
     <link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" type="text/html;charset=utf-8"/>
     
     <link rel="stylesheet"
-    zzhref="http://resources.yreality.net/Design/960/reset.css"
-      href="file://localhost/Users/elliottcable/Desktop/Design/960/reset.css"
+      href="http://resources.yreality.net/Design/960/reset.css"
       type="text/css;charset=utf-8"/>
     <style>
       <![CDATA[
-        @import url('file://localhost/Users/elliottcable/Desktop/Design/Typography/Typography.css') screen, print;
+        @import url('http://resources.yreality.net/Design/Typography/Typography.css') screen, print;
         
         /* ========
         = General =
@@ -28,35 +27,59 @@
         
         /* ### Inline textual elements */
         
-        section em {
-          font-style: normal;
+        a {
+          padding: 0.1em 0.25em 0.1em 0.25em;
+          margin: 0px -0.25em 0px -0.25em;
+          
+          border: 0px solid black;
+          
+          border-bottom-width: 0.15em;
+          border-top-width: 0.15em;
+          
+        /*-webkit-border-top-left-radius:     0.25em;
+          -webkit-border-top-right-radius:    0.25em;
+             -moz-border-radius-topleft:      0.25em;
+             -moz-border-radius-topright:     0.25em;
+                  border-top-left-radius:     0.25em;
+                  border-top-right-radius:    0.25em;*/
+          -webkit-border-radius: 0.25em;
+             -moz-border-radius: 0.25em;
+                  border-radius: 0.25em;
+          
+          
+          text-decoration: none;
+          color: inherit;
         }
-        section *:not(em) > em {
+        
+        a               { border-color: #FFCCE5; }
+        a:hover         {        color: #FFCCE5; background-color: rgba(0, 0, 0, 0.75); }
+        a:visited       { border-color: #C0B2FF; }
+        a:visited:hover {        color: #C0B2FF; background-color: rgba(0, 0, 0, 0.75); }
+        
+        em { font-style: normal; }
+        *:not(em) > em {
           padding: 0.1em 0.25em 0.1em 0.25em;
           margin: 0px -0.25em 0px -0.25em;
           
           -webkit-border-radius: 0.333em;
-          -moz-border-radius: 0.333em;
+             -moz-border-radius: 0.333em;
+                  border-radius: 0.333em;
+          
+          background-color: rgba(217, 255, 127, 0.5);
         }
-        *:not(section) > section *:not(em) > em { background-color: rgba(217, 255, 127, 0.5); }
-        section em em {
-          font-weight: 600;
-        }
-        
-        section strong {
-          font-weight: 900;
-        }
+        em em { font-weight: 600; }
+        strong { font-weight: 900; }
         
         /* ### Structural elements */
         
-        *:not(section) > section {
+        section {
           padding: 1.25em 2.5em;
           margin: 1.5em -2.5em;
           
           background-color: rgba(255, 255, 255, 0.5);
         }
         
-        *:not(section) > section:not(:first-of-type) {
+        body > div:not(:first-of-type) > section:first-child {
           border-top: 0.666em solid rgba(0, 0, 0, 0.666);
         }
         
@@ -86,7 +109,7 @@
         #title {
           display: table !important;
           margin: 2.5em 0px;
-          margin-right: -7em;
+          margin-right: -8em;
         }
         #title > * {
           display: table-cell !important;
@@ -99,34 +122,58 @@
         #title > #subtitle > .extraordinaire { font-family: "Georgia", serif; font-style: italic; }
         
         /* ### Section headers */
-        section > header:first-child > :first-child {
-          margin-top: 0px;
-        }
-        section > section {
-          padding-left: 1.583em;
-          margin-left: -1.583em;
-          
-          border-top: 0.666em solid rgba(0, 0, 0, 0.05);
-        }
+        section > header:first-child > :first-child { margin-top: 0px; }
         
         /* ### List focus */
-        section > aside#focus {
+        nav#focus {
+          padding: 0.25em 2.5em;
+          margin: 0.25em -2.5em;
+          
+          background-color: rgba(0, 0, 0, 0.50);
+          color: white;
+          text-align: center;
+        }
+        nav#focus > * { font-size: 75%; line-height: 1.3; }
+        
+        nav#focus > *:before { content: "Focus on "; }
+        nav#focus > ul, nav#focus > ul li { display: inline; }
+        nav#focus > ul li:not(:nth-last-child(1)):not(:nth-last-child(2)):after { content: ","; }
+        
+        nav#focus > ul li:nth-last-child(2):before { content: "or "; }
+        nav#focus > ul li:nth-last-child(1):before { content: "/ "; }
+        
+        nav#focus a { background-color: rgba(0, 0, 0, 0.75); border: none; }
+        nav#focus a               { color: #FFCCE5; }
+        nav#focus a:hover         { color: #C0B2FF; }
+        nav#focus a:visited       { color: #C0B2FF; }
+        nav#focus a:visited:hover { color: #FFCCE5; }
+        
+        aside#topics {
           float: right;
-          width: 10em;
-          margin-right: -7em;
+          width: 7em;
+          padding: 0.5em;
+          margin: 1em;
+          margin-right: -8em;
           
           background: #CCFFCC;
           
           border-left: 0.666em solid rgba(0, 0, 0, 0.05);
           
-          text-align: center;
+          text-align: left;
         }
-        section > aside#focus > * { font-size: 75%; }
+        aside#topics > * { font-size: 75%; }
         
-        section > aside#focus > #topics > * { display: inline; }
-        section > aside#focus > #topics strong:after { content: ","; }
-        section > aside#focus > #topics strong, section > ul li > span strong {
+/*        aside#topics li { display: inline; }*/
+        aside#topics li strong:after            { content: ","; }
+        aside#topics li strong:last-child:after { content: ""; }
+        aside#topics li strong, section > ul li > span strong {
+          padding: 0.1em 0.2em 0.1em 0.2em;
+          margin: 0px -0.2em 0px -0.2em;
           
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          -webkit-border-radius: 3px;
+             -moz-border-radius: 3px;
+                  border-radius: 3px;
         }
         
         /* ### Lists */
@@ -180,33 +227,36 @@
       <h1>Elliott Cable</h1>
       <div id="subtitle">librarian, architect, <span class="extraordinaire">sourcerer <strong>extraordinaire</strong>!</span></div>
     </header>
-    <section id="objective">
-      <header><h2>Objective</h2></header>
-      <p>
-        Elliott is interested in providing the <em>connective glue</em> necessary within <em><em>every</em>
-        team</em>. His wide areas of interest imply that he can “speak the language” of many and varied technical
-        fields. He'll be useful <em>anywhere</em> there are <em>new things to be created</em>.
-        <span class="smiley">:)</span>
-      </p>
-    </section>
-    <section id="skills">
-      <header><h2>What I’ll Bring to Your Team</h2></header>
-      <p>
-        I’m familiar with <em><em>quite</em> a lot</em> of tools, programming languages, systems, and frameworks.
-        To be honest, I’m a little obsessive about learning new things; so I’ve done my best to keep this section
-        as <em>short</em> and <em>relevant</em> as possible. That is, however, a lofty goal, given how much I
-        know… so please, keep an <em>open mind</em>! <span class="smiley">;)</span>
-      </p>
-      <aside id="focus">
-        <h4>Focus:</h4>
-        <nav>
-          <a href="#">systems architecture</a>
-          <a href="#">web development</a>
-          <a href="#">web design</a>
-          <a href="#">administration</a>
-          <a href="#">desktop development</a>
-        </nav>
-        <ul id="topics">
+    <div>
+      <section id="objective">
+        <header><h2>Objective</h2></header>
+        <p>
+          Elliott is interested in providing the <em>connective glue</em> necessary within <em><em>every</em>
+          team</em>. His wide areas of interest imply that he can “speak the language” of many and varied technical
+          fields. He'll be useful <em>anywhere</em> there are <em>new things to be created</em>.
+          <span class="smiley">:)</span>
+        </p>
+      </section>
+    </div>
+    <div>
+      <section id="skills">
+        <header><h2>What I’ll Bring to Your Team</h2></header>
+        <p>
+          I’m familiar with <em><em>quite</em> a lot</em> of tools, programming languages, systems, and frameworks.
+          To be honest, I’m a little obsessive about learning new things; so I’ve done my best to keep this section
+          as <em>short</em> and <em>relevant</em> as possible. That is, however, a lofty goal, given how much I
+          know… so please, keep an <em>open mind</em>! <span class="smiley">;)</span>
+        </p>
+      </section>
+      <nav id="focus"><ul>
+        <li><a href="#">design</a></li>
+        <li><a href="#">systems architecture</a></li>
+        <li><a href="#">administration</a></li>
+        <li><a href="#">desktop</a></li>
+        <li><a href="#">web development</a></li>
+      </ul></nav>
+      <section class="systems web admin desktop">
+        <aside id="topics"><ul>
           <li><strong>API design</strong></li>
           <li><strong>BDD</strong></li>
           <li><strong>Ruby</strong></li>
@@ -221,9 +271,7 @@
           <li><strong>Amazon EC2</strong></li>
           <li><strong>system administration tools</strong></li>
           <li><strong>shell scripting</strong></li>
-        </ul>
-      </aside>
-      <section class="systems web admin desktop">
+        </ul></aside>
         <p>
           When all is said and done, I’m primarily a developer: I love to <em>create things</em>, write tools and
           applications that change how people interact with their computers and eachother; if it ticks, I like to
@@ -300,7 +348,6 @@
               design solutions</em> we’ve seen in the last decade.
             </p>
           </li>
-          <li class="design competency"><span><strong>MooTools</strong>, modern dynamic-HTML techniques, and the DOM</span></li>
           <li class="design mastery"><span><strong>CSS3</strong></span></li>
           <li class="web design familiarity"><span>the <strong>HAML</strong> dynamic-markup system</span></li>
           <li class="design mastery"><span>the <strong>LESS</strong> and <strong>SASS</strong> CSS pre-compilers</span></li>
@@ -315,53 +362,59 @@
           </li>
         </ul>
       </section>
-    </section>
-    <section id="miscellaneous">
-      <header><h2>Miscellaneous</h2></header>
-      <p>
-        Finally, while these aren’t exactly capable of fitting into either of the above categories, I feel they
-        are relevant enough to merit inclusion. They give you an idea of <em>who I am</em>, which is critical to
-        understanding whether or not I’m a match for <em>your team</em>.
-      </p>
-      <ul>
-        <li>Born and raised in <strong>Anchorage, Alaska</strong></li>
-        <li>Trained as a classical <strong>pianist</strong></li>
-        <li>Attained rank of <strong>Eagle Scout</strong> in the Boy Scouts of America</li>
-        <li>Retains a taste and talent for <strong>photography</strong></li>
-      </ul>
-      <p>
-        In addition, I thought it apposite to include a few of these buzzwords in my résumé: First off, yes,
-        <em>I can “do AJAX.”</em> Even though that’s an <strong>absolutely</strong> stupid name for what is,
-        essentially, asynchronous JSON resources… Second, I’m capable of participating in “Agile” software
-        development practices—I also like a bowl of SCRUM with half’n’half for breakfast. Seriously, though, I
-        don’t put much stock in any development system or theory which doesn’t begin with “<em>I don’t care</em>
-        how you do it, just make <em>awesome stuff,</em> that <em>works great,</em> and is <em>easy to use.”</em>
-        After all, that’s all that matters, in the long run, isn’t it?
-      </p>
-    </section>
-    <section id="employment">
-      <header><h2>Employment</h2></header>
-      <ul>
-        <li>Self‐employed, Audio Video eXpress Workshops, 2002–2006</li>
-        <li>Self‐employed, ecable, 2005–2010</li>
-        <li>Entrepreneur, yreality, 2003–present</li>
-      </ul>
-    </section>
-    <section id="education">
-      <header><h2>Education</h2></header>
-      <ul>
-        <li>University of Alaska, Anchorage, Spring 2007—Spring 2009</li>
-        <li>Montana State University, Fall 2006</li>
-        <li>Grace Christian High School, Fall 2001—Spring 2006</li>
-      </ul>
-    </section>
-    <section id="closing">
-      <p>
-        So! You’ve read <em>what I can do</em>… why don’t you tell me what you want me to <em>make for you</em>?
-        I’m available for both contract work and longer-term employment (if you’ve the room for a little extra
-        <em><a href="http://search.twitter.com/search?q=from:elliottcable+%23awesome">#awesome</a></em> on your
-        team!) <a href="mailto:me+resume@ell.io">me@ell.io</a>
-      </p>
-    </section>
+    </div>
+    <div>
+      <section id="miscellaneous">
+        <header><h2>Miscellaneous</h2></header>
+        <p>
+          Finally, while these aren’t exactly capable of fitting into either of the above categories, I feel they
+          are relevant enough to merit inclusion. They give you an idea of <em>who I am</em>, which is critical to
+          understanding whether or not I’m a match for <em>your team</em>.
+        </p>
+        <ul>
+          <li>Born and raised in <strong>Anchorage, Alaska</strong></li>
+          <li>Trained as a classical <strong>pianist</strong></li>
+          <li>Attained rank of <strong>Eagle Scout</strong> in the Boy Scouts of America</li>
+          <li>Retains a taste and talent for <strong>photography</strong></li>
+        </ul>
+        <p>
+          In addition, I thought it apposite to include a few of these buzzwords in my résumé: First off, yes,
+          <em>I can “do AJAX.”</em> Even though that’s an <strong>absolutely</strong> stupid name for what is,
+          essentially, asynchronous JSON resources… Second, I’m capable of participating in “Agile” software
+          development practices—I also like a bowl of SCRUM with half’n’half for breakfast. Seriously, though, I
+          don’t put much stock in any development system or theory which doesn’t begin with “<em>I don’t care</em>
+          how you do it, just make <em>awesome stuff,</em> that <em>works great,</em> and is <em>easy to use.”</em>
+          After all, that’s all that matters, in the long run, isn’t it?
+        </p>
+      </section>
+    </div>
+    <div>
+      <section id="employment">
+        <header><h2>Employment</h2></header>
+        <ul>
+          <li>Self‐employed, Audio Video eXpress Workshops, 2002–2006</li>
+          <li>Self‐employed, ecable, 2005–2010</li>
+          <li>Entrepreneur, yreality, 2003–present</li>
+        </ul>
+      </section>
+      <section id="education">
+        <header><h2>Education</h2></header>
+        <ul>
+          <li>University of Alaska, Anchorage, Spring 2007—Spring 2009</li>
+          <li>Montana State University, Fall 2006</li>
+          <li>Grace Christian High School, Fall 2001—Spring 2006</li>
+        </ul>
+      </section>
+    </div>
+    <div>
+      <section id="closing">
+        <p>
+          So! You’ve read <em>what I can do</em>… why don’t you tell me what you want me to <em>make for you</em>?
+          I’m available for both contract work and longer-term employment (if you’ve the room for a <em>little
+          extra <a href="http://search.twitter.com/search?q=from:elliottcable+%23awesome">#awesome</a></em> on
+          your team!) <a href="mailto:me+resume@ell.io">me@ell.io</a>
+        </p>
+      </section>
+    </div>
   </body>
 </html>
