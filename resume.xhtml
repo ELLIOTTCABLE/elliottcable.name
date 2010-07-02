@@ -1,0 +1,367 @@
+<!--
+  
+  Well, well, well. A prospective employer who views-source on my résumé? That’s an amusing oddity, to say
+  the least. Even if you’re not planning to hire me, I’d appreciate it if you’d drop me an e-mail:
+  <me@ell.io> — at the very least, I’d like to chat with a recruiter that conscious of semanticity and style!
+  
+  Oh, yeah, also: I hope you enjoy my code! <span class="smiley">;)</span>
+  
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>elliottcable’s résumé</title>
+    <link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" type="text/html;charset=utf-8"/>
+    
+    <link rel="stylesheet"
+    zzhref="http://resources.yreality.net/Design/960/reset.css"
+      href="file://localhost/Users/elliottcable/Desktop/Design/960/reset.css"
+      type="text/css;charset=utf-8"/>
+    <style>
+      <![CDATA[
+        @import url('file://localhost/Users/elliottcable/Desktop/Design/Typography/Typography.css') screen, print;
+        
+        /* ========
+        = General =
+        =========*/
+        
+        body { font: 300 14pt/1.55 Helvetica, sans-serif; text-rendering: optimizeLegibility; }
+        
+        /* ### Inline textual elements */
+        
+        section em {
+          font-style: normal;
+        }
+        section *:not(em) > em {
+          padding: 0.1em 0.25em 0.1em 0.25em;
+          margin: 0px -0.25em 0px -0.25em;
+          
+          -webkit-border-radius: 0.333em;
+          -moz-border-radius: 0.333em;
+        }
+        *:not(section) > section *:not(em) > em { background-color: rgba(217, 255, 127, 0.5); }
+        section em em {
+          font-weight: 600;
+        }
+        
+        section strong {
+          font-weight: 900;
+        }
+        
+        /* ### Structural elements */
+        
+        *:not(section) > section {
+          padding: 1.25em 2.5em;
+          margin: 1.5em -2.5em;
+          
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        *:not(section) > section:not(:first-of-type) {
+          border-top: 0.666em solid rgba(0, 0, 0, 0.666);
+        }
+        
+        h1 { font-size: 350%; margin: 0.75em 0px 0.1em 0px; }
+        h2 { font-size: 175%; margin: 0.75em 0px 0.1em 0px; }
+        h3 { font-size: 125%; margin: 0.75em 0px 0.1em 0px; }
+        
+        /* =========
+        = Specific =
+        ==========*/
+        
+        html { height: 100%; background: #CCFFCC; }
+        body {
+          width: 35em;
+          margin: auto;
+          
+          /* These paddings are matched to those on list items and headers. See `li` and `h2`. */
+          padding: 0em 0.917em;
+       /* margin: 0em -0.917em; */
+          
+          border-left: 0.666em solid rgba(0, 0, 0, 0.05);
+          -webkit-border-top-left-radius: 7.25em;
+          -moz-border-radius-topleft: 7.25em;
+        }
+        
+        /* ### Page’s primary title */
+        #title {
+          display: table !important;
+          margin: 2.5em 0px;
+          margin-right: -7em;
+        }
+        #title > * {
+          display: table-cell !important;
+          vertical-align: middle !important;
+          
+          line-height: 1.0;
+        }
+        #title > #subtitle { opacity: 0.5; }
+        #title > #subtitle:before { content: " — "; }
+        #title > #subtitle > .extraordinaire { font-family: "Georgia", serif; font-style: italic; }
+        
+        /* ### Section headers */
+        section > header:first-child > :first-child {
+          margin-top: 0px;
+        }
+        section > section {
+          padding-left: 1.583em;
+          margin-left: -1.583em;
+          
+          border-top: 0.666em solid rgba(0, 0, 0, 0.05);
+        }
+        
+        /* ### List focus */
+        section > aside#focus {
+          float: right;
+          width: 10em;
+          margin-right: -7em;
+          
+          background: #CCFFCC;
+          
+          border-left: 0.666em solid rgba(0, 0, 0, 0.05);
+          
+          text-align: center;
+        }
+        section > aside#focus > * { font-size: 75%; }
+        
+        section > aside#focus > #topics > * { display: inline; }
+        section > aside#focus > #topics strong:after { content: ","; }
+        section > aside#focus > #topics strong, section > ul li > span strong {
+          
+        }
+        
+        /* ### Lists */
+        section > ul li {
+          padding: 0px 1.042em;
+          margin: 0.5em -1.375em;
+          
+          border-left: 0.25em solid rgba(0, 0, 0, 0.1);
+        }
+        section > ul li > span { display: block; }
+        
+        section > ul li.mastery     span:before { content: "Mastery of "; }
+        section > ul li.familiarity span:before { content: "Familiarity with "; }
+        section > ul li.competency  span:before { content: "Competency with "; }
+        
+        section > ul li.mastery      { border-left-color: rgba(0, 0, 0, 0.25 );
+                                            opacity: 1.0;  }
+        section > ul li.familiarity  { border-left-color: rgba(0, 0, 0, 0.15 );
+                                            opacity: 0.50; }
+        section > ul li.competency   { border-left-color: rgba(0, 0, 0, 0.1  );
+                                            opacity: 0.25; }
+        
+        section > ul li > p {
+          padding-left: 1em;
+          font-size: 75%;
+        }
+        
+      ]]>
+    </style>
+    <script type="text/javascript">
+      <![CDATA[
+        if(typeof xmlNS === 'undefined') {
+          var xmlNS = document.lastChild.namespaceURI };
+        if(typeof _gaq === 'undefined') { _gaq = new(Array) };
+        
+        _gaq.push(['_setAccount', "UA-5294724-1"]);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+          var ga = document.createElementNS(xmlNS, 'script');
+          ga.type = "text/javascript"; ga.async = true;
+          ga.src = "http://www.google-analytics.com/ga.js";
+          
+          document.getElementsByTagNameNS(xmlNS, 'head')[0].appendChild(ga);
+        })();
+      ]]>
+    </script>
+  </head>
+  <body>
+    <header id="title">
+      <h1>Elliott Cable</h1>
+      <div id="subtitle">librarian, architect, <span class="extraordinaire">sourcerer <strong>extraordinaire</strong>!</span></div>
+    </header>
+    <section id="objective">
+      <header><h2>Objective</h2></header>
+      <p>
+        Elliott is interested in providing the <em>connective glue</em> necessary within <em><em>every</em>
+        team</em>. His wide areas of interest imply that he can “speak the language” of many and varied technical
+        fields. He'll be useful <em>anywhere</em> there are <em>new things to be created</em>.
+        <span class="smiley">:)</span>
+      </p>
+    </section>
+    <section id="skills">
+      <header><h2>What I’ll Bring to Your Team</h2></header>
+      <p>
+        I’m familiar with <em><em>quite</em> a lot</em> of tools, programming languages, systems, and frameworks.
+        To be honest, I’m a little obsessive about learning new things; so I’ve done my best to keep this section
+        as <em>short</em> and <em>relevant</em> as possible. That is, however, a lofty goal, given how much I
+        know… so please, keep an <em>open mind</em>! <span class="smiley">;)</span>
+      </p>
+      <aside id="focus">
+        <h4>Focus:</h4>
+        <nav>
+          <a href="#">systems architecture</a>
+          <a href="#">web development</a>
+          <a href="#">web design</a>
+          <a href="#">administration</a>
+          <a href="#">desktop development</a>
+        </nav>
+        <ul id="topics">
+          <li><strong>API design</strong></li>
+          <li><strong>BDD</strong></li>
+          <li><strong>Ruby</strong></li>
+          <li><strong>C99</strong></li>
+          <li><strong>JavaScript</strong></li>
+          <li><strong>Node.js</strong></li>
+          <li><strong>git</strong></li>
+          <li><strong>Subversion</strong></li>
+          <li><strong>Objective-C</strong></li>
+          <li><strong>Mac OS X</strong></li>
+          <li><strong>Arch Linux</strong></li>
+          <li><strong>Amazon EC2</strong></li>
+          <li><strong>system administration tools</strong></li>
+          <li><strong>shell scripting</strong></li>
+        </ul>
+      </aside>
+      <section class="systems web admin desktop">
+        <p>
+          When all is said and done, I’m primarily a developer: I love to <em>create things</em>, write tools and
+          applications that change how people interact with their computers and eachother; if it ticks, I like to
+          know why, and then make it tick better.
+        </p>
+        <ul>
+          <li class="systems web mastery"><span><strong>API design</strong> and abstractive programming techniques</span>
+            <p>
+              I’ve written hundreds of distinct libraries in more languages than I can count. I tend to abstract
+              <em>everything</em> into portable libraries; it enables code reuse (upon which I heavily depend.)
+            </p>
+          </li>
+          <li class="systems web desktop mastery"><span><strong><abbr title="behaviour-driven development">BDD</abbr></strong> techniques</span></li>
+          <li class="systems web admin mastery"><span><strong>Ruby</strong></span></li>
+          <li class="web competency"><span><strong>Ruby on Rails</strong> and other Ruby web frameworks (Sinatra, Camping)</span></li>
+          <li class="systems admin mastery"><span><strong>C99</strong></span></li>
+          <li class="systems admin competency"><span><strong>C++</strong></span></li>
+          <li class="systems web mastery"><span><strong>JavaScript</strong></span></li>
+          <li class="systems web familiarity"><span><strong>Node.js</strong></span>
+            <p>
+              I’ve been in on the Node party since the very beginning. The moment I started digging into it, I knew
+              it, and things like it, was the future of web development. Asynchronicity is where it’s at!
+              <span class="smiley">:D</span>
+            </p>
+          </li>
+          <li class="systems web admin mastery"><span><strong>git</strong>, granular commit strategies, branch-driven development</span></li>
+          <li class="systems web admin familiarity"><span><strong>Subversion</strong></span></li>
+          <li class="web admin competency"><span>traditional relational <strong>databases</strong></span></li>
+          <li class="web admin familiarity"><span>exotic backend technologies (such as <strong>Redis</strong>)</span>
+            <p>
+              Redis is another technology that quickly caught my eye. I expect to find many wonderful uses for
+              this tool in quite a diverse array of projects; I find it plays especially well with Node.js.
+            </p>
+          </li>
+          <li class="systems admin desktop mastery"><span><strong>Objective-C</strong></span></li>
+          <li class="desktop familiarity"><span><strong>Cocoa</strong> and Xcode</span></li>
+          <li class="systems admin desktop mastery"><span><strong>Mac OS X</strong> and its BSD subsystems</span>
+            <p>
+              I’ve been using OS X and Apple’s hardware for half a decade, and I’ve always had a <em>hacker’s
+              spirit</em>. There’s really not a lot that I <em>don’t</em> know about them, anymore.
+            </p>
+          </li>
+          <li class="systems admin desktop mastery"><span>Linux systems (primarily <strong>Arch Linux</strong>, CentOS) and UNIX philosophies</span>
+            <p>
+              While I’m an OS X devotee, a properly tuned and maintained Linux system can easily be just as
+              beautiful. I <em>love</em> to create and maintain such systems.
+            </p>
+          </li>
+          <li class="web admin mastery"><span><strong>Amazon EC2</strong>’s APIs</span>
+            <p>
+              Cloud computing (all silly buzz aside) really is <em>the future</em>; and Amazon was, essentially,
+              there first (at least, on that sort of large scale.) I’ve been using them since 2007, and tend to
+              work ephemeral cloud-based instances into aspects of many of my tasks and projects.
+            </p>
+          </li>
+          <li class="admin mastery"><span><strong>system administration tools</strong> (SSH, vim, top, sed/AWK)</span></li>
+          <li class="systems admin familiarity"><span><strong>shell scripting</strong> techniques (zsh, bash)</span></li>
+        </ul>
+      </section>
+      <section class="design">
+        <p>
+          While I may be primarily a programmer, I have a taste for <em>clean, <em>minimalist</em> design</em>.
+          There’s a reason I use Apple computers and software, despite my comprehensive knowledge of more ‘true’
+          UNIX systems. My design skills will bring a touch of elegance to your development project that may
+          otherwise be lacking; a feel for <em>putting the user’s experience <em>first</em></em> (whether that
+          ‘user’ be a visitor to your website, or a developer applying your APIs to some task.)
+        </p>
+        <ul>
+          <li class="web design mastery"><span><strong>HTML5</strong> and associated technologies</span></li>
+          <li class="web design mastery"><span><strong>XHTML5</strong> with <strong>SVG</strong></span>
+            <p>
+              Yes, I realize that ‘XHTML5’ is simply HTML5 serialized as XML. I feel that the distinction is,
+              however, fairly important. I believe nesting SVG and XHTML offers some of the <em>most interesting
+              design solutions</em> we’ve seen in the last decade.
+            </p>
+          </li>
+          <li class="design competency"><span><strong>MooTools</strong>, modern dynamic-HTML techniques, and the DOM</span></li>
+          <li class="design mastery"><span><strong>CSS3</strong></span></li>
+          <li class="web design familiarity"><span>the <strong>HAML</strong> dynamic-markup system</span></li>
+          <li class="design mastery"><span>the <strong>LESS</strong> and <strong>SASS</strong> CSS pre-compilers</span></li>
+          <li class="design competency"><span><strong>MooTools</strong>, modern dynamic-HTML techniques, and the <strong>DOM</strong></span></li>
+          <li class="design mastery"><span><strong>minimalism</strong> and <strong>precision design</strong> theory</span></li>
+          <li class="design"><span>Obsession with <strong>typography</strong> and <strong>negative space</strong></span>
+            <p>
+              I love beautiful type. I find it extremely gratifying to see a page that one’s eyes can just… drink
+              in; a page begging to be absorbed. Honestly put, I believe typography to be the <em>single most
+              important element</em> of any design; after all, <em>content is king</em>, right?
+            </p>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section id="miscellaneous">
+      <header><h2>Miscellaneous</h2></header>
+      <p>
+        Finally, while these aren’t exactly capable of fitting into either of the above categories, I feel they
+        are relevant enough to merit inclusion. They give you an idea of <em>who I am</em>, which is critical to
+        understanding whether or not I’m a match for <em>your team</em>.
+      </p>
+      <ul>
+        <li>Born and raised in <strong>Anchorage, Alaska</strong></li>
+        <li>Trained as a classical <strong>pianist</strong></li>
+        <li>Attained rank of <strong>Eagle Scout</strong> in the Boy Scouts of America</li>
+        <li>Retains a taste and talent for <strong>photography</strong></li>
+      </ul>
+      <p>
+        In addition, I thought it apposite to include a few of these buzzwords in my résumé: First off, yes,
+        <em>I can “do AJAX.”</em> Even though that’s an <strong>absolutely</strong> stupid name for what is,
+        essentially, asynchronous JSON resources… Second, I’m capable of participating in “Agile” software
+        development practices—I also like a bowl of SCRUM with half’n’half for breakfast. Seriously, though, I
+        don’t put much stock in any development system or theory which doesn’t begin with “<em>I don’t care</em>
+        how you do it, just make <em>awesome stuff,</em> that <em>works great,</em> and is <em>easy to use.”</em>
+        After all, that’s all that matters, in the long run, isn’t it?
+      </p>
+    </section>
+    <section id="employment">
+      <header><h2>Employment</h2></header>
+      <ul>
+        <li>Self‐employed, Audio Video eXpress Workshops, 2002–2006</li>
+        <li>Self‐employed, ecable, 2005–2010</li>
+        <li>Entrepreneur, yreality, 2003–present</li>
+      </ul>
+    </section>
+    <section id="education">
+      <header><h2>Education</h2></header>
+      <ul>
+        <li>University of Alaska, Anchorage, Spring 2007—Spring 2009</li>
+        <li>Montana State University, Fall 2006</li>
+        <li>Grace Christian High School, Fall 2001—Spring 2006</li>
+      </ul>
+    </section>
+    <section id="closing">
+      <p>
+        So! You’ve read <em>what I can do</em>… why don’t you tell me what you want me to <em>make for you</em>?
+        I’m available for both contract work and longer-term employment (if you’ve the room for a little extra
+        <em><a href="http://search.twitter.com/search?q=from:elliottcable+%23awesome">#awesome</a></em> on your
+        team!) <a href="mailto:me+resume@ell.io">me@ell.io</a>
+      </p>
+    </section>
+  </body>
+</html>
