@@ -72,15 +72,19 @@
         
         /* ### Structural elements */
         
+        body > div:not(:first-of-type) {
+          margin-top: 25em;
+        }
+        
+        body > div:not(:first-of-type) > section:first-child {
+          border-top: 0.666em solid rgba(0, 0, 0, 0.666);
+        }
+        
         section {
           padding: 1.25em 2.5em;
           margin: 1.5em -2.5em;
           
           background-color: rgba(255, 255, 255, 0.5);
-        }
-        
-        body > div:not(:first-of-type) > section:first-child {
-          border-top: 0.666em solid rgba(0, 0, 0, 0.666);
         }
         
         h1 { font-size: 350%; margin: 0.75em 0px 0.1em 0px; }
@@ -123,6 +127,19 @@
         
         /* ### Section headers */
         section > header:first-child > :first-child { margin-top: 0px; }
+        
+        /* ### Next jumps */
+        a.next {
+          display: block;
+          margin: auto;
+          
+          background: none;
+          border: none;
+          
+          font-size: 500%;
+          line-height: 1.0;
+          text-align: center;
+        }
         
         /* ### List focus */
         nav#focus {
@@ -236,7 +253,7 @@
           <span class="smiley">:)</span>
         </p>
       </section>
-    </div>
+    </div><a class="next" href="#skills">↧</a>
     <div id="skills">
       <section>
         <header><h2>What I’ll Bring to Your Team</h2></header>
@@ -361,7 +378,7 @@
           </li>
         </ul>
       </section>
-    </div>
+    </div><a class="next" href="#miscellaneous">↧</a>
     <div id="miscellaneous">
       <section>
         <header><h2>Miscellaneous</h2></header>
@@ -386,7 +403,7 @@
           After all, that’s all that matters, in the long run, isn’t it?
         </p>
       </section>
-    </div>
+    </div><a class="next" href="#employment-education">↧</a>
     <div id="employment-education">
       <section>
         <header><h2>Employment</h2></header>
@@ -404,7 +421,7 @@
           <li>Grace Christian High School, Fall 2001—Spring 2006</li>
         </ul>
       </section>
-    </div>
+    </div><a class="next" href="#closing">↧</a>
     <div id="closing">
       <section>
         <p>
