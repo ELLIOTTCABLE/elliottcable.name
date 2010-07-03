@@ -181,6 +181,7 @@
         aside#topics:empty { visibility: hidden; }
         aside#topics > * { font-size: 75%; }
         
+        aside#topics li { padding: 0.1em 0em; }
         aside#topics li strong:after            { content: ","; }
         aside#topics li strong:last-child:after { content: ""; }
         aside#topics li strong { opacity: 0.5; }
@@ -203,11 +204,12 @@
           margin: 0.5em -1.375em;
           
           border-left: 0.25em solid rgba(0, 0, 0, 0.125);
+          
+          -webkit-transition: opacity 0.333s ease;
         }
         section > ul li > span { display: block; }
         
-        section > ul li.irrelevant { display: none; }
-        section > ul:empty { display: block; }
+        section > ul li.irrelevant { opacity: 0.05; }
         
         section > ul li.mastery     > span:before { content: "Mastery of "; }
         section > ul li.familiarity > span:before { content: "Familiarity with "; }
