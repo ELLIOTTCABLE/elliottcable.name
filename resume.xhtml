@@ -205,6 +205,9 @@
         }
         section > ul li > span { display: block; }
         
+        section > ul li.irrelevant { display: none; }
+        section > ul:empty { display: block; }
+        
         section > ul li.mastery     > span:before { content: "Mastery of "; }
         section > ul li.familiarity > span:before { content: "Familiarity with "; }
         section > ul li.competency  > span:before { content: "Competency with "; }
@@ -231,6 +234,110 @@
           
           document.getElementsByTagNameNS(xmlNS, 'head')[0].appendChild(ga);
         })();
+      ]]>
+    </script>
+    <script type="text/javascript">
+      <![CDATA[
+        /*
+         * classList.js: Implements a cross-browser element.classList getter.
+         * 2010-2-14
+         *
+         * By Eli Grey, http://eligrey.com
+         * Public Domain.
+         * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
+         */
+        "use strict";
+        if (typeof Element !== "undefined") {
+        (function () {
+        var classListProp = "classList";
+        if (!Element.prototype.hasOwnProperty(classListProp)) {
+            var trim = /^\s+|\s+$/g,
+            setClasses = function (elem, classes) {
+                elem.className = classes.join(" ");
+            },
+            checkAndGetIndex = function (classes, token) {
+                if (token === "") {
+                    throw "SYNTAX_ERR";
+                }
+                if (/\s/.test(token)) {
+                    throw "INVALID_CHARACTER_ERR";
+                }
+
+                return classes.indexOf(token);
+            },
+            classListGetter = function () {
+                var elem = this,
+                classes  = elem.className.replace(trim, "").split(/\s+/);
+                return {
+                    length: classes.length,
+                    item: function (i) {
+                        return classes[i] || null;
+                    },
+                    contains: function (token) {
+                        return checkAndGetIndex(classes, token) !== -1;
+                    },
+                    add: function (token) {
+                        if (checkAndGetIndex(classes, token) === -1) {
+                            classes.push(token);
+                            this.length = classes.length;
+                            setClasses(elem, classes);
+                        }
+                    },
+                    remove: function (token) {
+                        var index = checkAndGetIndex(classes, token);
+                        if (index !== -1) {
+                            classes.splice(index, 1);
+                            this.length = classes.length;
+                            setClasses(elem, classes);
+                        }
+                    },
+                    toggle: function (token) {
+                        if (checkAndGetIndex(classes, token) === -1) {
+                            this.add(token);
+                        } else {
+                            this.remove(token);
+                        }
+                    },
+                    toString: function () {
+                        return elem.className;
+                    }
+                };
+            };
+
+            if (Object.defineProperty) {
+                Object.defineProperty(Element.prototype, classListProp, { get: classListGetter, enumerable: true });
+            } else if (Object.prototype.__defineGetter__) {
+                Element.prototype.__defineGetter__(classListProp, classListGetter);
+            }
+        }
+        }());
+        }
+      ]]>
+    </script>
+    <script type="text/javascript">
+      <![CDATA[
+        focusTopic = function (kind) {
+          var topics = document.querySelector("#topics"),
+                list =   topics.querySelector("ul"),
+             newList = document.importNode(list, false)
+          
+          Array.prototype.forEach.call(document.querySelectorAll("section > ul li."+kind),
+            function (element) {
+              var elementCopy = document.importNode(element.querySelector("span strong"), true),
+                     listItem = document.createElementNS(document.documentElement.getAttribute("xmlns"), "li")
+              
+              element.classList.remove("irrelevant")
+              
+               newList.appendChild(listItem)
+              listItem.appendChild(elementCopy)
+            })
+          
+          topics.removeChild(list)
+          topics.appendChild(newList)
+          
+          Array.prototype.forEach.call(document.querySelectorAll("section > ul li:not(."+kind+")"),
+            function (element) { element.classList.add("irrelevant") })
+        }
       ]]>
     </script>
   </head>
@@ -260,18 +367,18 @@
         </p>
       </section>
       <nav id="focus"><ul>
-        <li><a href="#">design</a></li>
-        <li><a href="#">systems architecture</a></li>
-        <li><a href="#">administration</a></li>
-        <li><a href="#">desktop</a></li>
-        <li><a href="#">web development</a></li>
+        <li><a href="" onclick="focusTopic('design'); return false;">design</a></li>
+        <li><a href="" onclick="focusTopic('systems'); return false;">systems architecture</a></li>
+        <li><a href="" onclick="focusTopic('admin'); return false;">administration</a></li>
+        <li><a href="" onclick="focusTopic('desktop'); return false;">desktop</a></li>
+        <li><a href="" onclick="focusTopic('web'); return false;">web development</a></li>
       </ul></nav>
       <section class="systems web admin desktop">
         <aside id="topics"><ul>
           <li><strong>API design</strong></li>
           <li><strong>BDD</strong></li>
           <li><strong>Ruby</strong></li>
-          <li><strong>C99</strong></li>
+          <li><strong>C</strong></li>
           <li><strong>JavaScript</strong></li>
           <li><strong>node.js</strong></li>
           <li><strong>git</strong></li>
@@ -299,9 +406,9 @@
           <li class="systems web desktop mastery"><span><strong><abbr title="behaviour-driven development">BDD</abbr></strong> techniques</span></li>
           <li class="systems web admin mastery"><span><strong><a href="http://www.ruby-lang.org/en" title="Ruby Programming Language">Ruby</a></strong></span></li>
           <li class="web competency"><span><strong><a href="http://rubyonrails.org/" title="Ruby on Rails">Ruby on Rails</a></strong> and other Ruby web frameworks</span></li>
-          <li class="systems admin mastery"><span><strong>C99</strong></span></li>
+          <li class="systems admin mastery"><span>plain <strong>C</strong></span></li>
           <li class="systems admin competency"><span><strong>C++</strong></span></li>
-          <li class="systems web mastery"><span><strong>JavaScript</strong></span></li>
+          <li class="systems web design mastery"><span><strong>JavaScript</strong></span></li>
           <li class="systems web familiarity"><span><strong><a href="http://nodejs.org/" title="node.js">node.js</a></strong></span>
             <p>
               I’ve <a href="http://github.com/ry/node/commit/52f088b">been in on</a> the node.js party since the
