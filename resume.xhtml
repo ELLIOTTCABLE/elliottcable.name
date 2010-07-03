@@ -331,8 +331,6 @@
               var elementCopy = document.importNode(element.querySelector("span strong"), true),
                      listItem = document.createElementNS(document.documentElement.getAttribute("xmlns"), "li")
               
-              element.classList.remove("irrelevant")
-              
                newList.appendChild(listItem)
               listItem.appendChild(elementCopy)
             })
@@ -340,6 +338,8 @@
           if (list) topics.removeChild(list)
           topics.appendChild(newList)
           
+          Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li."+kind),
+            function (element) { element.classList.remove("irrelevant") })
           Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li:not(."+kind+")"),
             function (element) { element.classList.add("irrelevant") })
         }
