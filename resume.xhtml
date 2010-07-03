@@ -33,37 +33,29 @@
           
           border: 0px solid black;
           
-          border-bottom-width: 0.15em;
-          border-top-width: 0.15em;
-          
-        /*-webkit-border-top-left-radius:     0.25em;
-          -webkit-border-top-right-radius:    0.25em;
-             -moz-border-radius-topleft:      0.25em;
-             -moz-border-radius-topright:     0.25em;
-                  border-top-left-radius:     0.25em;
-                  border-top-right-radius:    0.25em;*/
-          -webkit-border-radius: 0.25em;
-             -moz-border-radius: 0.25em;
-                  border-radius: 0.25em;
-          
+          border: 0px solid rgba(0, 0, 0, 0.1);
+          border-width: 0.15em 0px;
+          -webkit-border-radius: 3px;
+             -moz-border-radius: 3px;
+                  border-radius: 3px;
           
           text-decoration: none;
           color: inherit;
         }
         
-        a               { border-color: #FFCCE5; }
-        a:hover         {        color: #FFCCE5; background-color: rgba(0, 0, 0, 0.75); }
-        a:visited       { border-color: #C0B2FF; }
-        a:visited:hover {        color: #C0B2FF; background-color: rgba(0, 0, 0, 0.75); }
+        a               { border-color: rgba(255, 204, 229, 0.1); }
+        a:hover         {        color: #FFCCE5;            background-color: rgba(0, 0, 0, 0.75); }
+        a:visited       { border-color: rgba(0, 0, 0, 0.9) !important; }
+        a:visited:hover {        color: rgba(0, 0, 0, 0.1); background-color: rgba(0, 0, 0, 0.75); }
         
         em { font-style: normal; }
         *:not(em) > em {
           padding: 0.1em 0.25em 0.1em 0.25em;
           margin: 0px -0.25em 0px -0.25em;
           
-          -webkit-border-radius: 0.333em;
-             -moz-border-radius: 0.333em;
-                  border-radius: 0.333em;
+          -webkit-border-radius: 3px;
+             -moz-border-radius: 3px;
+                  border-radius: 3px;
           
           background-color: rgba(217, 255, 127, 0.5);
         }
@@ -254,10 +246,9 @@
       <section>
         <header><h2>Objective</h2></header>
         <p>
-          Elliott is interested in providing the <em>connective glue</em> necessary within <em><em>every</em>
-          team</em>. His wide areas of interest imply that he can “speak the language” of many and varied technical
-          fields. He'll be useful <em>anywhere</em> there are <em>new things to be created</em>.
-          <span class="smiley">:)</span>
+          Elliott is interested in providing the connective glue necessary within every team. His wide areas of
+          interest imply that he can “speak the language” of many and varied technical fields. He'll be useful
+          anywhere there are <em>new things to be created</em>. <span class="smiley">:)</span>
         </p>
       </section>
     </div><a class="next" href="#skills">↓</a>
@@ -267,8 +258,8 @@
         <p>
           I’m familiar with <em><em>quite</em> a lot</em> of tools, programming languages, systems, and frameworks.
           To be honest, I’m a little obsessive about learning new things; so I’ve done my best to keep this section
-          as <em>short</em> and <em>relevant</em> as possible. That is, however, a lofty goal, given how much I
-          know… so please, keep an <em>open mind</em>! <span class="smiley">;)</span>
+          as short and relevant as possible. That is, however, a lofty goal, given how much I
+          know… so please, keep an open mind! <span class="smiley">;)</span>
         </p>
       </section>
       <nav id="focus"><ul>
@@ -303,84 +294,86 @@
         <ul>
           <li class="systems web mastery"><span><strong>API design</strong> and abstractive programming techniques</span>
             <p>
-              I’ve written hundreds of distinct libraries in more languages than I can count. I tend to abstract
-              <em>everything</em> into portable libraries; it enables code reuse (upon which I heavily depend.)
+              I’ve written <a href="http://github.com/elliottcable/repositories">hundreds of distinct libraries</a>
+              in more languages than I can count. I tend to abstract everything into portable libraries; it
+              enables code reuse (upon which I heavily depend for my productivity.)
             </p>
           </li>
           <li class="systems web desktop mastery"><span><strong><abbr title="behaviour-driven development">BDD</abbr></strong> techniques</span></li>
-          <li class="systems web admin mastery"><span><strong>Ruby</strong></span></li>
-          <li class="web competency"><span><strong>Ruby on Rails</strong> and other Ruby web frameworks (Sinatra, Camping)</span></li>
+          <li class="systems web admin mastery"><span><strong><a href="http://www.ruby-lang.org/en" title="Ruby Programming Language">Ruby</a></strong></span></li>
+          <li class="web competency"><span><strong><a href="http://rubyonrails.org/" title="Ruby on Rails">Ruby on Rails</a></strong> and other Ruby web frameworks</span></li>
           <li class="systems admin mastery"><span><strong>C99</strong></span></li>
           <li class="systems admin competency"><span><strong>C++</strong></span></li>
           <li class="systems web mastery"><span><strong>JavaScript</strong></span></li>
-          <li class="systems web familiarity"><span><strong>Node.js</strong></span>
+          <li class="systems web familiarity"><span><strong><a href="http://nodejs.org/" title="node.js">node.js</a></strong></span>
             <p>
-              I’ve been in on the Node party since the very beginning. The moment I started digging into it, I knew
-              it, and things like it, was the future of web development. Asynchronicity is where it’s at!
-              <span class="smiley">:D</span>
+              I’ve <a href="http://github.com/ry/node/commit/52f088b">been in on</a> the node.js party since the
+              very beginning. The moment I started digging into it, I knew it, and things like it, was the future
+              of web development. Asynchronicity is where it’s at! <span class="smiley">:D</span>
             </p>
           </li>
-          <li class="systems web admin mastery"><span><strong>git</strong>, granular commit strategies, branch-driven development</span></li>
-          <li class="systems web admin familiarity"><span><strong>Subversion</strong></span></li>
-          <li class="web admin competency"><span>traditional relational <strong>databases</strong></span></li>
-          <li class="web admin familiarity"><span>exotic backend technologies (such as <strong>Redis</strong>)</span>
+          <li class="systems web admin mastery"><span><strong><a href="http://git-scm.com/" title="Git - Fast Version Control System">git</a></strong>, granular commit strategies, branch-driven development</span></li>
+          <li class="systems web admin familiarity"><span><strong><a href="http://subversion.tigris.org/" title="subversion.tigris.org">Subversion</a></strong></span></li>
+          <li class="web admin competency"><span>traditional <a href="http://www.postgresql.org/" title="PostgreSQL: The world's most advanced open source database">relational <strong>databases</strong></a></span></li>
+          <li class="web admin familiarity"><span>exotic backend technologies (such as <strong><a href="http://code.google.com/p/redis/" title="redis - Project Hosting on Google Code">Redis</a></strong>)</span>
             <p>
               Redis is another technology that quickly caught my eye. I expect to find many wonderful uses for
               this tool in quite a diverse array of projects; I find it plays especially well with Node.js.
             </p>
           </li>
           <li class="systems admin desktop mastery"><span><strong>Objective-C</strong></span></li>
-          <li class="desktop familiarity"><span><strong>Cocoa</strong> and Xcode</span></li>
-          <li class="systems admin desktop mastery"><span><strong>Mac OS X</strong> and its BSD subsystems</span>
+          <li class="desktop familiarity"><span><strong><a href="http://developer.apple.com/cocoa/" title="Cocoa">Cocoa</a></strong> and Xcode</span></li>
+          <li class="systems admin desktop mastery"><span><strong><a href="http://www.apple.com/macosx/technology/" title="Apple - Mac OS X - New technologies in Snow Leopard">Mac OS X</a></strong> and its BSD subsystems</span>
             <p>
               I’ve been using OS X and Apple’s hardware for half a decade, and I’ve always had a <em>hacker’s
-              spirit</em>. There’s really not a lot that I <em>don’t</em> know about them, anymore.
+              spirit</em>. There’s really not a lot that I don’t know about them, anymore.
             </p>
           </li>
-          <li class="systems admin desktop mastery"><span>Linux systems (primarily <strong>Arch Linux</strong>, CentOS) and UNIX philosophies</span>
+          <li class="systems admin desktop mastery"><span>Linux systems (primarily <strong><a href="http://archlinux.org/" title="Arch Linux">Arch Linux</a></strong>, <a href="http://www.centos.org/" title="www.centos.org - The Community ENTerprise Operating System">CentOS</a>) and UNIX philosophies</span>
             <p>
               While I’m an OS X devotee, a properly tuned and maintained Linux system can easily be just as
-              beautiful. I <em>love</em> to create and maintain such systems.
+              beautiful. I love to create and maintain such systems.
             </p>
           </li>
-          <li class="web admin mastery"><span><strong>Amazon EC2</strong>’s APIs</span>
+          <li class="web admin mastery"><span><strong><a href="http://aws.amazon.com/ec2/" title="Amazon Elastic Compute Cloud (Amazon EC2)">Amazon EC2</a></strong>’s APIs</span>
             <p>
-              Cloud computing (all silly buzz aside) really is <em>the future</em>; and Amazon was, essentially,
+              Cloud computing (all silly buzz aside) <em>really is the future</em>; and Amazon was, essentially,
               there first (at least, on that sort of large scale.) I’ve been using them since 2007, and tend to
               work ephemeral cloud-based instances into aspects of many of my tasks and projects.
             </p>
           </li>
           <li class="admin mastery"><span><strong>sysadmin tools</strong> (SSH, vim, top, sed/AWK)</span></li>
-          <li class="systems admin familiarity"><span><strong>shell scripting</strong> techniques (zsh, bash)</span></li>
+          <li class="systems admin familiarity"><span><strong>shell scripting</strong> techniques (<a href="http://www.zsh.org/" title="Zsh">zsh</a>, bash)</span></li>
         </ul>
       </section>
       <section class="design">
         <p>
-          While I may be primarily a programmer, I have a taste for <em>clean, <em>minimalist</em> design</em>.
+          While I may be primarily a programmer, I have a taste for clean, minimalist design.
           There’s a reason I use Apple computers and software, despite my comprehensive knowledge of more ‘true’
           UNIX systems. My design skills will bring a touch of elegance to your development project that may
-          otherwise be lacking; a feel for <em>putting the user’s experience <em>first</em></em> (whether that
+          otherwise be lacking; a feel for <em>putting the <em>user’s experience</em> first</em> (whether that
           ‘user’ be a visitor to your website, or a developer applying your APIs to some task.)
         </p>
         <ul>
-          <li class="web design mastery"><span><strong>HTML5</strong> and associated technologies</span></li>
-          <li class="web design mastery"><span><strong>XHTML5</strong> with <strong>SVG</strong></span>
+          <li class="web design mastery"><span><strong><a href="http://diveintohtml5.org/" title="Dive Into HTML 5">HTML5</a></strong> and associated technologies</span></li>
+          <li class="web design mastery"><span><strong><a href="http://www.w3.org/TR/html5/the-xhtml-syntax.html" title="9 The XHTML syntax &#8212; HTML5">XHTML5</a></strong> with <strong>SVG</strong></span>
             <p>
               Yes, I realize that ‘XHTML5’ is simply HTML5 serialized as XML. I feel that the distinction is,
-              however, fairly important. I believe nesting SVG and XHTML offers some of the <em>most interesting
-              design solutions</em> we’ve seen in the last decade.
+              however, fairly important. I believe nesting SVG and XHTML offers some of the most interesting
+              design solutions we’ve seen in the last decade.
             </p>
           </li>
-          <li class="design mastery"><span><strong>CSS3</strong></span></li>
-          <li class="web design familiarity"><span>the <strong>HAML</strong> dynamic-markup system</span></li>
-          <li class="design mastery"><span>the <strong>LESS</strong> and <strong>SASS</strong> CSS pre-compilers</span></li>
-          <li class="design competency"><span><strong>MooTools</strong>, modern dynamic-HTML techniques, and the <strong>DOM</strong></span></li>
+          <li class="design mastery"><span><strong><a href="http://www.w3.org/Style/CSS/current-work" title="CSS: Current Work">CSS3</a></strong></span></li>
+          <li class="web design familiarity"><span>the <strong><a href="http://haml-lang.com/" title="#haml">HAML</a></strong> dynamic-markup system</span></li>
+          <li class="design mastery"><span>the <strong><a href="http://lesscss.org/" title="LESS - Leaner CSS">LESS</a></strong> and <strong><a href="http://sass-lang.com/" title="Sass - Syntactically Awesome Stylesheets">SASS</a></strong> CSS pre-compilers</span></li>
+          <li class="web design competency"><span><strong><a href="http://mootools.net/" title="MooTools - a compact javascript framework">MooTools</a></strong>, <strong><a href="http://jquery.com/" title="jQuery: The Write Less, Do More, JavaScript Library">jQuery</a></strong>, and other client-side JavaScript frameworks</span></li>
+          <li class="web design familiarity"><span>modern dynamic-HTML techniques, the <strong>DOM</strong>, and “<strong>AJAX</strong>”</span></li>
           <li class="design mastery"><span><strong>minimalism</strong> and <strong>precision design</strong> theory</span></li>
           <li class="design"><span>Obsession with <strong>typography</strong> and <strong>negative space</strong></span>
             <p>
               I love beautiful type. I find it extremely gratifying to see a page that one’s eyes can just… drink
               in; a page begging to be absorbed. Honestly put, I believe typography to be the <em>single most
-              important element</em> of any design; after all, <em>content is king</em>, right?
+              important element</em> of any design; after all, ‘content is king,’ right?
             </p>
           </li>
         </ul>
@@ -391,8 +384,8 @@
         <header><h2>Miscellaneous</h2></header>
         <p>
           Finally, while these aren’t exactly capable of fitting into either of the above categories, I feel they
-          are relevant enough to merit inclusion. They give you an idea of <em>who I am</em>, which is critical to
-          understanding whether or not I’m a match for <em>your team</em>.
+          are relevant enough to merit inclusion. They give you an idea of <em>who I am</em>, which is critical
+          to understanding whether or not I’m a match for your team.
         </p>
         <ul>
           <li>Born and raised in <strong>Anchorage, Alaska</strong></li>
@@ -400,15 +393,6 @@
           <li>Attained rank of <strong>Eagle Scout</strong> in the Boy Scouts of America</li>
           <li>Retains a taste and talent for <strong>photography</strong></li>
         </ul>
-        <p>
-          In addition, I thought it apposite to include a few of these buzzwords in my résumé: First off, yes,
-          <em>I can “do AJAX.”</em> Even though that’s an <strong>absolutely</strong> stupid name for what is,
-          essentially, asynchronous JSON resources… Second, I’m capable of participating in “Agile” software
-          development practices—I also like a bowl of SCRUM with half’n’half for breakfast. Seriously, though, I
-          don’t put much stock in any development system or theory which doesn’t begin with “<em>I don’t care</em>
-          how you do it, just make <em>awesome stuff,</em> that <em>works great,</em> and is <em>easy to use.”</em>
-          After all, that’s all that matters, in the long run, isn’t it?
-        </p>
       </section>
     </div><a class="next" href="#employment-education">↓</a>
     <div id="employment-education">
