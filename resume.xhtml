@@ -27,13 +27,13 @@
         
         /* ### Inline textual elements */
         
+        /* This is horribly broken. I can’t make `rgba()`s inside `a:visited` and `a` work properly in WebKit!
+           Hence, I’m using a screencap’d, hardcoded, colour… instead of the appropriate colour with an alpha. */
         a {
           padding: 0.1em 0.25em 0.1em 0.25em;
           margin: 0px -0.25em 0px -0.25em;
           
-          border: 0px solid black;
-          
-          border: 0px solid rgba(0, 0, 0, 0.1);
+          border: 0px solid #FFCCE5;
           border-width: 0.15em 0px;
           -webkit-border-radius: 3px;
              -moz-border-radius: 3px;
@@ -42,11 +42,11 @@
           text-decoration: none;
           color: inherit;
         }
+        a:hover         { border-color: #000000; background-color: rgba(0, 0, 0, 0.75); color: #FFCCE5; }
         
-        a               { border-color: rgba(255, 204, 229, 0.1); }
-        a:hover         {        color: #FFCCE5;            background-color: rgba(0, 0, 0, 0.75); }
-        a:visited       { border-color: rgba(0, 0, 0, 0.9) !important; }
-        a:visited:hover {        color: rgba(0, 0, 0, 0.1); background-color: rgba(0, 0, 0, 0.75); }
+      /*a:visited       { border-color: rgba(0, 0, 0, 0.05); }*/
+        a:visited       { border-color: #d0f0d0; }
+        a:visited:hover { border-color: #000000; background-color: rgba(0, 0, 0, 0.75); color: #FFCCE5; }
         
         em { font-style: normal; }
         *:not(em) > em {
