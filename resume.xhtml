@@ -180,8 +180,9 @@
         }
         aside#topics:empty { visibility: hidden; }
         aside#topics > * { font-size: 75%; }
+        aside#topics > ul:before { content: "Topics:"; display: block; margin-bottom: 0.5em; font-weight: 900; }
         
-        aside#topics li { padding: 0.1em 0em; }
+        aside#topics li { padding: 0.1em 0px; }
         aside#topics li strong:after            { content: ","; }
         aside#topics li strong:last-child:after { content: ""; }
         aside#topics li strong { opacity: 0.5; }
