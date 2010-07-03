@@ -127,24 +127,28 @@
           padding: 0em 0.917em;
           margin: 0em -1.583em;
           
-          border-left: 0.666em solid rgba(0, 0, 0, 0.50);
+          border-left: 0.666em solid rgba(0, 0, 0, 0.75);
         }
         
         /* ### Next jumps */
         a.next {
-          display: block;
-          margin: auto;
+          display: inline-block;
           
           background: none;
           border: none;
           
-          color: rgba(0, 0, 0, 0.5);
-          font-size: 500%;
+          color: rgba(0, 0, 0, 0.333);
           line-height: 1.0;
-          text-align: center;
         }
-        a.next:hover {
-          color: rgba(0, 0, 0, 0.9);
+        a.next:hover { color: rgba(0, 0, 0, 0.9); }
+        
+        body > a.next {
+          float: left;
+          display: block;
+          margin: 0px;
+          margin-left: -0.920em;
+          
+          font-size: 350%;
         }
         
         /* ### List focus */
@@ -252,7 +256,7 @@
           interest imply that he can “speak the language” of many and varied technical fields. He'll be useful
           anywhere there are <em>new things to be created</em>. <span class="smiley">:)</span>
         </p>
-        <p>Click the arrow below to begin!</p>
+        <p>Click the <a class="next" href="#skills">↓</a> to begin!</p>
       </section>
     </div><a class="next" href="#skills">↓</a>
     <div id="skills">
