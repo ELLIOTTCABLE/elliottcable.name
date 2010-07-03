@@ -477,6 +477,287 @@
           </li>
         </ul>
       </section>
+    </div><a class="next" href="#portfolio">↓</a>
+    <div id="portfolio">
+      <section>
+        <header><h2>Portfolio</h2></header>
+        <p>
+          I create things. I create a <strong>lot</strong> of things. I produce tons of designs, and I write an
+          unbelievably large quantity of code. I <a href="http://tau.pe/16522397951">recently rang it up</a>:
+          approximately as of this writing, among the 23 most-recently active of my ~100 repositories, I had
+          nearly <em><em>100,000 lines</em> of impact</em>, across around <em><em>2,000 commits</em></em>.
+        </p>
+        <p>Seriously. That’s a lot of code.</p>
+        <p>
+          In addition to that, I don’t write a lot of code I dislike: I’m an extreme perfectionst, possibly even
+          OCD in my devotion to creating beautiful code; thus, I found it very difficult to select a reasonably
+          small selection of examples of my work. I <strong>strongly</strong> encourage you to peruse the rest of
+          my <a href="http://github.com/elliottcable" title="elliottcable's Profile - GitHub">public GitHub repositories</a>,
+          if only because I’m extremely proud of most of the things presented there.
+        </p>
+        <p>
+          That said; the following are a few of my most interesting or impressive productions; I anticipate them
+          providing you with a clear overview of my style, abilities, and taste.
+        </p>
+      </section>
+      <section>
+        <header><h3><a href="http://github.com/elliottcable/Paws.o">Paws.o</a> and <a href="http://github.com/elliottcable/Paws.js">Paws.js</a></h3></header>
+        <p>
+          My latest and most ambitions open-source project to date, Paws, is a new sort of programming lanuage,
+          designed from the ground up with an eye for heavily distributed codebases oriented towards the web.
+          It’s massively concurrent, and extremely friendly towards asynchronicity; heavily inspired by
+          JavaScript/<a href="http://nodejs.org/" title="node.js">node.js</a> in spirit, as well as
+          <a href="http://www.ruby-lang.org/en" title="Ruby Programming Language">Ruby</a> and
+          <a href="http://iolanguage.com/" title="io">Io</a> in style.
+        </p>
+        <p>
+          This particular project has broadend my ANSI C horizons farther than I ever expected to take them. As
+          some mad hybrid between a designer and a developer, I wouldn’t expect myself delving this deep into the
+          stack; however, it’s been a fortunate turn of events, as I’ve discovered a deep love for C itself, as
+          well as low-level systems architecture.
+        </p>
+        <ul>
+          <li><code><a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Paws.c#L32-94">/Source/Paws.o/Paws.c, lines 32-94</a></code>
+            <p>
+              As usual, I’m heavy on the conceptual documentation; I love to explain *why* I’ve structured some
+              part of the code the way I did, in hopes that some reader will learn something useful from the
+              sweat and love I poured into creating that structure.
+            </p>
+          </li>
+          <li><code><a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Types/list/list.c#L17-47">/Source/Paws.o/Types/list/list.c</a></code>
+            <p>
+              This is the declaration of one of Paws’ most basic datatypes, <code>infrastructure list</code>.
+              This particular snippet demonstrates my fairly unique style of C, revolving around
+              <code>struct</code>s of function pointers to namespace “methods” relating to a specific datatype,
+              and pointers to <code>struct</code>s as the datatypes themselves. This also happens to exhibit my
+              proclivity towards abusing C’s preprocessor to modify the code.
+            </p>
+          </li>
+          <li><code><a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Types/Types.h#L29-53">/Source/Paws.o/Types/Types.h</a></code>
+            <p>
+              Another very unique element of my approach to large C projects; this is Paws’ <code>thing</code>
+              <code>struct</code>. It’s, essentially, an annotated pointer type, created to allow me to pass
+              around pointers to any of Paws’ core datatypes, without caring <strong>which</strong> datatype
+              we’re passing around. This is exactly the sort of system I absolutely love to engineer.
+            </p>
+          </li>
+          <li><code><a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Ancillary/Magazine/Magazine.c#L106-135">/Source/Paws.o/Ancillary/Magazine/Magazine.c</a></code>
+            <p>
+              Some more meaty implementation source-code, to counterbalance the declarations exhibited above.
+              This is one of the most inherently gnarly pieces of code in the Paws codebase as of this writing;
+              as such, I put quite a bit of work into making the implementation as absolutely clear as possible
+              to offset the inherent complexity of that system.
+            </p>
+          </li>
+          <li><code><a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Ancillary/Threading/Pool/Pool.c#L91-117">/Source/Paws.o/Ancillary/Threading/Pool/Pool.c</a> and <a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Ancillary/Threading/Thread/Thread.c#L97-175">/Source/Paws.o/Ancillary/Threading/Thread/Thread.c</a></code>
+            <p>
+              These files reveal my tendency to massively re-wrap any library which has an API I dislike; here, I
+              created a completely unique internal threading API (implemented as <code>Pool</code> and
+              <code>Thread</code>) to abstract away the (as I consider it, anyway) absolutely terrible
+              <code>pthread.h</code> API.
+            </p>
+          </li>
+          <li><code><a href="http://github.com/elliottcable/Paws.js/blob/Master/Packages/Paws.js/Things/list.js#L17-29">/Packages/Paws.js/Things/list.js</a></code>
+            <p>
+              The first example from the <code>Paws.js</code> codebase; this codebase is slowly starting to age,
+              as I’ve been focusing quite intensively on abstract Paws design and the <code>Paws.o</code>
+              implementation; however, there’s still plenty of good code in here. This snippet applies closures
+              and prototypal inheritance to positive effect, wrapping some data unique to a specific descendant
+              of the prototype object. It evidences my tendency to prefer to play to a language’s strengths,
+              rather than simply fall back to what I know: in this case, JavaScript’s prototypal inheritance
+              system is quite beautiful, and I use that to my advantage instead of relying upon a classist
+              abstraction.
+            </p>
+          </li>
+          <li><code><a href="http://github.com/elliottcable/Paws.js/blob/Master/Packages/Paws.js/Things/list.js#L133-162">/Packages/Paws.js/Things/list.js</a></code>
+            <p>
+              Another snippet exhibiting copious description of the reasoning behind an implementation prior to
+              the implementation itself.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <header><h3><a href="http://github.com/elliottcable/Solcounter.menu">Solcounter.menu</a></h3></header>
+        <p>
+          I’d developed a new timekeeping system with a few of my friends; I wrote this little
+          <code>NSMenuExtra</code> to display the current date and time in that timekeeping system, as a
+          replacement for OS X’s system clock menu-item. The project involved delving into Apple’s proprietary
+          binaries and private APIs to ascertain how to masquerade as a first-class citizen in the OS X menubar.
+          The project’s on hold, but it works sufficiently well as an example of my application of Objective-C
+          and Cocoa.
+        </p>
+        <ul>
+          <li><code><a href="http://github.com/elliottcable/Solcounter.menu/blob/Master/YRSolcounter.m#L33-47">/YRSolcounter.m</a></code>
+            <p>
+              I construct an <code>NSTextField</code> using the relevant Cocoa calls here; I very much tend to
+              avoid Interface Builder (in the same way that any experienced web designer avoids Dreamweaver) and
+              instead construct all of my interfaces in pure Objective-C source-code. This example also happens
+              to tweak that <code>NSTextField</code> to mimic a native OS X menubar item, down to the pixel; and
+              utilizes Snow Leopard’s CoreText APIs to bring in custom typeface data to render a logotype in the
+              middle of the view.
+            </p>
+          </li>
+          <li><code><a href="http://github.com/elliottcable/Solcounter.menu/blob/Master/Preference%20Pane/YRSolcounterPref.m#L36-51">/Preference Pane/YRSolcounterPref.m</a></code>
+            <p>
+              This code belongs to the <code>.preferencePane</code> that controls the menu extra; again, as I
+              discussed earlier, this echos my habit of wrapping APIs (in particular, this time, the private
+              Apple <code>NSMenuExtra</code> APIs) I dislike inside more pleasing wrappers, allowing for easier
+              control and access.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <header><h3><a href="http://github.com/elliottcable/Speck">Speck</a>, <a href="http://github.com/elliottcable/Spark">Spark</a>, and <a href="http://github.com/elliottcable/Slack">Slack</a></h3></header>
+        <p>
+          Another one of my very ambitious and interesting projects; I found that none of the testing or code
+          specification systems out there really facilitated the way I liked to develop. Specifically, they
+          required too much additional documentation of the operation of your code, when I felt that <em>the code
+            should be documenting itself</em>. This implementation was for Ruby, and involved a trio (or a
+            quartet, depending on how you look at it) of seperate projects.
+        </p>
+        <p>
+          This project really exhibits my taste for modularization; the core system itself was spread across only
+          two individual classes and files; all extraneous functionality was added to other libraries that
+          extended the core library.
+        </p>
+        <ul>
+          <li><code><a href="http://github.com/elliottcable/Speck/blob/master/lib/speck/check.rb#L26-40">/lib/speck/check.rb</a></code>
+            <p>
+              The majority of the meat of Speck’s implementation fits into these ~10 LoC. This piece of code is
+              quite exemplar of my programming style within Ruby; short, succinct. Nothing beyond what is
+              necessary.
+            </p>
+          </li>
+          <li><code><a href="http://github.com/elliottcable/Speck/blob/master/specifications/speck/check_specs.rb#L29-49">/specifications/speck/check_specs.rb</a></code>
+            <p>
+              A testament to its flexibility, I tested and specified Speck entirely, utilizing only the tools
+              provided within Speck itself.
+            </p>
+          </li>
+          <li><code><a href="http://github.com/elliottcable/Slack/blob/master/lib/slack/mixins/object.rb#L20-23">/lib/slack/mixins/object.rb</a></code></li>
+        </ul>
+      </section>
+      <section>
+        <header><h3><a href="http://github.com/elliottcable/taupe">tau.pe</a></h3></header>
+        <p>
+          One of my smallest and most interesting projects; this was the <em>first thing I actually made</em>
+          with node.js; it’s a simple, uniquely semantic, short-URL service for Twitter statuses.
+        </p>
+        <ul>
+          <li><code><a href="http://github.com/elliottcable/taupe/blob/master/server.js#L13-46">/server.js</a></code>
+            <p>
+              The entire server / application is only ~75 LoC; it ties into a Redis database to store and
+              retrieve tweet IDs and their respective owners. It then 301-redirects that URL to the relevant
+              tweet on <a href="http://twitter.com/">http://twitter.com/</a>.
+            </p>
+          </li>
+        </ul>
+        <header><h3><a href="http://github.com/elliottcable/Yarn">Yarn</a> and <a href="http://github.com/elliottcable/Percival">Percival</a></h3></header>
+        <p>
+          I created this pair of projects to allow me to intricately introspect JavaScript objects from node.js
+          at the command-line. Yarn provides an <strong>extremely</strong> robust styled-string printer that
+          utilizes ANSI escape codes to style output on the command line, while Percival is responsible for
+          actually introspecting JavaScript objects and datatypes, and turning them into Yarns for display.
+        </p>
+        <ul>
+          <li><code><a href="http://github.com/elliottcable/Yarn/blob/Master/lib/Yarn.js#L2-20">/lib/Yarn.js</a></code>
+            <p>
+              A very quintessential piece of my JavaScript; almost all of my libraries follow this basic form. I
+              rely on the prototypal nature of JavaScript to do my work for me, and focus on implementing the
+              aspects of my interfaces that I want to expose to the library’s user.
+            </p>
+          </li>
+          <li><code><a href="http://github.com/elliottcable/Percival/blob/Master/lib/Percival.js#L29-47">/lib/Percival.js</a></code>
+            <p>
+              This is the core of Percival’s functionality; it allows me to extend Percival with custom ‘lenses’
+              for any imaginable custom JavaScript object. I also bundle in ‘lenses’ for each of JavaScript’s
+              core datatypes. Yet again, presenting evidence to support my obsession with abstraction.
+            </p>
+          </li>
+        </ul>
+        <header><h3><a href="http://github.com/elliottcable/from">from</a></h3></header>
+        <p>
+          I didn’t like the direction node.js’s code-acquisition and packaging systems were developing last fall,
+          so I wrote a heavily asynchronous alternative. Simple.
+        </p>
+        <ul>
+          <li><code><a href="http://github.com/elliottcable/from/blob/Master/lib/from.js#L1-198">/lib/from.js</a></code>
+            <p>
+              Nearly a third of this project is commentary. I love talking about why I write code the way I write
+              it, as this serves to conclusively illustrate.
+            </p>
+          </li>
+          <li><code><a href="http://github.com/elliottcable/from/blob/Master/lib/from.js#L487">/lib/from.js</a></code>
+            <p>
+              This also happens to be some of the most callback-intensive code I’ve ever written, and helps to
+              illustrate the necessity of my current project, Paws.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <header><h3><a href="http://github.com/elliottcable/ArchLinux-AMIs">ArchLinux AMIs</a></h3></header>
+        <p>
+          A huge array of shell scripts, that work together with the Amazon EC2 APIs to remotely construct and
+          package up “AMIs” (Amazon Machine Images), built using my favourite ultra-elegant and clean Linux
+          distrobution: Arch Linux.
+        </p>
+        <ul>
+          <li><code><a href="http://github.com/elliottcable/ArchLinux-AMIs/blob/master/bundle.sh">/bundle.sh</a></code>
+            <p>
+              This is a single massive shell script that manages the host systems (instances) utilized during the
+              construction process. Other shell scripts from the project are executed by this script, remotely,
+              on those hosts, to preform the actual system construction and bundling. Far from the prettiest code
+              I’ve ever written, but what do you expect out of a shell script this monolithic and complex?
+              <span class="smiley">:]</span>
+            </p>
+          </li>
+        </ul>
+        <header><h3><a href="http://github.com/elliottcable/Nfoiled">Nfoiled</a></h3></header>
+        <p>
+          One of my older projects, which I’ve had to put on hold; this was a library (or perhaps, even,
+          framework) for developing command-line <strong>applications</strong>, a lá <code>irssi</code>. This was
+          some of my earliest Ruby code, but is still very abstracted, modular, and clean; I’ve come a long way,
+          but in a way, I haven’t really changed. <span class="smiley">;)</span>
+        </p>
+        <ul>
+          <li><code><a href="http://github.com/elliottcable/nfoiled/blob/master/lib/nfoiled/window.rb#L84-175">/lib/nfoiled/window.rb</a></code></li>
+        </ul>
+        <header><h3><a href="http://github.com/elliottcable/git-blog">git-blog</a></h3></header>
+        <p>
+          This is really beginning to dig into my personal precambrian: this is probably my most popular code
+          to-date, but it’s also some of my most disgusting. It’s simply a bundling of ad-hoc Rake tasks that
+          allow you to manage a blog inside a git repository.
+        </p>
+        <ul>
+          <li><code><a href="http://github.com/elliottcable/git-blog/blob/master/lib/git-blog.rb#L7-40">/lib/git-blog.rb</a></code></li>
+        </ul>
+      </section>
+      <section>
+        <header><h3><a href="http://github.com/elliottcable/it/blob/master/lib/it/environmented_proc.rb">EnvironmentedProc</a> and <a href="http://github.com/elliottcable/lobby">lobby</a></h3></header>
+        <p>
+          These are some of the oddest, most tricky, and interesting Ruby code I’ve ever written; I’ll let them
+          speak for themselves.
+        </p>
+        <ul>
+          <li><code><a href="http://github.com/elliottcable/it/blob/master/lib/it/environmented_proc.rb">/lib/it/environmented_proc.rb</a></code></li>
+          <li><code><a href="http://github.com/elliottcable/lobby/blob/master/lib/lobby.rb">/lib/lobby.rb</a></code></li>
+        </ul>
+        <header><h3>Other bits of interest</h3></header>
+        <ul>
+          <li><code><a href="http://github.com/elliottcable/rat/blob/master/lib/rat/command.rb">/lib/rat/command.rb</a></code></li>
+          <li><code><a href="http://github.com/elliottcable/jello/blob/master/lib/jello.rb">/lib/jello.rb</a></code></li>
+          <li><code><a href="http://github.com/elliottcable/launchdr/blob/master/lib/launchdr/launchd.rb">/lib/launchdr/launchd.rb</a></code></li>
+          <li><code><a href="http://github.com/elliottcable/typography.js/blob/master/js/typography.js#L118-133">/js/typography.js</a></code></li>
+          <li><code><a href="http://github.com/elliottcable/rdie-board/blob/master/lib/slice.rb">/lib/slice.rb</a></code></li>
+          <li><code><a href="http://github.com/elliottcable/tunnelr/blob/master/bin/tunnelr#L55-61">/bin/tunnelr</a></code></li>
+          <li><code><a href="http://github.com/elliottcable/xcode-git-versioner/blob/master/xcode-git-versioner.rb">/xcode-git-versioner.rb</a></code></li>
+          <li><code><a href="http://github.com/elliottcable/rdie/blob/master/lib/classist.rb">/lib/classist.rb</a></code></li>
+          <li><code><a href="http://github.com/elliottcable/rdie/blob/master/lib/attrist.rb">/lib/attrist.rb</a></code></li>
+        </ul>
+      </section>
     </div><a class="next" href="#history">↓</a>
     <div id="history">
       <section id="miscellaneous">
