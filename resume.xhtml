@@ -150,7 +150,7 @@
         
         /* ### Sections */
         
-        section, section > ul li { -webkit-transition: opacity 0.333s ease; }
+        section, section > ul li { -webkit-transition: opacity 0.333s ease, border-left-color 0.25s ease; }
         section.irrelevant:not(:hover), section > ul li.irrelevant:not(:hover) { opacity: 0.05; }
         
         /* ### Next jumps */
@@ -232,7 +232,6 @@
           margin: 0.5em -1.375em;
           
           border-left: 0.25em solid rgba(0, 0, 0, 0.125);
-          -webkit-transition: border-left-color 0.25s ease;
         }
         section > ul li:hover { border-left-color: rgba(0, 0, 0, 0.5); }
         section > ul li > span { display: block; }
