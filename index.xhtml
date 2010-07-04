@@ -96,8 +96,6 @@
         #header a#download > * { display: none; }
         
         #navigation {
-          display: none !important; /* Yay! Broken website! */
-          
           margin: 0px;
           
           font: 100 125%/1.6 "Diavlo";
@@ -113,6 +111,7 @@
           color: blue;
           text-shadow: none;
         }
+        #navigation li a.emphasized { background-color: rgba(0, 0, 255, 0.1);}
         #navigation li a:visited { color: black; }
         #navigation li a, #navigation li a:visited { text-shadow: none; }
         #navigation li a:hover { background: black; color: white; }
@@ -194,7 +193,7 @@
         <ul id="navigation">
           <li><a href="http://blog.elliottcable.name/">blog</a></li>
           <li><a href="http://by.elliottcable.name/">projects</a></li>
-          <li><a href="http://elliottcable.name/resume.xhtml">résumé</a></li>
+          <li><a href="http://elliottcable.name/resume.xhtml" class="emphasized">hire me!</a></li>
         </ul>
         <h1 class="title"><a class="url fn uid" rel="me openid.delegate" href="http://elliottcable.name">elliottcable</a></h1>
         <h2 class="subtitle">of <a class="org url" href="http://yreality.net" rel="me">yreality</a></h2>
