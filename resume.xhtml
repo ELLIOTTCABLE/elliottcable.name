@@ -185,7 +185,7 @@
         nav#focus.docked { position: fixed; top: 0px; z-index: 1000; }
         nav#focus.docked:hover { background: #444444; }
         
-        nav#focus > *:before { content: "Select a topic: "; font-weight: 600; }
+        nav#focus > *:before { content: "Select an area of focus: "; font-weight: 600; }
         nav#focus > ul, nav#focus > ul li { display: inline; }
         nav#focus > ul li:not(:nth-last-child(1)):not(:nth-last-child(2)):after { content: ","; }
         
@@ -423,7 +423,7 @@
       </section>
       <nav id="focus"><ul>
         <li><a href="" onclick="focusTopic('design'); return false;">design</a></li>
-        <li><a href="" onclick="focusTopic('systems'); return false;">systems architecture</a></li>
+        <li><a href="" onclick="focusTopic('architecture'); return false;">architecture</a></li>
         <li><a href="" onclick="focusTopic('admin'); return false;">administration</a></li>
         <li><a href="" onclick="focusTopic('desktop'); return false;">desktop</a></li>
         <li><a href="" onclick="focusTopic('web'); return false;">web development</a></li>
@@ -436,28 +436,28 @@
           know why, and then make it tick better.
         </p>
         <ul>
-          <li class="systems web mastery"><span><strong>API design</strong> and abstractive programming techniques</span>
+          <li class="architecture web mastery"><span><strong>API design</strong> and abstractive programming techniques</span>
             <p>
               I’ve written <a href="http://github.com/elliottcable/repositories">hundreds of distinct libraries</a>
               in more languages than I can count. I tend to abstract everything into portable libraries; it
               enables code reuse (upon which I heavily depend for my productivity.)
             </p>
           </li>
-          <li class="systems web desktop mastery"><span><strong><abbr title="behaviour-driven development">BDD</abbr></strong> techniques</span></li>
-          <li class="systems web admin mastery"><span><strong><a href="http://www.ruby-lang.org/en" title="Ruby Programming Language">Ruby</a></strong></span></li>
+          <li class="architecture web desktop mastery"><span><strong><abbr title="behaviour-driven development">BDD</abbr></strong> techniques</span></li>
+          <li class="architecture web admin mastery"><span><strong><a href="http://www.ruby-lang.org/en" title="Ruby Programming Language">Ruby</a></strong></span></li>
           <li class="web competency"><span><strong><a href="http://rubyonrails.org/" title="Ruby on Rails">Ruby on Rails</a></strong> and other Ruby web frameworks</span></li>
-          <li class="systems admin mastery"><span>plain <strong>C</strong></span></li>
-          <li class="systems admin competency"><span><strong>C++</strong></span></li>
-          <li class="systems web design mastery"><span><strong>JavaScript</strong></span></li>
-          <li class="systems web familiarity"><span><strong><a href="http://nodejs.org/" title="node.js">node.js</a></strong></span>
+          <li class="architecture admin mastery"><span>plain <strong>C</strong></span></li>
+          <li class="architecture admin competency"><span><strong>C++</strong></span></li>
+          <li class="architecture web design mastery"><span><strong>JavaScript</strong></span></li>
+          <li class="architecture web familiarity"><span><strong><a href="http://nodejs.org/" title="node.js">node.js</a></strong></span>
             <p>
               I’ve <a href="http://github.com/ry/node/commit/52f088b">been in on</a> the node.js party since the
               very beginning. The moment I started digging into it, I knew it, and things like it, was the future
               of web development. Asynchronicity is where it’s at! <span class="smiley">:D</span>
             </p>
           </li>
-          <li class="systems web admin mastery"><span><strong><a href="http://git-scm.com/" title="Git - Fast Version Control System">git</a></strong>, granular commit strategies, branch-driven development</span></li>
-          <li class="systems web admin familiarity"><span><strong><a href="http://subversion.tigris.org/" title="subversion.tigris.org">Subversion</a></strong></span></li>
+          <li class="architecture web admin mastery"><span><strong><a href="http://git-scm.com/" title="Git - Fast Version Control System">git</a></strong>, granular commit strategies, branch-driven development</span></li>
+          <li class="architecture web admin familiarity"><span><strong><a href="http://subversion.tigris.org/" title="subversion.tigris.org">Subversion</a></strong></span></li>
           <li class="web admin competency"><span>traditional <a href="http://www.postgresql.org/" title="PostgreSQL: The world's most advanced open source database">relational <strong>databases</strong></a></span></li>
           <li class="web admin familiarity"><span>exotic backend technologies (such as <strong><a href="http://code.google.com/p/redis/" title="redis - Project Hosting on Google Code">Redis</a></strong>)</span>
             <p>
@@ -465,15 +465,15 @@
               this tool in quite a diverse array of projects; I find it plays especially well with Node.js.
             </p>
           </li>
-          <li class="systems admin desktop familiarity"><span><strong>Objective-C</strong></span></li>
+          <li class="architecture admin desktop familiarity"><span><strong>Objective-C</strong></span></li>
           <li class="desktop competency"><span><strong><a href="http://developer.apple.com/cocoa/" title="Cocoa">Cocoa</a></strong> and Xcode</span></li>
-          <li class="systems admin desktop mastery"><span><strong><a href="http://www.apple.com/macosx/technology/" title="Apple - Mac OS X - New technologies in Snow Leopard">Mac OS X</a></strong> and its BSD subsystems</span>
+          <li class="architecture admin desktop mastery"><span><strong><a href="http://www.apple.com/macosx/technology/" title="Apple - Mac OS X - New technologies in Snow Leopard">Mac OS X</a></strong> and its BSD subsystems</span>
             <p>
               I’ve been using OS X and Apple’s hardware for half a decade, and I’ve always had a <em>hacker’s
               spirit</em>. There’s really not a lot that I don’t know about them, anymore.
             </p>
           </li>
-          <li class="systems admin desktop mastery"><span>Linux systems (primarily <strong><a href="http://archlinux.org/" title="Arch Linux">Arch Linux</a></strong>, <a href="http://www.centos.org/" title="www.centos.org - The Community ENTerprise Operating System">CentOS</a>) and UNIX philosophies</span>
+          <li class="architecture admin desktop mastery"><span>Linux systems (primarily <strong><a href="http://archlinux.org/" title="Arch Linux">Arch Linux</a></strong>, <a href="http://www.centos.org/" title="www.centos.org - The Community ENTerprise Operating System">CentOS</a>) and UNIX philosophies</span>
             <p>
               While I’m an OS X devotee, a properly tuned and maintained Linux system can easily be just as
               beautiful. I love to create and maintain such systems.
@@ -487,7 +487,7 @@
             </p>
           </li>
           <li class="admin mastery"><span><strong>sysadmin tools</strong> (SSH, vim, top, sed/AWK)</span></li>
-          <li class="systems admin familiarity"><span><strong>shell scripting</strong> techniques (<a href="http://www.zsh.org/" title="Zsh">zsh</a>, bash)</span></li>
+          <li class="architecture admin familiarity"><span><strong>shell scripting</strong> techniques (<a href="http://www.zsh.org/" title="Zsh">zsh</a>, bash)</span></li>
         </ul>
       </section>
       <section>
@@ -547,7 +547,7 @@
           as they pertain to programming and design.
         </p>
       </section>
-      <section class="systems web">
+      <section class="architecture web">
         <header><h3><a href="http://github.com/elliottcable/Paws.o">Paws.o</a> and <a href="http://github.com/elliottcable/Paws.js">Paws.js</a></h3></header>
         <p>
           My latest and most ambitions open-source project to date, Paws, is a new sort of programming lanuage,
@@ -624,7 +624,7 @@
           </li>
         </ul>
       </section>
-      <section class="systems web">
+      <section class="architecture web">
         <header><h3><a href="http://github.com/elliottcable/Speck">Speck</a>, <a href="http://github.com/elliottcable/Spark">Spark</a>, and <a href="http://github.com/elliottcable/Slack">Slack</a></h3></header>
         <p>
           Another one of my very ambitious and interesting projects; I found that none of the testing or code
@@ -671,7 +671,7 @@
           </li>
         </ul>
       </section>
-      <section class="systems desktop">
+      <section class="architecture desktop">
         <header><h3><a href="http://github.com/elliottcable/Yarn">Yarn</a> and <a href="http://github.com/elliottcable/Percival">Percival</a></h3></header>
         <p>
           I created this pair of projects to allow me to intricately introspect JavaScript objects from node.js
@@ -696,7 +696,7 @@
           </li>
         </ul>
       </section>
-      <section class="systems admin desktop">
+      <section class="architecture admin desktop">
         <header><h3><a href="http://github.com/elliottcable/ArchLinux-AMIs">ArchLinux AMIs</a></h3></header>
         <p>
           A huge array of shell scripts, that work together with the Amazon EC2 APIs to remotely construct and
@@ -715,7 +715,7 @@
           </li>
         </ul>
       </section>
-      <section class="systems desktop">
+      <section class="architecture desktop">
         <header><h3><code><a href="http://github.com/elliottcable/it/blob/master/lib/it/environmented_proc.rb">EnvironmentedProc</a></code> and <code><a href="http://github.com/elliottcable/lobby">Lobby</a></code></h3></header>
         <p>
           These are some of the oddest, most tricky, and interesting Ruby code I’ve ever written; I feel it’s
