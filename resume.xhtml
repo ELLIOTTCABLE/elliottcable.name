@@ -131,25 +131,21 @@
         }
         
         /* ### Next jumps */
-        a.next {
-          display: inline-block;
-          
-          background: none;
-          border: none;
-          
-          color: rgba(0, 0, 0, 0.333);
-          line-height: 1.0;
-        }
-        a.next:hover { color: rgba(0, 0, 0, 0.9); }
+        .next > a       { color: rgba(0, 0, 0, 0.333); background: none; border: none; line-height: 1.0; }
+        .next > a:hover { color: rgba(0, 0, 0, 0.9); }
         
-        body > a.next {
-          float: left;
+        /* To make this lay on top of the border in every browser, and across all sizes of text, I preform some
+           interesting trickery: I place the actual link in a bounding-box of normal font-size, and then utilize
+           em units to perfectly align that bounding-box on top of the border. Then, when I align the text to
+           the center of the bounding box, it is guaranteed to lie directly on top of the border. */
+        body > .next {
           display: block;
-          margin: 0px;
-          margin-left: -0.920em;
+          width: 5em;
+          margin-left: -3.70em;
           
-          font-size: 350%;
+          text-align: center;
         }
+        body > .next > a { font-size: 250%; }
         
         /* ### List focus */
         nav#focus {
@@ -362,9 +358,9 @@
           interest imply that he can “speak the language” of many and varied technical fields. He'll be useful
           anywhere there are <em>new things to be created</em>. <span class="smiley">:)</span>
         </p>
-        <p>Click the <a class="next" href="#skills">↓</a> to begin!</p>
+        <p>Click the <span class="next"><a href="#skills">↓</a></span> to begin!</p>
       </section>
-    </div><a class="next" href="#skills">↓</a>
+    </div><span class="next"><a href="#skills">↓</a></span>
     <div id="skills">
       <section>
         <header><h2>What I’ll Bring to Your Team</h2></header>
@@ -477,7 +473,7 @@
           </li>
         </ul>
       </section>
-    </div><a class="next" href="#portfolio">↓</a>
+    </div><span class="next"><a href="#skills">↓</a></span>
     <div id="portfolio">
       <section>
         <header><h2>Portfolio</h2></header>
@@ -758,7 +754,7 @@
           <li><code><a href="http://github.com/elliottcable/rdie/blob/master/lib/attrist.rb">/lib/attrist.rb</a></code></li>
         </ul>
       </section>
-    </div><a class="next" href="#history">↓</a>
+    </div><span class="next"><a href="#skills">↓</a></span>
     <div id="history">
       <section id="miscellaneous">
         <header><h2>Curriculum vitæ</h2></header>
@@ -788,7 +784,7 @@
           <li><strong>Grace Christian High School</strong>, Fall 2001—Spring 2006</li>
         </ul>
       </section>
-    </div><a class="next" href="#closing">↓</a>
+    </div><span class="next"><a href="#skills">↓</a></span>
     <div id="closing">
       <section>
         <p>
