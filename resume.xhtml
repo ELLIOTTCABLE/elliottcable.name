@@ -12,19 +12,18 @@
     <title>elliottcable’s résumé</title>
     <link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" type="text/html;charset=utf-8"/>
     
-    <link rel="stylesheet"
-      href="http://resources.yreality.net/Design/960/reset.css"
-      type="text/css;charset=utf-8"/>
+    <link rel="stylesheet" type="text/css;charset=utf-8"
+      href="http://resources.yreality.net/Design/960/reset.css"/>
+    <link rel="stylesheet" type="text/css"
+      href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight"/>
     <style>
       <![CDATA[
-        @import url('http://resources.yreality.net/Design/Typography/Typography.css') screen, print;
-        
         /* ========
         = General =
         =========*/
         
         body {
-          font: 300 14pt/1.55 Helvetica, sans-serif;
+          font: 300 14pt/1.55 "Helvetica", sans-serif;
           text-rendering: optimizeLegibility;
           -webkit-font-smoothing: antialiased;
         }
@@ -84,9 +83,11 @@
           margin-bottom: 1em;
         }
         
+        h1, h2, h3, h4 { font-family: "Yanone Kaffeesatz", "Helvetica", sans-serif; }
         h1 { font-size: 350%; line-height: 1.0; }
         h2 { font-size: 175%; line-height: 1.0; }
         h3 { font-size: 125%; line-height: 1.0; }
+        h4 { font-size: 105%; line-height: 1.0; }
         
         /* =========
         = Specific =
@@ -115,9 +116,8 @@
         #title > * {
           display: table-cell !important;
           vertical-align: middle !important;
-          
-          line-height: 1.0;
         }
+        #title > h1 { font-family: "Helvetica", sans-serif;}
         #title > #subtitle { opacity: 0.5; }
         #title > #subtitle:before { content: " — "; }
         #title > #subtitle > .extraordinaire { font-family: "Georgia", serif; font-style: italic; }
@@ -639,10 +639,10 @@
         </ul>
       </section>
       <section class="design web admin">
-        <header><h3><a href="http://github.com/elliottcable/taupe">tau.pe</a></h3></header>
+        <header><h3><a href="http://tau.pe">http://tau.pe</a> (<a href="http://github.com/elliottcable/taupe">source</a>)</h3></header>
         <p>
           One of my smallest and most interesting projects; this was the <em>first thing I actually made</em>
-          with node.js; it’s a simple, uniquely semantic, short-URL service for Twitter statuses.
+          with node.js; it’s a simple and uniquely semantic short-URL service for Twitter statuses.
         </p>
         <ul>
           <li><code><a href="http://github.com/elliottcable/taupe/blob/master/server.js#L13-46">/server.js</a></code>
