@@ -402,16 +402,18 @@
           
           window.onscroll = function(){
             if (!(focusNav.classList && focusNav.classList.contains("docked")) &&
-                (focusNav.offsetTop - document.querySelector('body').scrollTop < 0)) {
+                (focusNav.offsetTop - scrollTop() < 0)) {
               afterFocusNav.style.marginTop = "4.5em" // FIXME: This should pull the old value out, and increment
               focusNav.classList.add("docked") }
-            else if ((focusNav.classList && focusNav.classList.contains("docked")) &&
-                     document.querySelector('body').scrollTop <= position) {
+            else if ((focusNav.classList && focusNav.classList.contains("docked")) && scrollTop() <= position) {
               afterFocusNav.style.marginTop = margin
               focusNav.classList.remove("docked") }
           }
           
         }
+        
+        var scrollTop = function(){
+          return document.documentElement.scrollTop || document.documentElement.querySelector('body').scrollTop }
       ]]>
     </script>
   </head>
