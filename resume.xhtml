@@ -215,6 +215,7 @@
           margin: 0.5em -1.375em;
           
           border-left: 0.25em solid rgba(0, 0, 0, 0.125);
+          -webkit-transition: border-left-color 0.25s ease;
         }
         section > ul li:hover { border-left-color: rgba(0, 0, 0, 0.5); }
         section > ul li > span { display: block; }
@@ -223,10 +224,7 @@
         section > ul li.familiarity > span:before { content: "Familiarity with "; }
         section > ul li.competency  > span:before { content: "Competency with "; }
         
-        section > ul li > p {
-          padding-left: 1em;
-          font-size: 75%;
-        }
+        section > ul li > p { padding-left: 1em; font-size: 75%; }
       ]]>
     </style>
     <script type="text/javascript">
