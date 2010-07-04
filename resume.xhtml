@@ -21,15 +21,31 @@
       ]]>
     </style>
     <!-- <link rel="stylesheet" type="text/css"
-           href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight"/> -->
+           href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight,bold"/> -->
+    <!-- <link rel="stylesheet" type="text/css"
+           href="http://fonts.googleapis.com/css?family=Tangerine:regular,bold"/> -->
     <style type="text/css">
       <![CDATA[
         @font-face {
           font-family: 'Yanone Kaffeesatz';
           font-style: normal;
           font-weight: 200;
-          src: local('Yanone Kaffeesatz'), url('http://themes.googleusercontent.com/font?kit=We_iSDqttE3etzfdfhuPRWdYuNb9i97qInNKPYJgRwg') format('truetype');
-        }
+          src: local('Yanone Kaffeesatz'), url('http://themes.googleusercontent.com/font?kit=We_iSDqttE3etzfdfhuPRWdYuNb9i97qInNKPYJgRwg') format('truetype'); }
+        @font-face {
+          font-family: 'Yanone Kaffeesatz';
+          font-style: normal;
+          font-weight: 700;
+          src: local('Yanone Kaffeesatz'), url('http://themes.googleusercontent.com/font?kit=We_iSDqttE3etzfdfhuPRQL07A8tpHrkwi7BQtnqF-Q') format('truetype'); }
+        @font-face {
+          font-family: 'Tangerine';
+          font-style: normal;
+          font-weight: bold;
+          src: local('Tangerine'), url('http://themes.googleusercontent.com/font?kit=UkFsr-RwJB_d2l9fIWsx3vesZW2xOQ-xsNqO47m55DA') format('truetype'); }
+        @font-face {
+          font-family: 'Tangerine';
+          font-style: normal;
+          font-weight: normal;
+          src: local('Tangerine'), url('http://themes.googleusercontent.com/font?kit=_jMq7r9ahcBZZjpP8hftNA') format('truetype'); }
       ]]>
     </style>
     
@@ -115,9 +131,7 @@
           width: 35em;
           margin: auto;
           
-          /* These paddings are matched to those on list items and headers. See `li` and `h2`. */
           padding: 0em 0.917em;
-       /* margin: 0em -0.917em; */
           
           border-left: 0.666em solid rgba(0, 0, 0, 0.05);
           -webkit-border-top-left-radius: 7.50em;
@@ -125,19 +139,18 @@
         }
         
         /* ### Page’s primary title */
-        #title {
-          display: table !important;
-          margin: 2.5em 0px;
-          margin-right: -8em;
+        #title { margin: 2.5em 0px; margin-right: -8em; }
+        #title > * { display: inline; }
+        #title > h1 { font-family: "Helvetica", sans-serif; }
+        #title > #subtitle {
+          padding-left: 0.333em;
+          padding-right: 0.5em; /* To avoid clipping the exclamation point */
+          
+          font-family: "Tangerine", serif;
+          font-size: 225%;
+          
+          opacity: 0.5;
         }
-        #title > * {
-          display: table-cell !important;
-          vertical-align: middle !important;
-        }
-        #title > h1 { font-family: "Helvetica", sans-serif;}
-        #title > #subtitle { opacity: 0.5; }
-        #title > #subtitle:before { content: " — "; }
-        #title > #subtitle > .extraordinaire { font-family: "Georgia", serif; font-style: italic; }
         
         /* ### Section headers */
         section > header {
@@ -149,7 +162,6 @@
         }
         
         /* ### Sections */
-        
         section, section > ul li { -webkit-transition: opacity 0.333s ease, border-left-color 0.25s ease; }
         section.irrelevant:not(:hover), section > ul li.irrelevant:not(:hover) { opacity: 0.05; }
         
@@ -398,7 +410,7 @@
   <body>
     <header id="title">
       <h1>Elliott Cable</h1>
-      <div id="subtitle">librarian, architect, <span class="extraordinaire">sourcerer <strong>extraordinaire</strong>!</span></div>
+      <div id="subtitle">… sourcerer <strong>extraordinaire</strong>!</div>
     </header>
     <div id="objective">
       <section>
