@@ -168,7 +168,10 @@
         }
         
         /* ### Sections */
-        section, section > ul li { -webkit-transition: opacity 0.333s ease, border-left-color 0.25s ease; }
+        section, section > ul li {
+          -webkit-transition: opacity 0.333s ease, border-left-color 0.25s ease;
+             -moz-transition: opacity 0.333s ease, border-left-color 0.25s ease;
+        }
         section.irrelevant:not(:hover), section > ul li.irrelevant:not(:hover) { opacity: 0.05; }
         
         /* ### Next jumps */
@@ -194,7 +197,9 @@
           padding: 0px 2.5em;
           margin: 0px -2.5em;
           
-          background-color: rgba(0, 0, 0, 0.666); -webkit-transition: background-color 0.333s ease;
+          -webkit-transition: background-color 0.333s ease;
+             -moz-transition: background-color 0.333s ease;
+                              background-color: rgba(0, 0, 0, 0.666);
           color: white;
           text-align: center;
         }
