@@ -586,14 +586,14 @@
           itself, as well as designing and developing low‐level systems’ architecture.
         </p>
         <ul>
-          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Paws.c#L32-94">/Source/Paws.o/Paws.c</a></code>
+          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Paws.c#L32-94">/Source/Paws.o/Paws.c</a></code>
             <p>
               As usual, I’m heavy on the conceptual documentation; I love to explain *why* I’ve structured some
               part of the code the way I did, in hopes that some reader will learn something useful from the
               sweat and love I poured into creating that structure.
             </p>
           </li>
-          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Types/list/list.c#L17-47">/Source/Paws.o/Types/list/list.c</a></code>
+          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Types/list/list.c#L17-47">/Source/Paws.o/Types/list/list.c</a></code>
             <p>
               This is the declaration of one of Paws’ most basic datatypes, <code>infrastructure list</code>.
               This particular snippet demonstrates my fairly unique style of C, revolving around
@@ -602,7 +602,7 @@
               proclivity towards abusing C’s preprocessor to modify the code.
             </p>
           </li>
-          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Types/Types.h#L29-53">/Source/Paws.o/Types/Types.h</a></code>
+          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Types/Types.h#L29-53">/Source/Paws.o/Types/Types.h</a></code>
             <p>
               Another very unique element of my approach to large C projects; this is Paws’ <code>thing</code>
               <code>struct</code>. It’s, essentially, an annotated pointer type, created to allow me to pass
@@ -610,7 +610,7 @@
               we’re passing around. This is exactly the sort of system I absolutely love to engineer.
             </p>
           </li>
-          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Ancillary/Magazine/Magazine.c#L106-135">/Source/Paws.o/Ancillary/Magazine/Magazine.c</a></code>
+          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Ancillary/Magazine/Magazine.c#L106-135">/Source/Paws.o/Ancillary/Magazine/Magazine.c</a></code>
             <p>
               Some more meaty implementation source‐code, to counterbalance the declarations exhibited above.
               This is one of the most inherently gnarly pieces of code in the Paws codebase as of this writing;
@@ -618,7 +618,7 @@
               to offset the inherent complexity of that system.
             </p>
           </li>
-          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Ancillary/Threading/Pool/Pool.c#L91-117">/Source/Paws.o/Ancillary/Threading/Pool/Pool.c</a> and <a href="http://github.com/elliottcable/Paws.o/blob/Master/Source/Paws.o/Ancillary/Threading/Thread/Thread.c#L97-175">/Source/Paws.o/Ancillary/Threading/Thread/Thread.c</a></code>
+          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Ancillary/Threading/Pool/Pool.c#L91-117">/Source/Paws.o/Ancillary/Threading/Pool/Pool.c</a> and <a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Ancillary/Threading/Thread/Thread.c#L97-175">/Source/Paws.o/Ancillary/Threading/Thread/Thread.c</a></code>
             <p>
               These files reveal my tendency to massively re‐wrap any library which has an API I dislike; here, I
               created a completely unique internal threading API (implemented as <code>Pool</code> and
@@ -626,7 +626,7 @@
               <code>pthread.h</code> API.
             </p>
           </li>
-          <li><code>Paws.js</code> — <code><a href="http://github.com/elliottcable/Paws.js/blob/Master/Packages/Paws.js/Things/list.js#L17-29">/Packages/Paws.js/Things/list.js</a></code>
+          <li><code>Paws.js</code> — <code><a href="http://github.com/elliottcable/Paws.js/blob/99608a/Packages/Paws.js/Things/list.js#L17-29">/Packages/Paws.js/Things/list.js</a></code>
             <p>
               The first example from the <code>Paws.js</code> codebase; this codebase is slowly starting to age,
               as I’ve been focusing quite intensively on abstract Paws design and the <code>Paws.o</code>
@@ -638,7 +638,7 @@
               abstraction.
             </p>
           </li>
-          <li><code>Paws.js</code> — <code><a href="http://github.com/elliottcable/Paws.js/blob/Master/Packages/Paws.js/Things/list.js#L133-162">/Packages/Paws.js/Things/list.js</a></code>
+          <li><code>Paws.js</code> — <code><a href="http://github.com/elliottcable/Paws.js/blob/99608a/Packages/Paws.js/Things/list.js#L133-162">/Packages/Paws.js/Things/list.js</a></code>
             <p>
               Another snippet exhibiting copious description of the reasoning behind an implementation prior to
               the implementation itself.
@@ -661,20 +661,20 @@
           extended the core library.
         </p>
         <ul>
-          <li>Speck — <code><a href="http://github.com/elliottcable/Speck/blob/master/lib/speck/check.rb#L26-40">/lib/speck/check.rb</a></code>
+          <li>Speck — <code><a href="http://github.com/elliottcable/Speck/blob/4d36ff/lib/speck/check.rb#L26-40">/lib/speck/check.rb</a></code>
             <p>
               The majority of the meat of Speck’s implementation fits into these ~10 LoC. This piece of code is
               quite exemplar of my programming style within Ruby; short, succinct. Nothing beyond what is
               necessary.
             </p>
           </li>
-          <li>Speck — <code><a href="http://github.com/elliottcable/Speck/blob/master/specifications/speck/check_specs.rb#L29-49">/specifications/speck/check_specs.rb</a></code>
+          <li>Speck — <code><a href="http://github.com/elliottcable/Speck/blob/4d36ff/specifications/speck/check_specs.rb#L29-49">/specifications/speck/check_specs.rb</a></code>
             <p>
               A testament to its flexibility, I tested and specified Speck entirely, utilizing only the tools
               provided within Speck itself.
             </p>
           </li>
-          <li>Slack — <code><a href="http://github.com/elliottcable/Slack/blob/master/lib/slack/mixins/object.rb#L20-23">/lib/slack/mixins/object.rb</a></code></li>
+          <li>Slack — <code><a href="http://github.com/elliottcable/Slack/blob/45cdec/lib/slack/mixins/object.rb#L20-23">/lib/slack/mixins/object.rb</a></code></li>
         </ul>
       </section>
       <section class="design web admin">
@@ -684,7 +684,7 @@
           with node.js; it’s a simple and uniquely semantic short‐URL service for Twitter statuses.
         </p>
         <ul>
-          <li><code><a href="http://github.com/elliottcable/taupe/blob/master/server.js#L13-46">/server.js</a></code>
+          <li><code><a href="http://github.com/elliottcable/taupe/blob/94e62f/server.js#L13-46">/server.js</a></code>
             <p>
               The entire server / application is only ~75 LoC; it ties into a Redis database to store and
               retrieve tweet IDs and their respective owners. It then 301‐redirects that URL to the relevant
@@ -702,14 +702,14 @@
           actually introspecting JavaScript objects and datatypes, and turning them into Yarns for display.
         </p>
         <ul>
-          <li>Yarn — <code><a href="http://github.com/elliottcable/Yarn/blob/Master/lib/Yarn.js#L2-20">/lib/Yarn.js</a></code>
+          <li>Yarn — <code><a href="http://github.com/elliottcable/Yarn/blob/f67ecc/lib/Yarn.js#L2-20">/lib/Yarn.js</a></code>
             <p>
               A very quintessential piece of my JavaScript; almost all of my libraries follow this basic form. I
               rely on the prototypal nature of JavaScript to do my work for me, and focus on implementing the
               aspects of my interfaces that I want to expose to the library’s user.
             </p>
           </li>
-          <li>Percival — <code><a href="http://github.com/elliottcable/Percival/blob/Master/lib/Percival.js#L29-47">/lib/Percival.js</a></code>
+          <li>Percival — <code><a href="http://github.com/elliottcable/Percival/blob/bb9b0f/lib/Percival.js#L29-47">/lib/Percival.js</a></code>
             <p>
               This is the core of Percival’s functionality; it allows me to extend Percival with custom ‘lenses’
               for any imaginable custom JavaScript object. I also bundle in ‘lenses’ for each of JavaScript’s
@@ -726,7 +726,7 @@
           distribution: Arch Linux.
         </p>
         <ul>
-          <li><code><a href="http://github.com/elliottcable/ArchLinux-AMIs/blob/master/bundle.sh">/bundle.sh</a></code>
+          <li><code><a href="http://github.com/elliottcable/ArchLinux-AMIs/blob/a34646/bundle.sh#files">/bundle.sh</a></code>
             <p>
               This is a single massive shell script that manages the host systems (instances) utilized during the
               construction process. Other shell scripts from the project are executed by this script, remotely,
@@ -738,13 +738,13 @@
         </ul>
       </section>
       <section class="architecture desktop">
-        <header><h3><code><a href="http://github.com/elliottcable/it/blob/master/lib/it/environmented_proc.rb">EnvironmentedProc</a></code> and <code><a href="http://github.com/elliottcable/lobby">Lobby</a></code></h3></header>
+        <header><h3><code><a href="http://github.com/elliottcable/it/blob/b52441/lib/it/environmented_proc.rb#files">EnvironmentedProc</a></code> and <code><a href="http://github.com/elliottcable/lobby">Lobby</a></code></h3></header>
         <p>
           These are some of the oddest, most tricky, and interesting Ruby code I’ve ever written; I feel it’s
           fairly important to include them here, as they expose my taste for curious and unusual hackery.
         </p>
         <ul>
-          <li><code><a href="http://github.com/elliottcable/it/blob/master/lib/it/environmented_proc.rb">environmented_proc.rb</a></code>
+          <li><code><a href="http://github.com/elliottcable/it/blob/b52441/lib/it/environmented_proc.rb#files">environmented_proc.rb</a></code>
             <p>
               This is quite possibly the single most useful, yet small, pieces of Ruby code I’ve ever written.
               As with several of the above examples, the trickiness of the code is directly proportional to the
@@ -752,7 +752,7 @@
               explanatory material.
             </p>
           </li>
-          <li><code><a href="http://github.com/elliottcable/lobby/blob/master/lib/lobby.rb">lobby.rb</a></code></li>
+          <li><code><a href="http://github.com/elliottcable/lobby/blob/8dc3f6/lib/lobby.rb#files">lobby.rb</a></code></li>
         </ul>
       </section>
     </div><span class="next"><a href="#history">↓</a></span>
