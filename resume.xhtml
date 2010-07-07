@@ -571,7 +571,7 @@
         </p>
       </section>
       <section class="architecture web">
-        <header><h3><a href="http://github.com/elliottcable/Paws.o">Paws.o</a> and <a href="http://github.com/elliottcable/Paws.js">Paws.js</a></h3></header>
+        <header><h3><a href="http://github.com/elliottcable/Paws.c">Paws.c</a> and <a href="http://github.com/elliottcable/Paws.js">Paws.js</a></h3></header>
         <p>
           My latest and most ambitions open‐source project to date, Paws, is a new sort of programming language,
           designed from the ground up with an eye for heavily distributed codebases oriented towards the web.
@@ -587,14 +587,14 @@
           itself, as well as designing and developing low‐level systems’ architecture.
         </p>
         <ul>
-          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Paws.c#L32-94">/Source/Paws.o/Paws.c</a></code>
+          <li><code>Paws.c</code> — <code><a href="http://github.com/elliottcable/Paws.c/blob/f4fcb5/Source/Paws.c/Paws.c#L32-94">/Source/Paws.c/Paws.c</a></code>
             <p>
               As usual, I’m heavy on the conceptual documentation; I love to explain *why* I’ve structured some
               part of the code the way I did, in hopes that some reader will learn something useful from the
               sweat and love I poured into creating that structure.
             </p>
           </li>
-          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Types/list/list.c#L17-47">/Source/Paws.o/Types/list/list.c</a></code>
+          <li><code>Paws.c</code> — <code><a href="http://github.com/elliottcable/Paws.c/blob/f4fcb5/Source/Paws.c/Types/list/list.c#L17-47">/Source/Paws.c/Types/list/list.c</a></code>
             <p>
               This is the declaration of one of Paws’ most basic datatypes, <code>infrastructure list</code>.
               This particular snippet demonstrates my fairly unique style of C, revolving around
@@ -603,7 +603,7 @@
               proclivity towards abusing C’s preprocessor to modify the code.
             </p>
           </li>
-          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Types/Types.h#L29-53">/Source/Paws.o/Types/Types.h</a></code>
+          <li><code>Paws.c</code> — <code><a href="http://github.com/elliottcable/Paws.c/blob/f4fcb5/Source/Paws.c/Types/Types.h#L29-53">/Source/Paws.c/Types/Types.h</a></code>
             <p>
               Another very unique element of my approach to large C projects; this is Paws’ <code>thing</code>
               <code>struct</code>. It’s, essentially, an annotated pointer type, created to allow me to pass
@@ -611,7 +611,7 @@
               we’re passing around. This is exactly the sort of system I absolutely love to engineer.
             </p>
           </li>
-          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Ancillary/Magazine/Magazine.c#L106-135">/Source/Paws.o/Ancillary/Magazine/Magazine.c</a></code>
+          <li><code>Paws.c</code> — <code><a href="http://github.com/elliottcable/Paws.c/blob/f4fcb5/Source/Paws.c/Ancillary/Magazine/Magazine.c#L106-135">/Source/Paws.c/Ancillary/Magazine/Magazine.c</a></code>
             <p>
               Some more meaty implementation source‐code, to counterbalance the declarations exhibited above.
               This is one of the most inherently gnarly pieces of code in the Paws codebase as of this writing;
@@ -619,7 +619,7 @@
               to offset the inherent complexity of that system.
             </p>
           </li>
-          <li><code>Paws.o</code> — <code><a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Ancillary/Threading/Pool/Pool.c#L91-117">/Source/Paws.o/Ancillary/Threading/Pool/Pool.c</a> and <a href="http://github.com/elliottcable/Paws.o/blob/f4fcb5/Source/Paws.o/Ancillary/Threading/Thread/Thread.c#L97-175">/Source/Paws.o/Ancillary/Threading/Thread/Thread.c</a></code>
+          <li><code>Paws.c</code> — <code><a href="http://github.com/elliottcable/Paws.c/blob/f4fcb5/Source/Paws.c/Ancillary/Threading/Pool/Pool.c#L91-117">/Source/Paws.c/Ancillary/Threading/Pool/Pool.c</a> and <a href="http://github.com/elliottcable/Paws.c/blob/f4fcb5/Source/Paws.c/Ancillary/Threading/Thread/Thread.c#L97-175">/Source/Paws.c/Ancillary/Threading/Thread/Thread.c</a></code>
             <p>
               These files reveal my tendency to massively re‐wrap any library which has an API I dislike; here, I
               created a completely unique internal threading API (implemented as <code>Pool</code> and
@@ -630,7 +630,7 @@
           <li><code>Paws.js</code> — <code><a href="http://github.com/elliottcable/Paws.js/blob/99608a/Packages/Paws.js/Things/list.js#L17-29">/Packages/Paws.js/Things/list.js</a></code>
             <p>
               The first example from the <code>Paws.js</code> codebase; this codebase is slowly starting to age,
-              as I’ve been focusing quite intensively on abstract Paws design and the <code>Paws.o</code>
+              as I’ve been focusing quite intensively on abstract Paws design and the <code>Paws.c</code>
               implementation; however, there’s still plenty of good code in here. This snippet applies closures
               and prototypal inheritance to positive effect, wrapping some data unique to a specific descendant
               of the prototype object. It evidences my tendency to prefer to play to a language’s strengths,
