@@ -363,21 +363,21 @@
     </script>
     <script type="text/javascript">
       <![CDATA[
-        focusTopic = function (kind) {
+        focusTopic = function (focus) {
           var focusNav = document.querySelector('nav#focus')
              buzzwords = document.querySelector("#buzzwords"),
                   list = buzzwords.querySelector("ul"),
                newList = newList = document.createElementNS(document.documentElement.getAttribute("xmlns"), "ul")
                focused = focusNav.querySelector("li.focused")
-               toFocus = focusNav.querySelector("li#"+kind)
+               toFocus = focusNav.querySelector("li#"+focus)
           
-          if  (focused && focused === toFocus) kind = null
+          if  (focused && focused === toFocus) focus = null
           if (!focused || focused !== toFocus) toFocus.classList   .add("focused")
           if  (focused)                        focused.classList.remove("focused")
           
-          if (kind) {
-            Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li.mastery."+kind
-                                                          + ", " + "#skills > section > ul li.familiarity."+kind)
+          if (focus) {
+            Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li.mastery."+focus
+                                                          + ", " + "#skills > section > ul li.familiarity."+focus)
             , function (element) { var listItem
               newList.appendChild(
                 listItem = document.createElementNS(document.documentElement.getAttribute("xmlns"), "li"))
@@ -385,13 +385,13 @@
               Array.prototype.forEach.call(element.querySelectorAll("span strong"), function (span) {
                 listItem.appendChild(document.importNode(span, true)) }) }) }
           
-          if (list) buzzwords.removeChild(list)
-          if (kind) buzzwords.appendChild(newList)
+          if  (list) buzzwords.removeChild(list)
+          if (focus) buzzwords.appendChild(newList)
           
-          if (kind) {
-            Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li."+kind),
+          if (focus) {
+            Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li."+focus),
               function (element) { element.classList.remove("irrelevant") })
-            Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li:not(."+kind+")"),
+            Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li:not(."+focus+")"),
               function (element) { element.classList.add("irrelevant") }) }
           else
             Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li"),
@@ -401,10 +401,10 @@
              classes; there is nothing I can do about that. An unfortunate sideeffect is that `section`s with
              only one class will never be marked as ‘irrelevant’—so I have to ensure all `section`s have at least
              two topic-classes. */
-          if (kind) {
-            Array.prototype.forEach.call(document.querySelectorAll("#portfolio > section."+kind),
+          if (focus) {
+            Array.prototype.forEach.call(document.querySelectorAll("#portfolio > section."+focus),
               function (section) { if (section.classList.length > 1) section.classList.remove("irrelevant") })
-            Array.prototype.forEach.call(document.querySelectorAll("#portfolio > section:not(."+kind+")"),
+            Array.prototype.forEach.call(document.querySelectorAll("#portfolio > section:not(."+focus+")"),
               function (section) { if (section.classList.length > 1) section.classList.add("irrelevant") }) }
           else
             Array.prototype.forEach.call(document.querySelectorAll("#portfolio > section"),
