@@ -232,8 +232,8 @@
         aside#topics > ul:before { content: "Topics:"; display: block; margin-bottom: 0.5em; font-weight: 900; }
         
         aside#topics li { padding: 0.1em 0px; }
-        aside#topics li strong:after            { content: ","; }
-        aside#topics li strong:last-child:after { content: ""; }
+        aside#topics li strong:not(:last-child) { margin-right: 0.25em; }
+        aside#topics li strong:not(:last-child):after { content: ","; }
         aside#topics li strong { opacity: 0.5; }
         aside#topics li strong, section > ul li > span strong {
           padding: 0.1em 0.2em 0.1em 0.2em;
@@ -378,12 +378,12 @@
           if (kind) {
             Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li.mastery."+kind
                                                           + ", " + "#skills > section > ul li.familiarity."+kind)
-            , function (element) {
-                var elementCopy = document.importNode(element.querySelector("span strong"), true),
-                       listItem = document.createElementNS(document.documentElement.getAttribute("xmlns"), "li")
+            , function (element) { var listItem
+              newList.appendChild(
+                listItem = document.createElementNS(document.documentElement.getAttribute("xmlns"), "li"))
               
-                 newList.appendChild(listItem)
-                listItem.appendChild(elementCopy) }) }
+              Array.prototype.forEach.call(element.querySelectorAll("span strong"), function (span) {
+                listItem.appendChild(document.importNode(span, true)) }) }) }
           
           if (list) topics.removeChild(list)
           if (kind) topics.appendChild(newList)
