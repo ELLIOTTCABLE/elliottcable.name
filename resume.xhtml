@@ -395,7 +395,13 @@
             function (section) { if (section.classList.length > 1) section.classList.add("irrelevant") })
         }
         
-        window.onload = function(){
+        /* We avoid using `window.onload`, because that doesn’t fire until *all* resources have loaded in WebKit.
+           Since we’re using heavy webfonts, not to mention ga.js, and I want to ensure that the the focus-bar
+           ‘works’ (that is, docks properly) even if people get that far down the page before the fonts have
+           finished loading (hey! some people read really, really fast!), I utilize my own hook, that I then call
+           with a `<script/>` tag at the end of the `<body/>`’s contents. A bit of a hack, yes, but a hack that
+           works quite well. :D */
+        window.onbodyload = function(){
           var focusNav = document.querySelector('nav#focus'),
          afterFocusNav = document.querySelector('nav#focus + *'),
                 margin = window.getComputedStyle(afterFocusNav, null).getPropertyValue('margin-top'),
@@ -799,5 +805,6 @@
         <p>You can e‐mail me any time: <a href="mailto:me+resume@ell.io">me@ell.io</a></p>
       </section>
     </div>
+    <script type="text/javascript"><![CDATA[ window.onbodyload.call() ]]></script>
   </body>
 </html>
