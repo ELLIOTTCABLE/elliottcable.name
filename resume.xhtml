@@ -212,7 +212,7 @@
         nav#focus > ul li:nth-last-child(2):before { content: "or "; }
         nav#focus > ul li:nth-last-child(1):before { content: "/ "; }
         
-        aside#topics {
+        aside#buzzwords {
           float: right;
           width: 7em;
           padding: 0.5em;
@@ -227,15 +227,15 @@
           
           z-index: 100;
         }
-        aside#topics:empty { visibility: hidden; }
-        aside#topics > * { font-size: 75%; }
-        aside#topics > ul:before { content: "Topics:"; display: block; margin-bottom: 0.5em; font-weight: 900; }
+        aside#buzzwords:empty { visibility: hidden; }
+        aside#buzzwords > * { font-size: 75%; }
+        aside#buzzwords > ul:before { content: "Buzzwords:"; display: block; margin-bottom: 0.5em; font-weight: 900; }
         
-        aside#topics li { padding: 0.1em 0px; }
-        aside#topics li strong:not(:last-child) { margin-right: 0.25em; }
-        aside#topics li strong:not(:last-child):after { content: ","; }
-        aside#topics li strong { opacity: 0.5; }
-        aside#topics li strong, section > ul li > span strong {
+        aside#buzzwords li { padding: 0.1em 0px; }
+        aside#buzzwords li strong:not(:last-child) { margin-right: 0.25em; }
+        aside#buzzwords li strong:not(:last-child):after { content: ","; }
+        aside#buzzwords li strong { opacity: 0.5; }
+        aside#buzzwords li strong, section > ul li > span strong {
           padding: 0.1em 0.2em 0.1em 0.2em;
           margin: 0px -0.2em 0px -0.2em;
           
@@ -365,8 +365,8 @@
       <![CDATA[
         focusTopic = function (kind) {
           var focusNav = document.querySelector('nav#focus')
-                topics = document.querySelector("#topics"),
-                  list = topics.querySelector("ul"),
+             buzzwords = document.querySelector("#buzzwords"),
+                  list = buzzwords.querySelector("ul"),
                newList = newList = document.createElementNS(document.documentElement.getAttribute("xmlns"), "ul")
                focused = focusNav.querySelector("li.focused")
                toFocus = focusNav.querySelector("li#"+kind)
@@ -385,8 +385,8 @@
               Array.prototype.forEach.call(element.querySelectorAll("span strong"), function (span) {
                 listItem.appendChild(document.importNode(span, true)) }) }) }
           
-          if (list) topics.removeChild(list)
-          if (kind) topics.appendChild(newList)
+          if (list) buzzwords.removeChild(list)
+          if (kind) buzzwords.appendChild(newList)
           
           if (kind) {
             Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li."+kind),
@@ -474,7 +474,7 @@
         <li id="web"><a href="" onclick="focusTopic('web'); return false;">web development</a></li>
       </ul></nav>
       <section>
-        <aside id="topics"></aside>
+        <aside id="buzzwords"></aside>
         <p>
           When all is said and done, I’m primarily a developer: I love to <em>create things</em>, write tools and
           applications that change how people interact with their computers and each‐other; if it ticks, I want to
