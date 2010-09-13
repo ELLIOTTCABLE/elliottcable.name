@@ -80,6 +80,7 @@
           text-decoration: none;
           color: inherit;
         }
+        nav#focus > ul li.focused > a,
         a:hover { border-color: #000000; background-color: rgba(0, 0, 0, 0.75); color: #C0B2FF; }
         
         em { font-style: normal; }
@@ -363,36 +364,51 @@
     <script type="text/javascript">
       <![CDATA[
         focusTopic = function (kind) {
-          var topics = document.querySelector("#topics"),
-                list =   topics.querySelector("ul"),
-             newList = document.createElementNS(document.documentElement.getAttribute("xmlns"), "ul")
+          var focusNav = document.querySelector('nav#focus')
+                topics = document.querySelector("#topics"),
+                  list = topics.querySelector("ul"),
+               newList = newList = document.createElementNS(document.documentElement.getAttribute("xmlns"), "ul")
+               focused = focusNav.querySelector("li.focused")
+               toFocus = focusNav.querySelector("li#"+kind)
           
-          Array.prototype.forEach.call( document.querySelectorAll("#skills > section > ul li.mastery."+kind+", "+
-                                                                  "#skills > section > ul li.familiarity."+kind),
-            function (element) {
-              var elementCopy = document.importNode(element.querySelector("span strong"), true),
-                     listItem = document.createElementNS(document.documentElement.getAttribute("xmlns"), "li")
+          if  (focused && focused === toFocus) kind = null
+          if (!focused || focused !== toFocus) toFocus.classList   .add("focused")
+          if  (focused)                        focused.classList.remove("focused")
+          
+          if (kind) {
+            Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li.mastery."+kind
+                                                          + ", " + "#skills > section > ul li.familiarity."+kind)
+            , function (element) {
+                var elementCopy = document.importNode(element.querySelector("span strong"), true),
+                       listItem = document.createElementNS(document.documentElement.getAttribute("xmlns"), "li")
               
-               newList.appendChild(listItem)
-              listItem.appendChild(elementCopy)
-            })
+                 newList.appendChild(listItem)
+                listItem.appendChild(elementCopy) }) }
           
           if (list) topics.removeChild(list)
-          topics.appendChild(newList)
+          if (kind) topics.appendChild(newList)
           
-          Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li."+kind),
-            function (element) { element.classList.remove("irrelevant") })
-          Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li:not(."+kind+")"),
-            function (element) { element.classList.add("irrelevant") })
+          if (kind) {
+            Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li."+kind),
+              function (element) { element.classList.remove("irrelevant") })
+            Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li:not(."+kind+")"),
+              function (element) { element.classList.add("irrelevant") }) }
+          else
+            Array.prototype.forEach.call(document.querySelectorAll("#skills > section > ul li"),
+              function (element) { element.classList.remove("irrelevant") })
           
           /* This is buggy in a necessary way. `Element.classList().length` is 1, even for elements with *no*
              classes; there is nothing I can do about that. An unfortunate sideeffect is that `section`s with
              only one class will never be marked as ‘irrelevant’—so I have to ensure all `section`s have at least
              two topic-classes. */
-          Array.prototype.forEach.call(document.querySelectorAll("#portfolio > section."+kind),
-            function (section) { if (section.classList.length > 1) section.classList.remove("irrelevant") })
-          Array.prototype.forEach.call(document.querySelectorAll("#portfolio > section:not(."+kind+")"),
-            function (section) { if (section.classList.length > 1) section.classList.add("irrelevant") })
+          if (kind) {
+            Array.prototype.forEach.call(document.querySelectorAll("#portfolio > section."+kind),
+              function (section) { if (section.classList.length > 1) section.classList.remove("irrelevant") })
+            Array.prototype.forEach.call(document.querySelectorAll("#portfolio > section:not(."+kind+")"),
+              function (section) { if (section.classList.length > 1) section.classList.add("irrelevant") }) }
+          else
+            Array.prototype.forEach.call(document.querySelectorAll("#portfolio > section"),
+              function (section) { if (section.classList.length > 1) section.classList.remove("irrelevant") })
         }
         
         /* We avoid using `window.onload`, because that doesn’t fire until *all* resources have loaded in WebKit.
@@ -451,11 +467,11 @@
         <p>(Use the focus bar below to reduce the deluge of content.)</p>
       </section>
       <nav id="focus"><ul>
-        <li><a href="" onclick="focusTopic('design'); return false;">design</a></li>
-        <li><a href="" onclick="focusTopic('architecture'); return false;">architecture</a></li>
-        <li><a href="" onclick="focusTopic('admin'); return false;">administration</a></li>
-        <li><a href="" onclick="focusTopic('desktop'); return false;">desktop</a></li>
-        <li><a href="" onclick="focusTopic('web'); return false;">web development</a></li>
+        <li id="design"><a href="" onclick="focusTopic('design'); return false;">design</a></li>
+        <li id="architecture"><a href="" onclick="focusTopic('architecture'); return false;">architecture</a></li>
+        <li id="admin"><a href="" onclick="focusTopic('admin'); return false;">administration</a></li>
+        <li id="desktop"><a href="" onclick="focusTopic('desktop'); return false;">desktop</a></li>
+        <li id="web"><a href="" onclick="focusTopic('web'); return false;">web development</a></li>
       </ul></nav>
       <section>
         <aside id="topics"></aside>
