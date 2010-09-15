@@ -63,6 +63,9 @@
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased; }}
         
+        @media print, tty, speech, embossed, braille {
+          .interactive, .next { visibility: hidden; display: none; }}
+        
         /* ### Inline textual elements */
         
         /* This is horribly broken. I can’t make `rgba()`s inside `a:visited` and `a` work properly in WebKit!
@@ -454,7 +457,7 @@
           interest imply that he can “speak the language” of many and varied technical fields. He'll be useful
           anywhere there are <em>new things to be created</em>. <span class="smiley">:)</span>
         </p>
-        <p>Click the <span class="next"><a href="#skills">↓</a></span> to begin!</p>
+        <p class="interactive">Click the <span class="next"><a href="#skills">↓</a></span> to begin!</p>
       </section>
     </div><span class="next"><a href="#skills">↓</a></span>
     <div id="skills">
@@ -466,9 +469,9 @@
           as short and relevant as possible. That is, however, a lofty goal, given how much I
           know… so please, keep an open mind! <span class="smiley">;)</span>
         </p>
-        <p>(Use the focus bar below to reduce the deluge of content.)</p>
+        <p class="interactive">(Use the focus bar below to reduce the deluge of content.)</p>
       </section>
-      <nav id="focus"><ul>
+      <nav id="focus" class="interactive"><ul>
         <li id="design"><a href="" onclick="focusTopic('design'); return false;">design</a></li>
         <li id="architecture"><a href="" onclick="focusTopic('architecture'); return false;">architecture</a></li>
         <li id="admin"><a href="" onclick="focusTopic('admin'); return false;">administration</a></li>
@@ -476,7 +479,7 @@
         <li id="web"><a href="" onclick="focusTopic('web'); return false;">web development</a></li>
       </ul></nav>
       <section>
-        <aside id="buzzwords"></aside>
+        <aside id="buzzwords" class="interactive"></aside>
         <p>
           When all is said and done, I’m primarily a developer: I love to <em>create things</em>, write tools and
           applications that change how people interact with their computers and each‐other; if it ticks, I want to
