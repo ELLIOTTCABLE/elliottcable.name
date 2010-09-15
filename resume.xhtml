@@ -57,13 +57,16 @@
         = General =
         =========*/
         
+        @media all {
+          body { font: 300 14pt/1.55 "Helvetica", sans-serif; }}
+        
         @media screen, projection, TV {
           body {
-            font: 300 14pt/1.55 "Helvetica", sans-serif;
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased; }}
         
         @media print, TTY, speech, embossed, Braille {
+          body { font-size: 12pt !important; } /* I have no idea why !important is necessary here. */
           .interactive, .next { visibility: hidden; display: none; }}
         
         /* ### Inline textual elements */
@@ -102,12 +105,13 @@
         
         /* ### Structural elements */
         
-        @media screen, projection, TV {
-          body > div:not(:first-of-type) {
-            padding-top: 1em;
-            margin-top: 49em; }}
+        @media all {
+          body > div:not(:first-of-type) { padding-top: 1em; }}
         
         @media screen, projection, TV {
+          body > div:not(:first-of-type) { margin-top: 49em; }}
+        
+        @media all {
           body > div:not(:first-of-type) > section:first-child {
             border-top: 0.666em solid rgba(0, 0, 0, 0.666); }}
         
@@ -132,17 +136,23 @@
         = Specific =
         ==========*/
         
-        @media screen, projection, TV {
-          html { height: 100%; background: #E0E0E0; }
+        @media all {
+          html { height: 100%; }
           body {
             width: 35em;
             margin: auto;
-          
+            
             padding: 0px 0.917em;
           
-            border-left: 0.666em solid rgba(0, 0, 0, 0.05);
+            border-left: 0.666em solid rgba(0, 0, 0, 0.05); }}
+        
+        @media screen, projection, TV {
+          html { background: #E0E0E0; }
+          body {
             -webkit-border-top-left-radius: 7.50em;
-            -moz-border-radius-topleft: 7.50em; }}
+               -moz-border-radius-topleft:  7.50em; }}
+        
+        @media print, TTY, speech, embossed, Braille { /* ... */ }
         
         /* ### Page’s primary title */
         @media screen, projection, TV {
