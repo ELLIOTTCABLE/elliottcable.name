@@ -57,212 +57,214 @@
         = General =
         =========*/
         
-        body {
-          font: 300 14pt/1.55 "Helvetica", sans-serif;
-          text-rendering: optimizeLegibility;
-          -webkit-font-smoothing: antialiased;
-        }
+        @media screen, projection, tv {
+          body {
+            font: 300 14pt/1.55 "Helvetica", sans-serif;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased; }}
         
         /* ### Inline textual elements */
         
         /* This is horribly broken. I can’t make `rgba()`s inside `a:visited` and `a` work properly in WebKit!
            Hence, I’m using a screencap’d, hardcoded, colour… instead of the appropriate colour with an alpha. */
-        a {
-          padding: 0.1em 0.25em 0.1em 0.25em;
-          margin: 0px -0.25em 0px -0.25em;
+        @media screen, projection, tv {
+          a {
+            padding: 0.1em 0.25em 0.1em 0.25em;
+            margin: 0px -0.25em 0px -0.25em;
           
-          border: 0px solid rgba(0, 0, 0, 0.15);
-          border-width: 0.15em 0px;
-          -webkit-border-radius: 3px;
-             -moz-border-radius: 3px;
-                  border-radius: 3px;
+            border: 0px solid rgba(0, 0, 0, 0.15);
+            border-width: 0.15em 0px;
+            -webkit-border-radius: 3px;
+               -moz-border-radius: 3px;
+                    border-radius: 3px;
           
-          text-decoration: none;
-          color: inherit;
-        }
-        nav#focus > ul li.focused > a,
-        a:hover { border-color: #000000; background-color: rgba(0, 0, 0, 0.75); color: #C0B2FF; }
+            text-decoration: none;
+            color: inherit; }
+          nav#focus > ul li.focused > a, a:hover {
+            border-color: #000000; background-color: rgba(0, 0, 0, 0.75); color: #C0B2FF; }}
         
-        em { font-style: normal; }
-        *:not(em) > em {
-          padding: 0.1em 0.25em 0.1em 0.25em;
-          margin: 0px -0.25em 0px -0.25em;
+        @media screen, projection, tv {
+          em { font-style: normal; }
+          *:not(em) > em {
+            padding: 0.1em 0.25em 0.1em 0.25em;
+            margin: 0px -0.25em 0px -0.25em;
           
-          -webkit-border-radius: 3px;
-             -moz-border-radius: 3px;
-                  border-radius: 3px;
+            -webkit-border-radius: 3px;
+               -moz-border-radius: 3px;
+                    border-radius: 3px;
           
-          background-color: rgba(255, 255, 0, 0.25);
-        }
-        em em { font-weight: 600; }
-        strong { font-weight: 900; }
+            background-color: rgba(255, 255, 0, 0.25); }
+          em em { font-weight: 600; }
+          strong { font-weight: 900; }}
         
         /* ### Structural elements */
         
-        body > div:not(:first-of-type) {
-          padding-top: 1em;
-          margin-top: 49em;
-        }
+        @media screen, projection, tv {
+          body > div:not(:first-of-type) {
+            padding-top: 1em;
+            margin-top: 49em; }}
         
-        body > div:not(:first-of-type) > section:first-child {
-          border-top: 0.666em solid rgba(0, 0, 0, 0.666);
-        }
+        @media screen, projection, tv {
+          body > div:not(:first-of-type) > section:first-child {
+            border-top: 0.666em solid rgba(0, 0, 0, 0.666); }}
         
-        section {
-          padding: 1.25em 2.5em;
-          margin: 1.5em -2.5em;
+        @media screen, projection, tv {
+          section {
+            padding: 1.25em 2.5em;
+            margin: 1.5em -2.5em;
           
-          background-color: rgba(255, 255, 255, 0.5);
-        }
+            background-color: rgba(255, 255, 255, 0.5); }}
         
-        section > p:not(:last-child) {
-          margin-bottom: 1em;
-        }
+        @media screen, projection, tv {
+          section > p:not(:last-child) { margin-bottom: 1em; }}
         
-        h1, h2, h3, h4 { font-family: "Yanone Kaffeesatz", "Helvetica", sans-serif; }
-        h1 { font-size: 350%; line-height: 1.0; }
-        h2 { font-size: 175%; line-height: 1.0; }
-        h3 { font-size: 125%; line-height: 1.0; }
-        h4 { font-size: 105%; line-height: 1.0; }
+        @media screen, projection, tv {
+          h1, h2, h3, h4 { font-family: "Yanone Kaffeesatz", "Helvetica", sans-serif; }
+          h1 { font-size: 350%; line-height: 1.0; }
+          h2 { font-size: 175%; line-height: 1.0; }
+          h3 { font-size: 125%; line-height: 1.0; }
+          h4 { font-size: 105%; line-height: 1.0; }}
         
         /* =========
         = Specific =
         ==========*/
         
-        html { height: 100%; background: #E0E0E0; }
-        body {
-          width: 35em;
-          margin: auto;
+        @media screen, projection, tv {
+          html { height: 100%; background: #E0E0E0; }
+          body {
+            width: 35em;
+            margin: auto;
           
-          padding: 0px 0.917em;
+            padding: 0px 0.917em;
           
-          border-left: 0.666em solid rgba(0, 0, 0, 0.05);
-          -webkit-border-top-left-radius: 7.50em;
-          -moz-border-radius-topleft: 7.50em;
-        }
+            border-left: 0.666em solid rgba(0, 0, 0, 0.05);
+            -webkit-border-top-left-radius: 7.50em;
+            -moz-border-radius-topleft: 7.50em; }}
         
         /* ### Page’s primary title */
-        #title { margin: 2.5em 0px; margin-right: -8em; }
-        #title > * { display: inline; }
-        #title > h1 { font-family: "Helvetica", sans-serif; }
-        #title > #subtitle {
-          padding-left: 0.333em;
-          padding-right: 0.5em; /* To avoid clipping the exclamation point */
+        @media screen, projection, tv {
+          #title { margin: 2.5em 0px; margin-right: -8em; }
+          #title > * { display: inline; }
+          #title > h1 { font-family: "Helvetica", sans-serif; }
+          #title > #subtitle {
+            padding-left: 0.333em;
+            padding-right: 0.5em; /* To avoid clipping the exclamation point */
           
-          font-family: "Tangerine", serif;
-          font-size: 225%;
+            font-family: "Tangerine", serif;
+            font-size: 225%;
           
-          opacity: 0.5;
-        }
+            opacity: 0.5; }}
         
         /* ### Section headers */
-        section > header {
-          padding: 0em 0.917em;
-          margin: 0em -1.583em;
-          margin-bottom: 1em;
+        @media screen, projection, tv {
+          section > header {
+            padding: 0em 0.917em;
+            margin: 0em -1.583em;
+            margin-bottom: 1em;
           
-          border-left: 0.666em solid rgba(0, 0, 0, 0.75);
-        }
+            border-left: 0.666em solid rgba(0, 0, 0, 0.75); }}
         
         /* ### Sections */
-        section, section > ul li {
-          -webkit-transition: opacity 0.333s ease, border-left-color 0.25s ease;
-             -moz-transition: opacity 0.333s ease, border-left-color 0.25s ease;
-        }
-        section.irrelevant:not(:hover), section > ul li.irrelevant:not(:hover) { opacity: 0.05; }
+        @media screen, projection, tv {
+          section, section > ul li {
+            -webkit-transition: opacity 0.333s ease, border-left-color 0.25s ease;
+               -moz-transition: opacity 0.333s ease, border-left-color 0.25s ease; }
+          section.irrelevant:not(:hover), section > ul li.irrelevant:not(:hover) { opacity: 0.05; }}
         
         /* ### Next jumps */
-        .next > a       { color: rgba(0, 0, 0, 0.333); background: none; border: none; line-height: 1.0; }
-        .next > a:hover { color: rgba(0, 0, 0, 0.9); }
+        @media screen, projection, tv {
+          .next > a       { color: rgba(0, 0, 0, 0.333); background: none; border: none; line-height: 1.0; }
+          .next > a:hover { color: rgba(0, 0, 0, 0.9); }
         
-        /* To make this lay on top of the border in every browser, and across all sizes of text, I preform some
-           interesting trickery: I place the actual link in a bounding-box of normal font-size, and then utilize
-           em units to perfectly align that bounding-box on top of the border. Then, when I align the text to
-           the center of the bounding box, it is guaranteed to lie directly on top of the border. */
-        body > .next {
-          display: block;
-          width: 5em;
-          margin-left: -3.70em;
+          /* To make this lay on top of the border in every browser, and across all sizes of text, I preform some
+             interesting trickery: I place the actual link in a bounding-box of normal font-size, and then
+             utilize em units to perfectly align that bounding-box on top of the border. Then, when I align the
+             text to the center of the bounding box, it is guaranteed to lie directly on top of the border. */
+          body > .next {
+            display: block;
+            width: 5em;
+            margin-left: -3.70em;
           
-          text-align: center;
-        }
-        body > .next > a { font-size: 250%; }
+            text-align: center; }
+          body > .next > a { font-size: 250%; }}
         
         /* ### List focus */
-        nav#focus {
-          width: 35em;
-          padding: 0px 2.5em;
-          margin: 0px -2.5em;
+        @media screen, projection, tv {
+          nav#focus {
+            width: 35em;
+            padding: 0px 2.5em;
+            margin: 0px -2.5em;
           
-          -webkit-transition: background-color 0.333s ease;
-             -moz-transition: background-color 0.333s ease;
-                              background-color: rgba(0, 0, 0, 0.666);
-          color: white;
-          text-align: center;
-        }
-        nav#focus > * { font-size: 75%; line-height: 1.3; }
+            -webkit-transition: background-color 0.333s ease;
+               -moz-transition: background-color 0.333s ease;
+                                background-color: rgba(0, 0, 0, 0.666);
+            color: white;
+            text-align: center; }
+          nav#focus > * { font-size: 75%; line-height: 1.3; }}
         
-        nav#focus.docked { position: fixed; top: 0px; z-index: 1000; }
-        nav#focus.docked:hover { background: #444444; }
+        @media screen, projection, tv {
+          nav#focus.docked { position: fixed; top: 0px; z-index: 1000; }
+          nav#focus.docked:hover { background: #444444; }}
         
-        nav#focus > *:before { content: "Select a discipline: "; font-weight: 600; }
-        nav#focus > ul, nav#focus > ul li { display: inline; }
-        nav#focus > ul li:not(:nth-last-child(1)):not(:nth-last-child(2)):after { content: ","; }
+        @media screen, projection, tv {
+          nav#focus > *:before { content: "Select a discipline: "; font-weight: 600; }
+          nav#focus > ul, nav#focus > ul li { display: inline; }
+          nav#focus > ul li:not(:nth-last-child(1)):not(:nth-last-child(2)):after { content: ","; }
         
-        nav#focus > ul li:nth-last-child(2):before { content: "or "; }
-        nav#focus > ul li:nth-last-child(1):before { content: "/ "; }
+          nav#focus > ul li:nth-last-child(2):before { content: "or "; }
+          nav#focus > ul li:nth-last-child(1):before { content: "/ "; }}
         
-        aside#buzzwords {
-          float: right;
-          width: 7em;
-          padding: 0.5em;
-          margin: 1em;
-          margin-right: -8em;
+        @media screen, projection, tv {
+          aside#buzzwords {
+            float: right;
+            width: 7em;
+            padding: 0.5em;
+            margin: 1em;
+            margin-right: -8em;
           
-          background: #E0E0E0;
+            background: #E0E0E0;
           
-          border-left: 0.333em solid rgba(0, 0, 0, 0.05);
+            border-left: 0.333em solid rgba(0, 0, 0, 0.05);
           
-          text-align: left;
+            text-align: left;
           
-          z-index: 100;
-        }
-        aside#buzzwords:empty { visibility: hidden; }
-        aside#buzzwords > * { font-size: 75%; }
-        aside#buzzwords > ul:before { content: "Buzzwords:"; display: block; margin-bottom: 0.5em; font-weight: 900; }
+            z-index: 100; }
+          aside#buzzwords:empty { visibility: hidden; }
+          aside#buzzwords > * { font-size: 75%; }
+          aside#buzzwords > ul:before { content: "Buzzwords:"; display: block; margin-bottom: 0.5em; font-weight: 900; }
         
-        aside#buzzwords li { padding: 0.1em 0px; }
-        aside#buzzwords li strong:not(:last-child) { margin-right: 0.25em; }
-        aside#buzzwords li strong:not(:last-child):after { content: ","; }
-        aside#buzzwords li strong { opacity: 0.5; }
-        aside#buzzwords li strong, section > ul li > span strong {
-          padding: 0.1em 0.2em 0.1em 0.2em;
-          margin: 0px -0.2em 0px -0.2em;
+          aside#buzzwords li { padding: 0.1em 0px; }
+          aside#buzzwords li strong:not(:last-child) { margin-right: 0.25em; }
+          aside#buzzwords li strong:not(:last-child):after { content: ","; }
+          aside#buzzwords li strong { opacity: 0.5; }
+          aside#buzzwords li strong, section > ul li > span strong {
+            padding: 0.1em 0.2em 0.1em 0.2em;
+            margin: 0px -0.2em 0px -0.2em;
           
-          border: 1px solid rgba(0, 0, 0, 0.1);
-          -webkit-border-radius: 3px;
-             -moz-border-radius: 3px;
-                  border-radius: 3px;
-        }
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            -webkit-border-radius: 3px;
+               -moz-border-radius: 3px;
+                    border-radius: 3px; }}
         
         /* ### Lists */
-        section > ul:not(:first-child) { margin-top: 1em; }
-        section > ul:not(:last-child)  { margin-bottom: 1em; }
+        @media screen, projection, tv {
+          section > ul:not(:first-child) { margin-top: 1em; }
+          section > ul:not(:last-child)  { margin-bottom: 1em; }}
         
-        section > ul li {
-          padding: 0px 1.142em;
-          margin: 0.666em -1.375em;
+        @media screen, projection, tv {
+          section > ul li {
+            padding: 0px 1.142em;
+            margin: 0.666em -1.375em;
           
-          border-left: 0.25em solid rgba(0, 0, 0, 0.125);
-        }
-        section > ul li:hover { border-left-color: rgba(0, 0, 0, 0.5); }
-        section > ul li > span { display: block; }
+            border-left: 0.25em solid rgba(0, 0, 0, 0.125); }
+          section > ul li:hover { border-left-color: rgba(0, 0, 0, 0.5); }
+          section > ul li > span { display: block; }
         
-        section > ul li.mastery     > span:before { content: "Mastery of "; }
-        section > ul li.familiarity > span:before { content: "Familiarity with "; }
-        section > ul li.competency  > span:before { content: "Competency with "; }
+          section > ul li.mastery     > span:before { content: "Mastery of "; }
+          section > ul li.familiarity > span:before { content: "Familiarity with "; }
+          section > ul li.competency  > span:before { content: "Competency with "; }
         
-        section > ul li > p { font-size: 75%; }
+          section > ul li > p { font-size: 75%; }}
       ]]>
     </style>
     <script type="text/javascript">
