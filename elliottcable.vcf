@@ -6,14 +6,16 @@ ORG:yreality;
 EMAIL;type=INTERNET;type=HOME;type=pref:me@ell.io
 TEL;type=HOME;type=pref:+1-919-636-4204
 TEL;type=CELL:+1-907-306-2404
-item1.ADR;type=HOME;type=pref:;;4501 Trapline Circle;Anchorage;Alaska;99516;United States
+item1.ADR;type=HOME;type=pref:;;5258 Christian Drive;Wilmington;North Carolina;28403;United States
 item1.X-ABADR:us
+item2.ADR;type=HOME:;;4501 Trapline Circle;Anchorage;Alaska;99516;United States
+item2.X-ABADR:us
 URL;type=HOME;type=pref:http\://ell.io/
 BDAY;value=date:1989-08-10
 X-JABBER;type=HOME;type=pref:me@ell.io
 X-AIM;type=HOME:me@ell.io
 TZ;VALUE=text:-09:00;AKST;America/Anchorage
-GEO:61.117314;-149.798997
+GEO:34.229729,-77.861368
 PHOTO;BASE64:
   /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEP
   ERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4e
