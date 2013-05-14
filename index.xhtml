@@ -161,11 +161,12 @@
         h2.subtitle a { color: blue !important; }
         
         .type, .label { font: bold 100%/1.6 "Diavlo"; }
+        .type a, .label a { color: black !important; border-bottom: 1px dashed blue; }
         .type:after, .label:after { content: ":"; }
         .type.invisible, .label.invisible { display: none; }
         
-        .ims a:after, .tags a:after, .sites a:after { content: ","; }
-        .ims a:last-child:after, .tags a:last-child:after, .sites a:last-child:after { content: ""; }
+        .ims a:after, .x-money a:after, .tags a:after, .sites a:after { content: ","; }
+        .ims a:last-child:after, .x-money a:last-child:after, .tags a:last-child:after, .sites a:last-child:after { content: ""; }
         
         .adr a span:after { content: "\2c\20"; }
         .adr a span:last-child:after { content: "\20\221a\20" }
@@ -214,6 +215,11 @@
           <a class="url preferred" rel="me" href="imessage://me@ell.io">iMessage</a>
           <a class="url" rel="me" href="xmpp:me@ell.io">Jabber</a>
           <a class="url" rel="me" href="aim:goim?screenname=me@ell.io">AIM</a>
+        </div>
+        <div class="x-money">
+          <span class="label"><a href="http://weusecoins.com/">Money</a></span>
+          <a class="url preferred" rel="me" href="bitcoin:1Ciwfg7H54j2xNMH1yiEX46RxvoqNPZC1m">Bitcoin</a>
+          <a class="url preferred" rel="me" href="https://gittip.com/elliottcable">Gittip</a>
         </div>
         <div class="sites">
           <span class="label">Elsewhere</span>
