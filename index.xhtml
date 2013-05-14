@@ -127,6 +127,9 @@
         .vcard a:visited.preferred, .vcard .preferred a:visited { color: #581C90; }
         .vcard a:visited:hover { color: #581C90; text-shadow: #999999 0px 0px 2px; }
         
+        .vcard .aside:before { content: "(" }
+        .vcard .aside:after  { content: ")" }
+        
         h1.title {
           padding: 0px; margin: 0px;
           text-transform: uppercase;
@@ -204,10 +207,12 @@
         <div class="tel preferred">
           <span class="type">Phone</span><span class="type invisible">pref</span>
           <a href="tel:+19196364204?call"><span class="value">+1.919.636.4204</span></a>
+          <span class="aside"><a class="url preferred" rel="me" href="facetime://me@ell.io">FaceTime</a></span>
         </div>
         <div class="ims">
-          <span class="label">Instant Messengers</span>
-          <a class="url preferred" rel="me" href="xmpp:me@ell.io">Jabber</a>
+          <span class="label">Messengers</span>
+          <a class="url preferred" rel="me" href="imessage://me@ell.io">iMessage</a>
+          <a class="url" rel="me" href="xmpp:me@ell.io">Jabber</a>
           <a class="url" rel="me" href="aim:goim?screenname=me@ell.io">AIM</a>
         </div>
         <div class="sites">
