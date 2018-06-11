@@ -1,8 +1,8 @@
 Elliott Cable
 =============
 
-Cell:    +1 919 636.4204          (SMS, calls, FaceTime welcome)
-E-mail:   me@ell.io               (NOT CHECKED OFTEN - Call or text first!)
+Cell:    +1 919 636.4204          (SMS preferred; calls, FaceTime w/ prior notice)
+E-mail:   me@ell.io               (NOT CHECKED OFTEN; reach out first!)
 Twitter: twitter.com/ELLIOTTCABLE (DMs welcome)
 GitHub:   github.com/ELLIOTTCABLE
 Addt'l:   elliottcable.name
@@ -22,9 +22,7 @@ languages, tools, and platforms. (See footer.)
 
 PROJECT EXPERIENCE
 ------------------
-These are neither necessarily my most recent, nor most mature, pieces of work; I
-instead opted to try and present a *breadth* of experience - if there's one
-primary skill I possess, it's learning new things quickly and thoroughly.
+Here's a sampling of my work, selected primarily to show breadth of expierience:
 
 ### 2010-now: Pratchett, the programming language
 My overarching work of the past ten years, Pratchett (née Paws) is the
@@ -55,9 +53,9 @@ well as general OCaml skill, parsing automata, and Scheme itself.
 [ghuloum]: <http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf>
 
 ### Various patches, or contributions to others' open-source projects
-I'm a compulsive open-source developer and patcher. Although so many of my
-changes stay local and never see the light of day (a bad habit!), occasionally,
-I clean up and complete my explorations, and remember to submit a pull-request.
+I'm a repeat open-source developer and patcher. Although so many of my changes
+stay local and never see the light of day (a bad habit!), occasionally, I clean
+up and complete my explorations, and remember to submit a pull-request.
 
  - 2018, Python/OCaml, to OCaml's analysis engine, Merlin:
    http://ell.io/tt$merlin/blob/9b80dd/vim/merlin/autoload/merlin.py#L677-L734
@@ -106,13 +104,13 @@ libraries and tools I was most proud of.
 
 ADDITIONAL INFORMATION
 ----------------------
-I'm an avid maker/hacker, a U.S. General-class licensed radio operator (KL4JC,
-monitoring!), and consider myself an activist for the safety and inclusion of
-Black, trans, and underrepresented folks in tech. I'm also a lifelong Eagle
-Scout (whether the BSA wants “people like me” or not. ;)
+I'm an avid maker/hacker, a gov't-licensed General-class radio operator (KL4JC,
+monitoring!), and an activist for the safety and inclusion of Black, trans, and
+other underrepresented folks in tech. I'm also a lifelong Eagle Scout.
 
-Finally, a keyword-oriented list of additional related skills (with which I have
-at least a passing familiarity) omitted from the above, follows:
+Finally, a keyword-oriented list of additional related skills omitted from the
+above (at least, those with which I have at least a passing familiarity),
+follows:
 
     Techniques: BDD & TDD
     Languages & platforms: CoffeeScript, TypeScript, Flow; Rails, PHP;
