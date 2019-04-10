@@ -24,6 +24,26 @@ PROJECT EXPERIENCE
 Here's a sampling of my work, selected primarily for breadth. Where publically
 available, I've included exemplary source-code.
 
+### 2018-2019: KidScript, an educational programming-language for kids
+    (as Senior Software Engineer at Codeverse)
+
+Codeverse brought me onboard to draw on my open-source experience, improving on
+the stability of (and establishing engineering process for) their KidScript
+programming-language, as well as an iOS IDE. Responsibilities included:
+
+ - Establish strict Semantic Versioning procedure for the releases of, and
+   dependencies between, internal packages and external products
+ - Rewrite organization's internal tooling for JavaScript and iOS compilation,
+   deployment, etc. effectively from scratch, to enforce good practices
+ - Contribute features and handle fixes to the parsing, error-handling, and
+   interpreter components of KidScript
+ - Manage contributions to the language's standard-library of components and
+   objects
+ - Review other engineers' contributions to all of the above; providing guidance
+   on maintainability and technical debt
+ - Rewrite critical portions of the IDE's game/graphics-engine in TypeScript and
+   ML to improve stability
+
 ### 2010-2018: Pratchett, a programming language
 My overarching work of the past ten years, Pratchett (née Paws) is the project
 that's driven much of my personal development as a programmer. From surveying
