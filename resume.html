@@ -8,10 +8,10 @@
       <meta name="description" content="ELLIOTTCABLE's resume">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css'>
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css">
 
       <style>
-         a { text-decoration: none; }
+         a { text-decoration: none; color: blue; }
          pre {
             margin: 2em;
             font-family: Hack, "DejaVu Sans Mono", Menlo, Consolas,
@@ -24,38 +24,35 @@
 <b>=============</b>
 
 Cell:    <a href="tel:+1-919-636-4204">+1 919 636.4204</a>          (SMS preferred; calls, FaceTime w/ prior notice)
-E-mail:   <a href="mailto:me@ell.io">me@ell.io</a>               (NOT CHECKED OFTEN; reach out first!)
+E-mail:   <a href="mailto:me@ell.io">me@ell.io</a>               (NOT CHECKED OFTEN; text or DM me first!)
 Twitter: <a href="http://twitter.com/elliottcable">twitter.com/ELLIOTTCABLE</a> (DMs welcome)
 GitHub:   <a href="http://github.com/ELLIOTTCABLE">github.com/ELLIOTTCABLE</a>
 Addt'l:   <a href="http://elliottcable.name">elliottcable.name</a>
 
-I'm a testing-, operations-, and documentation-obsessed software engineer, most
-motivated by projects involving: programming-language design and implementation,
-maintainability refactors, tooling development, or diversity and accessibility.
+&ldquo;Move slowly and maintain things.&rdquo; I'm a testing-, operations-, and
+documentation-obsessed software engineer, motivated by projects involving
+programming-language implementation, maintainability refactors, tooling
+development, or diversity and accessibility.
 
-I'm currently most <em>*interested*</em> in: careful software development using powerful
-correctness tools like ML (i.e. OCaml/ReasonML); PL theory and JIT design; and
-improving the stability and maintainability of existing projects. Comparatively,
-I'm most <em>*experienced*</em> in: interpreter implementation; open-source library
+I'm currently interested in: careful software development using powerful
+correctness tools like OCaml and ReasonML; or PLT and JIT/compiler design. I'm
+most <em>*experienced*</em> in: interpreter implementation; open-source library
 maintenance; modern JavaScript tooling, versioning, and deployment; JS library
 development; server-side development in Node.js or Ruby; POSIX shell and ISO C.
 
-This is just a summary, of course. In researching and building software for a
-wide range of domains of concern, I've become at least passably familiar with a
-vast array of <em>*other*</em> programming languages, tools, and platforms. (See footer.)
 
+<b><a id="project-experience"></a>PROJECT EXPERIENCE</b>
+<b>------------------</b>
+Here's a sampling of my work, selected primarily for breadth. Where publically
+available, I've included exemplary source-code.
 
-<b><a id="project-experience"></a>OPEN-SOURCE PROJECT EXPERIENCE</b>
-<b>------------------------------</b>
-Here's a sampling of my work, selected primarily to show breadth of experience:
-
-<b>### 2010-2018: Pratchett, the programming language</b>
-My overarching work of the nearly ten years, Pratchett (née Paws) was the
-project that drove much of my personal development as a programmer. From
-surveying prospective users' needs, to staying on top of similar language work
-and PLT research, to organizing a community of interest and contributors, to
-triaging design goals to try and keep a sense of constant progress; my work here
-spanned many concerns and needs. This was my largest ongoing software project.
+<b>### 2010-2018: Pratchett, a programming language</b>
+My overarching work of the past ten years, Pratchett (née Paws) is the project
+that's driven much of my personal development as a programmer. From surveying
+prospective users' needs, staying on top of similar language work and PLT
+research, to organizing a (brief) community of interest and contributors and
+triaging design goals to try and keep a sense of constant progress, this has
+been my largest ongoing software project.
 
  - <a href="http://ell.io/tt$Paws.js/tree/queueless+#README">ell.io/tt$Paws.js/tree/queueless+#README</a>
  - <a href="http://ell.io/tt$Paws.js/blob/d1a1f2/Source/datagraph.coffee#L27-L135">ell.io/tt$Paws.js/blob/d1a1f2/Source/datagraph.coffee#L27-L135</a>
@@ -65,29 +62,28 @@ spanned many concerns and needs. This was my largest ongoing software project.
  - <a href="http://ell.io/tt$Paws.c/tree/f4fcb5/Source/Paws.o/Paws.c#L32-L94">ell.io/tt$Paws.c/tree/f4fcb5/Source/Paws.o/Paws.c#L32-L94</a>
  - <a href="http://ell.io/tt$Paws.c/blob/f4fcb5/Source/Paws.o/Ancillary/Threading/Thread/Thread.c#L97-L175">ell.io/tt$Paws.c/blob/f4fcb5/Source/Paws.o/Ancillary/Threading/Thread/Thread.c#L97-L175</a>
 
-<b>### 2017-now: Unnamed learning project, an R5RS-Scheme compiler in OCaml</b>
+<b>### 2017-now: An R5RS-Scheme compiler in OCaml</b>
 At PWLconf 2017, I was introduced to A. Ghuloum's “<a href="http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf">Incremental Approach to
 Compiler Construction</a>” paper. This spawned a still-ongoing project
 from which I am learning a substantial amount — about compiler architecture, as
-well as general OCaml skills, parsing automata, and of course Scheme and LISPs'
-implementation constraints.
+well as general OCaml skill, parsing automata, and Scheme itself.
 
  - <a href="http://ell.io/tt$ocameel/blob/5ac70f/bin/cli.ml#L6-L93">ell.io/tt$ocameel/blob/5ac70f/bin/cli.ml#L6-L93</a>
  - <a href="http://ell.io/tt$ocameel/blob/db2dda/lib/Lexer.sedlex.body.ml#L40-L97">ell.io/tt$ocameel/blob/db2dda/lib/Lexer.sedlex.body.ml#L40-L97</a>
 
-<b>### Various patches, or contributions to others' open-source projects</b>
+<b>### Various patches and contributions to others' open-source projects</b>
 I'm a repeat open-source developer and patcher. Although so many of my changes
 stay local and never see the light of day (a bad habit!), occasionally, I clean
 up and complete my explorations, and remember to submit a pull-request.
 
- - 2018, Python/OCaml, to OCaml's analysis engine, Merlin:
+ - 2018, Python/OCaml: Merlin, OCaml's analysis engine.
    <a href="http://ell.io/tt$merlin/blob/9b80dd/vim/merlin/autoload/merlin.py#L677-L734">ell.io/tt$merlin/blob/9b80dd/vim/merlin/autoload/merlin.py#L677-L734</a>
 
- - 2017, ISO C, adding syscalls to the xv6 operating system, as an exercise:
+ - 2017, ISO C: the XV6 operating-system.
    <a href="http://ell.io/tt$xv6/blob/efd94e/README#L10-L57">ell.io/tt$xv6/blob/efd94e/README#L10-L57</a>,
    <a href="http://ell.io/tt$xv6/compare/08429c...379fc6">ell.io/tt$xv6/compare/08429c...379fc6</a>
 
- - 2013, ISO C, adding a history-reorganizing feature to git mainline:
+ - 2013, ISO C: Git. adding a history-reorganizing feature.
    <a href="http://ell.io/tt$git/compare/b5c267...author-order+">ell.io/tt$git/compare/b5c267...author-order+</a>
 
 <b>### 2017: Giraphe, a configurable JavaScript graph-walking library</b>
@@ -98,7 +94,7 @@ related tasks. (It currently only <em>*implements*</em> a generic, unoptimized w
  - <a href="http://ell.io/tt$giraphe#README">ell.io/tt$giraphe#README</a>
  - <a href="http://ell.io/tt$giraphe/blob/fe85e6/giraphe.es6.js#L122-L257">ell.io/tt$giraphe/blob/fe85e6/giraphe.es6.js#L122-L257</a>
 
-<b>### 2016: `pin-cushion`, an API-client for <a href="http://Pinboard.in">http://Pinboard.in</a></b>
+<b>### 2016: `pin-cushion`, an API-client for <a href="http://pinboard.in">Pinboard.in</a></b>
 A small, one-off, but complete and modern, command-line client for my
 bookmarking service of choice. Included simply because it's some of the only
 recent and pure JavaScript I've written, with no legacy cruft.
@@ -107,11 +103,12 @@ recent and pure JavaScript I've written, with no legacy cruft.
  - <a href="http://ell.io/tt$pin-cushion/blob/36be70/pin-cushion#L78-L121">ell.io/tt$pin-cushion/blob/36be70/pin-cushion#L78-L121</a>
 
 <b>### 2008: ArchLinux image-builder for Amazon EC2</b>
-ArchLinux, my preferred distro, was unavailable on Amazon EC2 for years. I built
-a fiendishly-complex, modular shell-script architecture for bundling custom
-builds of Arch and publishing them to your EC2 hosts. This involved poring
-through both Amazon's AWS documentation, as well as that of Arch's own build-
-system and packaging. This is the largest pure-POSIX-shell program I've written.
+Arch, my preferred Linux distro, was unavailable on Amazon EC2 for years. I
+built a fiendishly-complex, modular shell-script architecture for bundling
+custom builds of Arch and publishing them to your EC2 hosts. This involved
+poring through both Amazon's AWS documentation, as well as that of Arch's own
+build-system and packaging. This is the largest pure-POSIX-shell program I've
+written.
 
  - <a href="http://ell.io/tt$ArchLinux-AMIs/blob/a34646/bundle.sh">ell.io/tt$ArchLinux-AMIs/blob/a34646/bundle.sh</a>
 
@@ -127,19 +124,21 @@ libraries and tools I was most proud of.
 
 <b><a id="additional-information"></a>ADDITIONAL INFORMATION</b>
 <b>----------------------</b>
-I'm an avid maker/hacker, a gov't-licensed General-class radio operator (KL4JC,
-monitoring!), and an activist for the safety and inclusion of Black, trans, and
-otherwise underrepresented folks in tech. I'm also a lifelong Eagle Scout.
+I'm an avid maker/hacker, I hold a &lsquo;General&rsquo;-class gov't license for radio
+operation (KL4JC, monitoring!), and I'm an activist for the safety and inclusion
+of Black, trans, and other underrepresented folks in tech. I'm also a lifelong
+Eagle Scout.
 
 Finally, a keyword-oriented list of additional related skills omitted from the
 above (at least, those with which I have at least <em>*some*</em> familiarity), follows:
 
-    Practices: BDD &amp; TDD, granular Git, strict Semantic Versioning
-    Languages &amp; platforms: CoffeeScript, TypeScript, BuckleScript, Flow;
-       Rails, PHP, Python; Objective-C, Cocoa; Io, Lua, Potion; Racket, Guile,
-       other R5RS LISPs; Tulip, Eff, MetaOCaml; VimScript; C++, Java
-    Other: macOS, BSD, Linux, and the POSIX/UNIX APIs; Redis &amp; MongoDB;
-       firmware and RTOS development; Docker, Vagrant, and other DevOps tools
+    Practices: BDD &amp; TDD, Agile; granular Git or git-flow; Agile, git-flow;
+       Semantic Versioning
+    Languages &amp; platforms: CoffeeScript, TypeScript, BuckleScript, Flow; React,
+       Rails, Python; Objective-C, Cocoa; Io, Lua, Potion; Racket, Guile, other
+       R5RS; Tulip, Eff, MetaOCaml; VimScript; C++, Java
+    Other: macOS, BSD, Linux, and the POSIX/UNIX APIs; Redis & MongoDB;
+       firmware / RTOS development; Docker, Vagrant; PostgreSQL
       </pre>
    </body>
 </html>
