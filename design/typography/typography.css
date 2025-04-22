@@ -1,0 +1,364 @@
+/* Several browsers fail to recognize font property descriptors in `@font-face` declarations; thus, we have to
+   define the ‘regular’ variant after every other variant specified with the same `font-family` name. This will
+   (theoretically) override the previous definitions, so, at the very least, text won’t appear as all-italics or
+   all-bold or something worse.
+   
+   In addition, the CSS3 Fonts module mistakenly treats `font-variant` as a non-selection-affecting “font 
+   feature.” This should definately not be the case, as it’s important to be able to select the font file for a
+   ‘small caps’ variant of a typeface when you declare `font-variant: small-caps`. Since this is not handled
+   properly, we have to declare faked seperate ‘font families’ for the ‘small caps’ variant of each family.
+   Hopefully, this will one day be fixed, but I am not optimistic. */
+
+/* = Anivers = */
+
+@font-face {
+  font-family: 'Anivers'; font-style: italic;
+  src: url('fonts/Anivers/Anivers-Italic.eot');
+  src: local('⚙'),
+       url('fonts/Anivers/Anivers-Italic.woff') format('woff'),
+       url('fonts/Anivers/Anivers-Italic.ttf') format('truetype'),
+       url('fonts/Anivers/Anivers-Italic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Anivers';
+  src: url('fonts/Anivers/Anivers-SmallCaps.eot');
+  src: local('⚙'),
+       url('fonts/Anivers/Anivers-SmallCaps.woff') format('woff'),
+       url('fonts/Anivers/Anivers-SmallCaps.ttf') format('truetype'),
+       url('fonts/Anivers/Anivers-SmallCaps.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Anivers'; font-weight: bold;
+  src: url('fonts/Anivers/Anivers-Bold.eot');
+  src: local('⚙'),
+       url('fonts/Anivers/Anivers-Bold.woff') format('woff'),
+       url('fonts/Anivers/Anivers-Bold.ttf') format('truetype'),
+       url('fonts/Anivers/Anivers-Bold.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Anivers';
+  src: url('fonts/Anivers/Anivers-Regular.eot');
+  src: local('⚙'),
+       url('fonts/Anivers/Anivers-Regular.woff') format('woff'),
+       url('fonts/Anivers/Anivers-Regular.ttf') format('truetype'),
+       url('fonts/Anivers/Anivers-Regular.otf') format('opentype'); }
+
+/* = Delicious = */
+
+@font-face {
+  font-family: 'Delicious'; font-style: italic;
+  src: url('fonts/Delicious/Delicious-Italic.eot');
+  src: local('⚙'),
+       url('fonts/Delicious/Delicious-Italic.woff') format('woff'),
+       url('fonts/Delicious/Delicious-Italic.ttf') format('truetype'),
+       url('fonts/Delicious/Delicious-Italic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Delicious';
+  src: url('fonts/Delicious/Delicious-SmallCaps.eot');
+  src: local('⚙'),
+       url('fonts/Delicious/Delicious-SmallCaps.woff') format('woff'),
+       url('fonts/Delicious/Delicious-SmallCaps.ttf') format('truetype'),
+       url('fonts/Delicious/Delicious-SmallCaps.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Delicious'; font-weight: bold;
+  src: url('fonts/Delicious/Delicious-Bold.eot');
+  src: local('⚙'),
+       url('fonts/Delicious/Delicious-Bold.woff') format('woff'),
+       url('fonts/Delicious/Delicious-Bold.ttf') format('truetype'),
+       url('fonts/Delicious/Delicious-Bold.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Delicious'; font-weight: bold; font-style: italic;
+  src: url('fonts/Delicious/Delicious-BoldItalic.eot');
+  src: local('⚙'),
+       url('fonts/Delicious/Delicious-BoldItalic.woff') format('woff'),
+       url('fonts/Delicious/Delicious-BoldItalic.ttf') format('truetype'),
+       url('fonts/Delicious/Delicious-BoldItalic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Delicious'; font-weight: 800; font-style: italic;
+  src: url('fonts/Delicious/Delicious-Black.eot');
+  src: local('⚙'),
+       url('fonts/Delicious/Delicious-Black.woff') format('woff'),
+       url('fonts/Delicious/Delicious-Black.ttf') format('truetype'),
+       url('fonts/Delicious/Delicious-Black.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Delicious';
+  src: url('fonts/Delicious/Delicious-Regular.eot');
+  src: local('⚙'),
+       url('fonts/Delicious/Delicious-Regular.woff') format('woff'),
+       url('fonts/Delicious/Delicious-Regular.ttf') format('truetype'),
+       url('fonts/Delicious/Delicious-Regular.otf') format('opentype'); }
+
+/* = Diavlo = */
+
+@font-face {
+  font-family: 'Diavlo'; font-weight: 200;
+  src: url('fonts/Diavlo/Diavlo-Light.eot');
+  src: local('⚙'),
+       url('fonts/Diavlo/Diavlo-Light.woff') format('woff'),
+       url('fonts/Diavlo/Diavlo-Light.ttf') format('truetype'),
+       url('fonts/Diavlo/Diavlo-Light.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Diavlo'; font-weight: 300;
+  src: url('fonts/Diavlo/Diavlo-Book.eot');
+  src: local('⚙'),
+       url('fonts/Diavlo/Diavlo-Book.woff') format('woff'),
+       url('fonts/Diavlo/Diavlo-Book.ttf') format('truetype'),
+       url('fonts/Diavlo/Diavlo-Book.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Diavlo'; font-weight: bold;
+  src: url('fonts/Diavlo/Diavlo-Bold.eot');
+  src: local('⚙'),
+       url('fonts/Diavlo/Diavlo-Bold.woff') format('woff'),
+       url('fonts/Diavlo/Diavlo-Bold.ttf') format('truetype'),
+       url('fonts/Diavlo/Diavlo-Bold.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Diavlo'; font-weight: 800;
+  src: url('fonts/Diavlo/Diavlo-Black.eot');
+  src: local('⚙'),
+       url('fonts/Diavlo/Diavlo-Black.woff') format('woff'),
+       url('fonts/Diavlo/Diavlo-Black.ttf') format('truetype'),
+       url('fonts/Diavlo/Diavlo-Black.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Diavlo';
+  src: url('fonts/Diavlo/Diavlo-Regular.eot');
+  src: local('⚙'),
+       url('fonts/Diavlo/Diavlo-Regular.woff') format('woff'),
+       url('fonts/Diavlo/Diavlo-Regular.ttf') format('truetype'),
+       url('fonts/Diavlo/Diavlo-Regular.otf') format('opentype'); }
+
+/* = Fertigo Pro = */
+
+@font-face {
+  font-family: 'FertigoPro'; font-style: italic;
+  src: url('fonts/FertigoPro/FertigoPro-Italic.eot');
+  src: local('⚙'),
+       url('fonts/FertigoPro/FertigoPro-Italic.woff') format('woff'),
+       url('fonts/FertigoPro/FertigoPro-Italic.ttf') format('truetype'),
+       url('fonts/FertigoPro/FertigoPro-Italic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'FertigoPro';
+  src: url('fonts/FertigoPro/FertigoPro-Regular.eot');
+  src: local('⚙'),
+       url('fonts/FertigoPro/FertigoPro-Regular.woff') format('woff'),
+       url('fonts/FertigoPro/FertigoPro-Regular.ttf') format('truetype'),
+       url('fonts/FertigoPro/FertigoPro-Regular.otf') format('opentype'); }
+
+/* = Fontin = */
+
+@font-face {
+  font-family: 'Fontin'; font-style: italic;
+  src: url('fonts/Fontin/Fontin-Italic.eot');
+  src: local('⚙'),
+       url('fonts/Fontin/Fontin-Italic.woff') format('woff'),
+       url('fonts/Fontin/Fontin-Italic.ttf') format('truetype'),
+       url('fonts/Fontin/Fontin-Italic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Fontin';
+  src: url('fonts/Fontin/Fontin-SmallCaps.eot');
+  src: local('⚙'),
+       url('fonts/Fontin/Fontin-SmallCaps.woff') format('woff'),
+       url('fonts/Fontin/Fontin-SmallCaps.ttf') format('truetype'),
+       url('fonts/Fontin/Fontin-SmallCaps.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Fontin'; font-weight: bold;
+  src: url('fonts/Fontin/Fontin-Bold.eot');
+  src: local('⚙'),
+       url('fonts/Fontin/Fontin-Bold.woff') format('woff'),
+       url('fonts/Fontin/Fontin-Bold.ttf') format('truetype'),
+       url('fonts/Fontin/Fontin-Bold.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Fontin';
+  src: url('fonts/Fontin/Fontin-Regular.eot');
+  src: local('⚙'),
+       url('fonts/Fontin/Fontin-Regular.woff') format('woff'),
+       url('fonts/Fontin/Fontin-Regular.ttf') format('truetype'),
+       url('fonts/Fontin/Fontin-Regular.otf') format('opentype'); }
+
+/* = Fontin Sans = */
+
+@font-face {
+  font-family: 'FontinSans'; font-style: italic;
+  src: url('fonts/FontinSans/FontinSans-Italic.eot');
+  src: local('⚙'),
+       url('fonts/FontinSans/FontinSans-Italic.woff') format('woff'),
+       url('fonts/FontinSans/FontinSans-Italic.ttf') format('truetype'),
+       url('fonts/FontinSans/FontinSans-Italic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'FontinSans';
+  src: url('fonts/FontinSans/FontinSans-SmallCaps.eot');
+  src: local('⚙'),
+       url('fonts/FontinSans/FontinSans-SmallCaps.woff') format('woff'),
+       url('fonts/FontinSans/FontinSans-SmallCaps.ttf') format('truetype'),
+       url('fonts/FontinSans/FontinSans-SmallCaps.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'FontinSans'; font-weight: bold;
+  src: url('fonts/FontinSans/FontinSans-Bold.eot');
+  src: local('⚙'),
+       url('fonts/FontinSans/FontinSans-Bold.woff') format('woff'),
+       url('fonts/FontinSans/FontinSans-Bold.ttf') format('truetype'),
+       url('fonts/FontinSans/FontinSans-Bold.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'FontinSans'; font-weight: bold; font-style: italic;
+  src: url('fonts/FontinSans/FontinSans-BoldItalic.eot');
+  src: local('⚙'),
+       url('fonts/FontinSans/FontinSans-BoldItalic.woff') format('woff'),
+       url('fonts/FontinSans/FontinSans-BoldItalic.ttf') format('truetype'),
+       url('fonts/FontinSans/FontinSans-BoldItalic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'FontinSans';
+  src: url('fonts/FontinSans/FontinSans-Regular.eot');
+  src: local('⚙'),
+       url('fonts/FontinSans/FontinSans-Regular.woff') format('woff'),
+       url('fonts/FontinSans/FontinSans-Regular.ttf') format('truetype'),
+       url('fonts/FontinSans/FontinSans-Regular.otf') format('opentype'); }
+
+/* = Museo = */
+
+@font-face {
+  font-family: 'Museo'; font-weight: 200;
+  src: url('fonts/Museo/Museo-Light.eot');
+  src: local('⚙'),
+       url('fonts/Museo/Museo-Light.woff') format('woff'),
+       url('fonts/Museo/Museo-Light.ttf') format('truetype'),
+       url('fonts/Museo/Museo-Light.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Museo'; font-weight: 300;
+  src: url('fonts/Museo/Museo-Book.eot');
+  src: local('⚙'),
+       url('fonts/Museo/Museo-Book.woff') format('woff'),
+       url('fonts/Museo/Museo-Book.ttf') format('truetype'),
+       url('fonts/Museo/Museo-Book.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Museo'; font-weight: bold;
+  src: url('fonts/Museo/Museo-Bold.eot');
+  src: local('⚙'),
+       url('fonts/Museo/Museo-Bold.woff') format('woff'),
+       url('fonts/Museo/Museo-Bold.ttf') format('truetype'),
+       url('fonts/Museo/Museo-Bold.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Museo'; font-weight: 800;
+  src: url('fonts/Museo/Museo-Black.eot');
+  src: local('⚙'),
+       url('fonts/Museo/Museo-Black.woff') format('woff'),
+       url('fonts/Museo/Museo-Black.ttf') format('truetype'),
+       url('fonts/Museo/Museo-Black.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'Museo';
+  src: url('fonts/Museo/Museo-Regular.eot');
+  src: local('⚙'),
+       url('fonts/Museo/Museo-Regular.woff') format('woff'),
+       url('fonts/Museo/Museo-Regular.ttf') format('truetype'),
+       url('fonts/Museo/Museo-Regular.otf') format('opentype'); }
+
+/* = Museo Sans = */
+
+@font-face {
+  font-family: 'MuseoSans'; font-weight: 200;
+  src: url('fonts/MuseoSans/MuseoSans-Light.eot');
+  src: local('⚙'),
+       url('fonts/MuseoSans/MuseoSans-Light.woff') format('woff'),
+       url('fonts/MuseoSans/MuseoSans-Light.ttf') format('truetype'),
+       url('fonts/MuseoSans/MuseoSans-Light.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'MuseoSans'; font-weight: 200; font-style: italic;
+  src: url('fonts/MuseoSans/MuseoSans-LightItalic.eot');
+  src: local('⚙'),
+       url('fonts/MuseoSans/MuseoSans-LightItalic.woff') format('woff'),
+       url('fonts/MuseoSans/MuseoSans-LightItalic.ttf') format('truetype'),
+       url('fonts/MuseoSans/MuseoSans-LightItalic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'MuseoSans'; font-weight: 300;
+  src: url('fonts/MuseoSans/MuseoSans-Book.eot');
+  src: local('⚙'),
+       url('fonts/MuseoSans/MuseoSans-Book.woff') format('woff'),
+       url('fonts/MuseoSans/MuseoSans-Book.ttf') format('truetype'),
+       url('fonts/MuseoSans/MuseoSans-Book.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'MuseoSans'; font-weight: 300; font-style: italic;
+  src: url('fonts/MuseoSans/MuseoSans-BookItalic.eot');
+  src: local('⚙'),
+       url('fonts/MuseoSans/MuseoSans-BookItalic.woff') format('woff'),
+       url('fonts/MuseoSans/MuseoSans-BookItalic.ttf') format('truetype'),
+       url('fonts/MuseoSans/MuseoSans-BookItalic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'MuseoSans'; font-style: italic;
+  src: url('fonts/MuseoSans/MuseoSans-RegularItalic.eot');
+  src: local('⚙'),
+       url('fonts/MuseoSans/MuseoSans-RegularItalic.woff') format('woff'),
+       url('fonts/MuseoSans/MuseoSans-RegularItalic.ttf') format('truetype'),
+       url('fonts/MuseoSans/MuseoSans-RegularItalic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'MuseoSans'; font-weight: bold;
+  src: url('fonts/MuseoSans/MuseoSans-Bold.eot');
+  src: local('⚙'),
+       url('fonts/MuseoSans/MuseoSans-Bold.woff') format('woff'),
+       url('fonts/MuseoSans/MuseoSans-Bold.ttf') format('truetype'),
+       url('fonts/MuseoSans/MuseoSans-Bold.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'MuseoSans'; font-weight: bold; font-style: italic;
+  src: url('fonts/MuseoSans/MuseoSans-BoldItalic.eot');
+  src: local('⚙'),
+       url('fonts/MuseoSans/MuseoSans-BoldItalic.woff') format('woff'),
+       url('fonts/MuseoSans/MuseoSans-BoldItalic.ttf') format('truetype'),
+       url('fonts/MuseoSans/MuseoSans-BoldItalic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'MuseoSans'; font-weight: 800;
+  src: url('fonts/MuseoSans/MuseoSans-Black.eot');
+  src: local('⚙'),
+       url('fonts/MuseoSans/MuseoSans-Black.woff') format('woff'),
+       url('fonts/MuseoSans/MuseoSans-Black.ttf') format('truetype'),
+       url('fonts/MuseoSans/MuseoSans-Black.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'MuseoSans'; font-weight: 800; font-style: italic;
+  src: url('fonts/MuseoSans/MuseoSans-BlackItalic.eot');
+  src: local('⚙'),
+       url('fonts/MuseoSans/MuseoSans-BlackItalic.woff') format('woff'),
+       url('fonts/MuseoSans/MuseoSans-BlackItalic.ttf') format('truetype'),
+       url('fonts/MuseoSans/MuseoSans-BlackItalic.otf') format('opentype'); }
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('fonts/MuseoSans/MuseoSans-Regular.eot');
+  src: local('⚙'),
+       url('fonts/MuseoSans/MuseoSans-Regular.woff') format('woff'),
+       url('fonts/MuseoSans/MuseoSans-Regular.ttf') format('truetype'),
+       url('fonts/MuseoSans/MuseoSans-Regular.otf') format('opentype'); }
+
+/* = Tallys = */
+
+@font-face {
+  font-family: 'Tallys';
+  src: url('fonts/Tallys/Tallys-Regular.eot');
+  src: local('⚙'),
+       url('fonts/Tallys/Tallys-Regular.woff') format('woff'),
+       url('fonts/Tallys/Tallys-Regular.ttf') format('truetype'),
+       url('fonts/Tallys/Tallys-Regular.otf') format('opentype'); }

@@ -3,44 +3,44 @@
   <head>
     <title>elliottcable</title>
     <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" type="text/html;charset=utf-8"/>
-    
+
     <link rel="openid.server" href="http://www.myopenid.com/server"/>
     <link rel="openid.delegate" href="http://elliott.cable.myopenid.com/"/>
     <link rel="openid2.local_id" href="http://elliott.cable.myopenid.com"/>
     <link rel="openid2.provider" href="http://www.myopenid.com/server"/>
     <meta name="microid" content="mailto+http:sha1:dd5d6b0bc85a5932dd8b630ba505bde075e6b9ee"/>
     <link rel="pavatar" href="http://elliottcable.name/pavatar.png"/>
-    
+
     <link rel="alternate" type="application/atom+xml" title="elliottcable" href="http://elliottcable.name/index.xml"/>
-    
+
     <link rel="stylesheet"
-      href="http://resources.yreality.net/Design/960/reset.css"
+      href="./design/960/reset.css"
       type="text/css;charset=utf-8"/>
     <link rel="stylesheet"
-      href="http://resources.yreality.net/Design/960/text.css"
+      href="./design/960/text.css"
       type="text/css;charset=utf-8"/>
     <script type="text/javascript">
       <![CDATA[
         if(typeof xmlNS === 'undefined') {
           var xmlNS = document.lastChild.namespaceURI };
         if(typeof _gaq === 'undefined') { _gaq = new(Array) };
-        
+
         _gaq.push(['_setAccount', "UA-5294724-1"]);
         _gaq.push(['_trackPageview']);
-        
+
         (function() {
           var ga = document.createElementNS(xmlNS, 'script');
           ga.type = "text/javascript"; ga.async = true;
           ga.src = "http://www.google-analytics.com/ga.js";
-          
+
           document.getElementsByTagNameNS(xmlNS, 'head')[0].appendChild(ga);
         })();
       ]]>
     </script>
     <style>
       <![CDATA[
-        @import url('http://resources.yreality.net/Design/Typography/Typography.css') screen, print;
-        
+        @import url('./design/typography/typography.css') screen, print;
+
         html {
           height: 100%;
           background: white;
@@ -50,18 +50,18 @@
           font: 100 125%/1.6 "Diavlo";
           color: black;
         }
-        
+
         a { color: blue; text-decoration: none; }
         a:hover {
           color: black;
           text-decoration: none;
         }
-        
+
         a:visited { color: #581C90; }
         a:visited:hover {
           text-decoration: none;
         }
-        
+
         #acontlol {
           height: 100%;
           display: table !important;
@@ -71,33 +71,33 @@
           display: table-cell !important;
           vertical-align: middle !important
         }
-        
-        
+
+
         #header {
           width: 100%;
           border-top: 5px solid black;
           position: absolute;
           top: 0; right: 0;
-          
+
           font: 900 125%/1.0 "Museo";
           text-align: left;
         }
-        
+
         #header a#download {
           margin: 3px;
           display: block;
           height: 18px;
           width: 29px;
-          background: transparent url("http://resources.yreality.net.s3.amazonaws.com/microformats/hcard.png") no-repeat center center;
+          background: transparent url("./microformats/hcard.png") no-repeat center center;
         }
         #header a#download:hover {
-          background: transparent url("http://resources.yreality.net.s3.amazonaws.com/microformats/hcard-download.png") no-repeat center center;
+          background: transparent url("./microformats/hcard-download.png") no-repeat center center;
         }
         #header a#download > * { display: none; }
-        
+
         #navigation {
           margin: 0px;
-          
+
           font: 100 125%/1.6 "Diavlo";
           text-align: center;
         }
@@ -107,7 +107,7 @@
           margin-left: 0.25em;
           padding-left: 0.25em;
           padding-right: 0.25em;
-          
+
           color: blue;
           text-shadow: none;
         }
@@ -115,39 +115,39 @@
         #navigation li a:visited { color: #581C90; }
         #navigation li a, #navigation li a:visited { text-shadow: none; }
         #navigation li a:hover { background: black; color: white; }
-        
+
         .vcard {
           font-style: normal;
         }
         .vcard a { color: #CCCCFF; text-shadow: rgba(255, 255, 255, 0.01) 0px 0px 2px; }
         .vcard a.preferred, .vcard .preferred a { color: blue; }
         .vcard a:hover { color: blue; text-shadow: #9999FF 0px 0px 2px; }
-        
+
         .vcard a:visited { color: #cbb2e0; }
         .vcard a:visited.preferred, .vcard .preferred a:visited { color: #581C90; }
         .vcard a:visited:hover { color: #581C90; text-shadow: #999999 0px 0px 2px; }
-        
+
         .vcard .aside:before { content: "(" }
         .vcard .aside:after  { content: ")" }
-        
+
         h1.title {
           padding: 0px; margin: 0px;
           text-transform: uppercase;
-          
+
           text-align: right;
           font: 300 125%/1.0 "Museo";
-          
+
           border-top: 5px solid black;
           padding-top: 0.25em;
         }
         h1.title a {
           color: blue !important;
           text-shadow: none !important;
-          
+
           display: block;
           text-align: center;
           font: 200 350%/1.0 "Museo";
-          
+
           border-bottom: 5px solid blue;
         }
         h2.subtitle {
@@ -155,33 +155,33 @@
           text-align: right;
           padding-top: 0.25em;
           font: bold 100%/1.0 "Museo";
-          
+
           padding-bottom: 1em;
         }
         h2.subtitle a { color: blue !important; }
-        
+
         .type, .label { font: bold 100%/1.6 "Diavlo"; }
         .type a, .label a { color: black !important; border-bottom: 1px dashed blue; }
         .type:after, .label:after { content: ":"; }
         .type.invisible, .label.invisible { display: none; }
-        
+
         .ims a:after, .x-money a:after, .tags a:after, .sites a:after { content: ","; }
         .ims a:last-child:after, .x-money a:last-child:after, .tags a:last-child:after, .sites a:last-child:after { content: ""; }
-        
+
         .adr a span:after { content: "\2c\20"; }
         .adr a span:last-child:after { content: "\20\221a\20" }
         .adr a:last-child span:after { content: ""; }
-        
+
         .emails { text-align: center; margin-top: 2em; }
         .emails a { font: 133%/1.3 "Anivers"; display: block; }
-        
-        
+
+
         #footer {
           width: 100%;
           border-bottom: 5px solid blue;
           position: absolute;
           bottom: 0; left: 0;
-          
+
           font: bold 125%/1.0 "Museo";
           text-align: right;
         }
@@ -190,7 +190,7 @@
   </head>
   <body>
     <div id="header">
-      <a id="download" href="http://elliottcable.name/elliottcable.vcf" rel="me"><span>download my vCard</span></a>
+      <a id="download" href="./elliottcable.vcf" rel="me"><span>download my vCard</span></a>
     </div>
     <div id="acontlol">
       <address id="hcard-elliott-cable" class="vcard">
