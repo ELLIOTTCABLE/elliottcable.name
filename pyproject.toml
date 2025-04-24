@@ -1,0 +1,10 @@
+[project]
+name = "elliottcable.name"
+version = "0.0.1"
+
+[dependency-groups]
+dev = [
+   "fonttools>=4.57.0",
+   "brotli>=1.1.0",
+   "zopfli>=0.2.3",
+]

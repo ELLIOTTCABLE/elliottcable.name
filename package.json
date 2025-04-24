@@ -1,0 +1,7 @@
+{
+   "name": "elliottcable.name",
+   "private": "true",
+   "devDependencies": {
+      "glyphhanger": "^5.0.0"
+   }
+}
