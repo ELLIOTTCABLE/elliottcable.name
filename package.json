@@ -2,6 +2,7 @@
    "name": "elliottcable.name",
    "private": "true",
    "devDependencies": {
+      "@fortawesome/fontawesome-free": "^6.7.2",
       "glyphhanger": "^5.0.0"
    }
 }
