@@ -98,19 +98,19 @@
         #navigation li a, #navigation li a:visited { text-shadow: none; }
         #navigation li a:hover { background: black; color: white; }
 
-        .vcard {
+        .h-card {
           font-style: normal;
         }
-        .vcard a { color: #CCCCFF; text-shadow: rgba(255, 255, 255, 0.01) 0px 0px 2px; }
-        .vcard a.preferred, .vcard .preferred a { color: blue; }
-        .vcard a:hover { color: blue; text-shadow: #9999FF 0px 0px 2px; }
+        .h-card a { color: #CCCCFF; text-shadow: rgba(255, 255, 255, 0.01) 0px 0px 2px; }
+        .h-card a.preferred, .h-card .preferred a { color: blue; }
+        .h-card a:hover { color: blue; text-shadow: #9999FF 0px 0px 2px; }
 
-        .vcard a:visited { color: #cbb2e0; }
-        .vcard a:visited.preferred, .vcard .preferred a:visited { color: #581C90; }
-        .vcard a:visited:hover { color: #581C90; text-shadow: #999999 0px 0px 2px; }
+        .h-card a:visited { color: #cbb2e0; }
+        .h-card a:visited.preferred, .h-card .preferred a:visited { color: #581C90; }
+        .h-card a:visited:hover { color: #581C90; text-shadow: #999999 0px 0px 2px; }
 
-        .vcard .aside:before { content: "(" }
-        .vcard .aside:after  { content: ")" }
+        .h-card .aside:before { content: "(" }
+        .h-card .aside:after  { content: ")" }
 
         h1.title {
           padding: 0px; margin: 0px;
@@ -174,46 +174,49 @@
       <a id="download" href="./elliottcable.vcf" rel="me"><span>download my vCard</span></a>
     </div>
     <div id="acontlol">
-      <address id="hcard-elliott-cable" class="vcard">
+      <address id="hcard-elliott-cable" class="h-card">
         <ul id="navigation">
-          <li><a href="http://blog.elliottcable.name/">blog</a></li>
-          <li><a href="http://by.elliottcable.name/">projects</a></li>
-          <li><a href="http://elliottcable.name/resume.html" class="emphasized">hire me!</a></li>
+          <li><a class="u-url" href="http://blog.elliottcable.name/">blog</a></li>
+          <li><a class="u-url" href="http://by.elliottcable.name/">projects</a></li>
+          <li><a class="u-url" href="http://elliottcable.name/resume.html" class="emphasized">hire me!</a></li>
         </ul>
-        <h1 class="title"><a class="url fn uid" rel="me openid.delegate" href="http://elliottcable.name">elliottcable</a></h1>
-        <h2 class="subtitle">of <a class="org url" href="http://yreality.net" rel="me">yreality</a></h2>
+        <h1 class="title"><a class="u-uid p-name p-nickname u-url" rel="me" href="http://elliottcable.name">elliottcable</a></h1>
+        <h2 class="subtitle">of <a class="p-org u-url" href="http://yreality.net" rel="me">yreality</a></h2>
         <div class="ims">
           <span class="label">Chat</span>
-          <a class="url preferred" rel="me" href="https://discordapp.com/users/271068975343861761">Discord</a>
-          <a class="url preferred" rel="me" href="imessage://me@ell.io">iMessage</a>
-          <a class="url preferred" rel="me" href="https://signal.me/#p/+19196364204">Signal</a>
-          <a class="url" rel="me" href="sms:+19196364204">SMS</a>
-          <a class="url" rel="me" href="https://t.me/elliottcable">Telegram</a>
+          <a class="u-url preferred" rel="me" href="https://discordapp.com/users/271068975343861761">Discord</a>
+          <a class="u-url preferred" rel="me" href="imessage://me@ell.io">iMessage</a>
+          <a class="u-url preferred" rel="me" href="https://signal.me/#p/+19196364204">Signal</a>
+          <a class="u-url" rel="me" href="sms:+19196364204">SMS</a>
+          <a class="u-url" rel="me" href="https://t.me/elliottcable">Telegram</a>
         </div>
         <div class="x-money">
           <span class="label">Money</span>
-          <a class="url preferred" rel="me" href="https://cash.app/$ELLIOTTCABLE">Cash.app</a>
+          <a class="u-url preferred" rel="me" href="https://cash.app/$ELLIOTTCABLE">Cash.app</a>
+        </div>
+        <div class="phone">
+          <span class="type">Phone</span><span class="type invisible">pref</span>
+          <a href="tel:+19196364204?call"><span class="p-tel">+1 919 636.4204</span></a>
+          <span class="aside"><a class="u-url" rel="me" href="facetime://me@ell.io">FaceTime</a></span>
+          &#8275; please text me first!
         </div>
         <div class="sites">
           <span class="label">Etc</span>
-          <a class="url preferred" rel="me" href="https://functional.cafe/@ELLIOTTCABLE">Mastodon</a>
-          <a class="url preferred" rel="me" href="http://github.com/elliottcable">GitHub</a>
-          <a class="url preferred" rel="me" href="https://foursquare.com/elliottcable">Foursquare</a>
-          <a class="url preferred" rel="me" href="http://open.spotify.com/user/elliottcable">Spotify</a>
-          <a class="url preferred" rel="me" href="http://last.fm/user/elliottcable">Last.fm</a>
-          <a class="url preferred" rel="me" href="https://keybase.io/elliottcable">Keybase</a>
-          <a class="url preferred" rel="me" href="https://www.linkedin.com/in/elliottcable/">LinkedIn</a>
-          <a class="url" rel="me" href="http://flickr.com/photos/elliottcable/">Flickr</a>
-        </div>
-        <div class="tel">
-          <span class="type">Phone</span><span class="type invisible">pref</span>
-          <a href="tel:+19196364204?call"><span class="value">+1 919 636.4204</span></a>
-          <span class="aside"><a class="url" rel="me" href="facetime://me@ell.io">FaceTime</a></span>
-          &#8275; please text me first!
+          <a class="u-url preferred" rel="me" href="https://functional.cafe/@ELLIOTTCABLE">Mastodon</a>
+          <a class="u-url preferred" rel="me" href="http://github.com/elliottcable">GitHub</a>
+          <a class="u-url preferred" rel="me" href="https://foursquare.com/elliottcable">Foursquare</a>
+          <a class="u-url preferred" rel="me" href="http://open.spotify.com/user/elliottcable">Spotify</a>
+          <a class="u-url preferred" rel="me" href="http://last.fm/user/elliottcable">Last.fm</a>
+          <a class="u-url preferred" rel="me" href="https://keybase.io/elliottcable">Keybase</a>
+          <a class="u-url preferred" rel="me" href="https://www.linkedin.com/in/elliottcable/">LinkedIn</a>
+          <a class="u-url preferred" rel="me" href="https://www.reddit.com/u/ELLIOTTCABLE">Reddit</a>
+          <a class="u-url preferred" rel="me" href="https://beehaw.org/u/ELLIOTTCABLE">Lemmy (Beehaw.org)</a>
+
+          <a class="u-url" rel="me" href="http://flickr.com/photos/elliottcable/">Flickr</a>
         </div>
         <address class="emails">
-          <a class="email preferred" rel="me" href="mailto:mail@from.ec">mail@from.ec</a>
-          <a class="email" rel="me" href="mailto:me@ell.io">me@ell.io</a>
+          <a class="u-email preferred" rel="me" href="mailto:mail@from.ec">mail@from.ec</a>
+          <a class="u-email" rel="me" href="mailto:me@ell.io">me@ell.io</a>
         </address>
       </address>
     </div>
