@@ -8,3 +8,9 @@ _.python.venv = { path = ".venv", create = true }
 bun = "1"
 python = "3"
 uv = "latest"
+
+[tasks.install]
+run = [
+   "uv sync --locked",
+   "npm clean-install",
+]

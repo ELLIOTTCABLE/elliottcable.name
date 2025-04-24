@@ -1,0 +1,2 @@
+install:
+	mise run install
