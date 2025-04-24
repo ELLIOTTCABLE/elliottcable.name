@@ -1,3 +1,14 @@
 http://elliottcable.name
 ========================
 This website proudly composed of Polka Dots™.
+
+Build
+-----
+
+Icon-subsetting requires [mise][]; which will install the build-dependencies:
+
+```console
+$ mise run install
+```
+
+[mise]: <https://mise.jdx.dev> "A general-purpose version-manager and task runner, ala nodenv, asdf, make, etc."
